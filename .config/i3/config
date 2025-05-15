@@ -243,3 +243,9 @@ gaps inner 2px
 workspace $blenderWorkspace gaps inner 0px
 
 bindsym Print exec --no-startup-id scrot ~/Pictures/
+
+# take screenshoot
+bindsym Print exec --no-startup-id scrot ~/Pictures/
+
+# change background color
+exec --no-startup-id xsetroot -solid "#aaffe3"
