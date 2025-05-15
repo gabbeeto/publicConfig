@@ -1,0 +1,6 @@
+# long list of installs
+sudo pacman -S kitty unzip obs-studio go helix tmux npm nodejs npm certifi pip python-pip python-xyz python-certifi python-brotili python-brotili discord udisks2 openbsd-netcat nvm nmap  git pacman-contrib scrot pactl
+npm i -g vscode-langservers-extracted
+npm i -g @olrtg/emmet-language-server
+mkdir ~/Pictures
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
