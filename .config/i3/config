@@ -146,13 +146,6 @@ bindsym $mod+6 workspace $obsWorkspace
 bindsym $mod+7 workspace $browserWorkspace
 
 
-bindsym $mod+1 workspace $terminalsWorspace
-bindsym $mod+2 workspace $videoWorkspace
-bindsym $mod+3 workspace $godotWorkspace
-bindsym $mod+4 workspace $blenderWorkspace
-bindsym $mod+5 workspace $discordWorkspace
-bindsym $mod+6 workspace $obsWorkspace
-bindsym $mod+7 workspace $browserWorkspace
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $terminalsWorspace
@@ -238,14 +231,13 @@ bindsym $mod+g exec ~/Godot.x86_64
 bindsym $mod+o exec obs
 
 # add gaps
-gaps inner 2px
+gaps inner 4px
 
 workspace $blenderWorkspace gaps inner 0px
 
-bindsym Print exec --no-startup-id scrot ~/Pictures/
 
 # take screenshoot
 bindsym Print exec --no-startup-id scrot ~/Pictures/
 
-# change background color
+# add background color
 exec --no-startup-id xsetroot -solid "#aaffe3"
