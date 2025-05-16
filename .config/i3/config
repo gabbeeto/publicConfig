@@ -106,8 +106,13 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# start dmenu (a program launcher)
-bindsym $mod+space  exec --no-startup-id dmenu_run
+# Launch rofi as an app launcher
+bindsym $mod+space  exec --no-startup-id rofi -show-icons -show drun
+
+# Launch rofi as a window switcher
+bindsym $mod+Tab  exec --no-startup-id rofi -show window
+# Launch Rofi for running custom commands
+bindsym $mod+Shift+Return exec --no-startup-id rofi -show-icons -show run
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -207,21 +212,24 @@ client.urgent           #2f343a #de4f4f #ffffff #900000   #900000
 
 client.background       #82C4BE
 
-bar {
-        position top
-        status_command i3status
-        padding 3px
-        separator_symbol " | "
-        colors {
-                background "#FFC8DD" # Semi-transparent dark (RGBA)
-                separator "#1E1E2E" # Subtle gray
-                statusline "#333333" # Bright text
+# bar {
+#         position top
+#         status_command i3status
+#         padding 3px
+#         separator_symbol " | "
+#         colors {
+#                 background "#FFC8DD" # Semi-transparent dark (RGBA)
+#                 separator "#1E1E2E" # Subtle gray
+#                 statusline "#333333" # Bright text
 
-                focused_workspace  #4c7899 #BDE0FE #000000
-                inactive_workspace #333333 #CDB4DB #333333
-                urgent_workspace   #2f343a #de4f4f #ffffff
-            }
-}
+#                 focused_workspace  #4c7899 #BDE0FE #000000
+#                 inactive_workspace #333333 #CDB4DB #333333
+#                 urgent_workspace   #2f343a #de4f4f #ffffff
+#             }
+# }
+ 
+# opens up polybar
+exec_always ~/.config/polybar/launch.sh
 
 # opens up blender
 bindsym $mod+b exec blender
@@ -233,7 +241,7 @@ bindsym $mod+o exec obs
 # add gaps
 gaps inner 4px
 
-workspace $blenderWorkspace gaps inner 0px
+workspace $blenderWorkspace gaps inner 1px
 
 
 # take screenshoot
@@ -241,3 +249,6 @@ bindsym Print exec --no-startup-id scrot ~/Pictures/
 
 # add background color
 exec --no-startup-id xsetroot -solid "#aaffe3"
+
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-

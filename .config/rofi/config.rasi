@@ -1,0 +1,53 @@
+* {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "Fira Code 12";
+    terminal: "kitty";  
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+window {
+    transparency: "none";
+    width: 100%;
+    height: 30%;
+    location: south;
+    anchor: center;
+    y-offset: -115;
+    background-color: #e9fff8;
+}
+
+inputbar {
+    padding: 1px;
+    children: [entry];
+}
+
+listview {
+    padding: 1px;
+    lines: 4;
+    dynamic: true;
+}
+
+
+element {
+    padding: 4px;
+    border-radius:10px;
+}
+
+
+element-text {
+    background-color: #FFAFCC;
+    padding: 3px;
+    text-color: black;
+    border-radius:10px;
+}
+
+element-text selected {
+    background-color: #73e8c1;
+    text-color: black;
+}
