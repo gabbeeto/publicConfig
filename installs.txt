@@ -3,6 +3,7 @@ sudo pacman -S kitty unzip obs-studio go helix tmux npm nodejs npm  certifi pip 
 npm i -g vscode-langservers-extracted
 npm i -g @olrtg/emmet-language-server
 mkdir ~/Pictures
+mkdir ~/Videos
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 systemctl --user enable pulseaudio --now
 sudo usermod -aG video $USER
