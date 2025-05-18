@@ -22,3 +22,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 # installs twitch with cargo
 cargo install twitch-tui
+
+# copy the configs
+cp .config/* ~/.config/ -r
+cp .local ~ -r
+cp .tmux.conf ~
