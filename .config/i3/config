@@ -111,8 +111,12 @@ bindsym $mod+space  exec --no-startup-id rofi -show-icons -show drun
 
 # Launch rofi as a window switcher
 bindsym $mod+Tab  exec --no-startup-id rofi -show window
+
 # Launch Rofi for running custom commands
 bindsym $mod+Shift+Return exec --no-startup-id rofi -show-icons -show run
+
+# launch Rofi to watch videos
+bindsym $mod+v exec ~/.config/i3/watchVideos.sh
 
 # focus the parent container
 bindsym $mod+a focus parent
