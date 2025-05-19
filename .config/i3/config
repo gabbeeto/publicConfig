@@ -99,7 +99,7 @@ bindsym $mod+$mod2+h workspace prev
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+$mod2+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -260,3 +260,4 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 # Toggle Polybar (kill if running, start if not running)
 bindsym $mod+p exec --no-startup-id "if pgrep -x polybar >/dev/null; then killall polybar; else ~/.config/polybar/launch.sh; fi"
 
+bindsym $mod+s exec ~/.config/i3/watchVideos.sh
