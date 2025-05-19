@@ -1,13 +1,15 @@
 #!/bin/bash
 
-selection=$(echo "audio"$'\n'"brightness"$'\n'"wifi" | rofi -dmenu -p "Select Apps" -i)
+selection=$(echo "audio"$'\n'"brightness"$'\n'"input"$'\n'"monitor" | rofi -dmenu -p "Select Apps" -i)
 echo $selection
 if [ $selection == "audio" ]; then
   pavucontrol
 elif [ $selection == "brightness" ]; then
-  brightnessctl set $(zenity --scale --title="Brightness" --percentage)
-elif [ $selection == "wifi" ]; then
-  nm-connection-editor
+ lxqt-config-brightness
+elif [ $selection == "input" ]; then
+  lxqt-config-input
+elif [ $selection == "monitor" ]; then
+  lxqt-config-monitor
 fi
 
 # echo ${listOfApp[0]}

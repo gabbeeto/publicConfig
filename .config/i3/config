@@ -127,12 +127,13 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $terminalsWorspace "terminals"
-set $videoWorkspace "video"
+set $videoWorkspace "videos"
 set $godotWorkspace "godot"
 set $blenderWorkspace "blender"
 set $discordWorkspace "discord"
 set $obsWorkspace "obs"
-set $browserWorkspace "browser"
+set $browserWorkspace "browsers"
+set $settingWorkspace "settings"
 
 # TODO: use the ´xprop | grep CLASS´ command on terminal to figure out the class
 assign [class="kitty"] $terminalsWorspace
@@ -144,6 +145,7 @@ assign [class="obs"] $obsWorkspace
 assign [class="discord"] $discordWorkspace
 
 
+assign [class="pavucontrol"] $settingWorkspace
 
 # switch to workspace
 bindsym $mod+1 workspace $terminalsWorspace
@@ -261,3 +263,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym $mod+p exec --no-startup-id "if pgrep -x polybar >/dev/null; then killall polybar; else ~/.config/polybar/launch.sh; fi"
 
 bindsym $mod+s exec ~/.config/i3/myApp.sh
+
+# this is for the tray
+exec --no-startup-id nm-applet --indicator
