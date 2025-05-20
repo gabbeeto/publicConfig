@@ -9,6 +9,23 @@
 * {
     font-family: monospace;
     font-size: 10pt;
+    -gtk-text-select-foreground: #FFFFFF;  /* White text on selection */
+    -gtk-text-select-background: @secondary_color; /* Your secondary color */
+}
+
+/* Text selection colors */
+
+/* Firefox specific selection styling */
+textview.view:selected,
+.view:selected {
+    background-color: @secondary_color;
+    color: #FFFFFF;
+}
+
+/* Chrome/Chromium selection */
+*:selected {
+    background-color: @secondary_color;
+    color: #FFFFFF;
 }
 
 window {
