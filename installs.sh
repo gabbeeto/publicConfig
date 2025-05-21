@@ -2,7 +2,10 @@
 sudo pacman -Syu
 
 # long list of installs
-sudo pacman -S kitty unzip obs-studio go helix tmux npm nodejs npm  certifi pip python-pip python-xyz python-certifi python-brotili python-brotili discord udisks2 openbsd-netcat nvm nmap  git pacman-contrib scrot pulseaudio noto-fonts noto-fonts-emoji ttf-font-awesome xorg-xsetroot brightnessctl rofi polybar curl pavucontrol  network-manager-applet xorg-xbacklight  lxqt-config networkmanager 
+sudo pacman -S kitty unzip obs-studio go helix tmux npm nodejs npm  python-pip python-certifi python-brotili python-brotili discord udisks2 openbsd-netcat nvm nmap  git pacman-contrib scrot pulseaudio noto-fonts noto-fonts-emoji ttf-font-awesome xorg-xsetroot brightnessctl rofi polybar curl pavucontrol  network-manager-applet xorg-xbacklight  lxqt-config networkmanager tlp flatpak
+
+# tlp-ui
+flatpak install flathub com.github.d4nj1.tlpui
 
 # enable networkmanager
 sudo systemctl enable --now NetworkManager
