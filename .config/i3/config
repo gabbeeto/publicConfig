@@ -260,7 +260,7 @@ exec_always ~/.config/polybar/launch.sh
 
 
 # add gaps
-gaps inner 4px
+gaps inner 2px
 
 workspace $blenderWorkspace gaps inner 1px
 
