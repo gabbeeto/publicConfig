@@ -1,0 +1,23 @@
+
+
+ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
+# uses pulse audio default
+       -f pulse -i default \
+# bitrates and maxbitrates spikes: -b:v 2500k -maxrate 3000k
+# Smooths out bitrate fluctuations: -bufsize 4000k
+# keyframe every 60 second:-g 60
+       -c:v libx264 -preset veryfast -b:v 3200k -maxrate 3500k -bufsize 4000k -g 60 \
+# audio codec acc and audio bitrates 128k -c:a aac -b:a 128k
+       -c:a aac -b:a 128k \
+# streaming:
+       # -f flv "rtmp://live.twitch.tv/app/YOUR_STREAM_KEY"
+# recording:
+       test_output.mp4
+
+sudo usermod -a -G video gabbeeto
+
+ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
+       -f pulse -i default \
+       -c:v libx264 -preset veryfast -b:v 3200k -maxrate 3500k -bufsize 4000k -g 60 \
+       -c:a aac -b:a 128k \
+       test_output.mp4
