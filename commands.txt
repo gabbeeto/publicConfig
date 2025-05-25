@@ -5,6 +5,15 @@ pavucontrol
 # execute previous command
 !!
 
+# make links
+ln
+
+# makes you type password again for sudo command
+sudo -k
+
+# enter sudo mode
+sudo -i
+
 --pendrive stuff--
 
 # (see partitions name)
