@@ -1,14 +1,10 @@
-# update system
-sudo pacman -Syu
-
-# long list of installs
-sudo pacman -S kitty unzip obs-studio go helix tmux npm nodejs npm  python-pip python-certifi discord udisks2 openbsd-netcat nvm nmap  git pacman-contrib scrot pulseaudio noto-fonts noto-fonts-emoji ttf-font-awesome xorg-xsetroot brightnessctl rofi polybar curl pavucontrol  network-manager-applet xorg-xbacklight  lxqt-config networkmanager tlp flatpak
-
 # tlp-ui
 flatpak install flathub com.github.d4nj1.tlpui
 
 # enable networkmanager
 sudo systemctl enable --now NetworkManager
+
+# install language servers
 npm i -g vscode-langservers-extracted
 npm i -g @olrtg/emmet-language-server
 
@@ -19,9 +15,6 @@ mkdir ~/Videos
 # tmux plugin
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# brightnessctl needs this
-systemctl --user enable pulseaudio --now
-sudo usermod -aG video $USER
 
 # set keyboard to the variant I like
 setxkbmap us -variant altgr-intl
@@ -37,4 +30,5 @@ cp .config/* ~/.config/ -r
 cp .local ~ -r
 cp .tmux.conf ~
 
+# godot format needs this
 pip3 install "gdtoolkit==4.*"
