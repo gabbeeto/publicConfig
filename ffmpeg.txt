@@ -1,6 +1,7 @@
 
 
-ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
+# s -1360x768 is base resolution
+ffmpeg -f x11grab -s 1360x768 -framerate 60 -i :0.0 \
 # uses pulse audio default
        -f pulse -i default \
 # bitrates and maxbitrates spikes: -b:v 2500k -maxrate 3000k
@@ -9,6 +10,8 @@ ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
        -c:v libx264 -preset veryfast -b:v 3200k -maxrate 3500k -bufsize 4000k -g 60 \
 # audio codec acc and audio bitrates 128k -c:a aac -b:a 128k
        -c:a aac -b:a 128k \
+# scaled resolution with bilinear as an option
+       -vf "scale=1092:614:flags=bilinear" \
 # streaming:
        # -f flv "rtmp://live.twitch.tv/app/YOUR_STREAM_KEY"
 # recording:
@@ -16,8 +19,9 @@ ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
 
 sudo usermod -a -G video gabbeeto
 
-ffmpeg -f x11grab -s 1360x768 -framerate 50 -i :0.0 \
+ffmpeg -f x11grab -s 1360x768 -framerate 60 -i :0.0 \
        -f pulse -i default \
-       -c:v libx264 -preset veryfast -b:v 3200k -maxrate 3500k -bufsize 4000k -g 60 \
+       -c:v libx264 -preset veryfast -tune zerolatency -b:v 3200k -maxrate 3500k -bufsize 4000k -g 60 \
        -c:a aac -b:a 128k \
+       -vf "scale=1092:614:flags=bilinear" \
        test_output.mp4
