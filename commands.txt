@@ -31,3 +31,6 @@ sudo mount /dev/sdb1 /mnt/usb
 
 # unmount partition
 sudo umount /mnt/usb
+
+# remove packages on arch
+sudo pacman -Rsnu packageName
