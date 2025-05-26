@@ -32,3 +32,7 @@ cp .tmux.conf ~
 
 # godot format needs this
 pip3 install "gdtoolkit==4.*"
+
+# for go
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile

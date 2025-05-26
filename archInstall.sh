@@ -9,3 +9,5 @@ sudo pacman -S curl kitty unzip obs-studio go helix tmux npm nodejs npm  python-
 # brightnessctl needs this
 systemctl --user enable pulseaudio --now
 sudo usermod -aG video $USER
+
+echo "alias hx='helix'" >> ~/.bashrc
