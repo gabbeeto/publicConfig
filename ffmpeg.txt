@@ -1,5 +1,4 @@
 
-
 # s -1360x768 is base resolution
 ffmpeg -f x11grab -s 1360x768 -framerate 60 -i :0.0 \
 # uses pulse audio default
@@ -25,13 +24,4 @@ ffmpeg -f x11grab -s 1360x768 -framerate 60 -i :0.0 \
        -c:v libx264 -preset veryfast -tune zerolatency -b:v 3500k -maxrate 3500k -minrate 3500k -bufsize 3500k -g 60 \
        -c:a aac -b:a 128k \
        -vf "scale=1088:614:flags=bilinear" \
-       test_output.mp4
-
-
-# wayland version
-ffmpeg -device /dev/dri/card1 -f kmsgrab -i - \
-       -f pulse -i default \
-       -vf 'hwmap=derive_device=vaapi,scale_vaapi=w=1088:h=614:format=nv12' \
-       -c:v h264_vaapi -qp 18 -b:v 3500k -maxrate 3500k -minrate 3500k -bufsize 3500k -g 60 \
-       -c:a aac -b:a 128k \
        test_output.mp4
