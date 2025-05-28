@@ -1,10 +1,13 @@
-sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty
+sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf
+
+# enables flatpak(you have to reboot though)
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # installs helix
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-
+# sudo add-apt-repository ppa:maveonair/helix-editor
+# sudo apt update
+# sudo apt install helix
+sudo snap install helix --clasic
 
 # Download and install nvm:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
