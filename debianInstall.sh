@@ -1,4 +1,4 @@
-sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf
+sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf python3-pip python3
 
 # enables flatpak(you have to reboot though)
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
