@@ -17,3 +17,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 # Download and install Node.js:
 nvm install 22
+
+
+echo "alias hx='helix'" >> ~/.bashrc
