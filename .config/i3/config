@@ -283,3 +283,6 @@ bindsym $mod+p exec --no-startup-id "if pgrep -x polybar >/dev/null; then killal
 
 # this is for the tray
 exec --no-startup-id nm-applet --indicator
+
+# this is for notification
+exec --no-startup-id dunst
