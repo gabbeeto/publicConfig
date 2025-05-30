@@ -168,6 +168,9 @@ bindsym $mod+d exec discord; workspace $discordWorkspace
 # launch Rofi to change settins  and switch to workspace for settings
 bindsym $mod+s exec ~/.config/i3/myApp.sh;workspace $settingWorkspace
 
+# record screen
+bindsym $mod+$mod2+Shift+r exec ~/.config/i3/record.sh;
+
 # switch to workspace
 bindsym $mod+1 workspace $terminalsWorspace
 bindsym $mod+2 workspace $videoWorkspace
