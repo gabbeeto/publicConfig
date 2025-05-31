@@ -1,10 +1,11 @@
 # install tlp-ui
 flatpak install flathub com.github.d4nj1.tlpui
 
-# install krita and gimp and pixelorama
+# install krita and gimp and pixelorama and inkscape
 flatpak install flathub org.kde.krita
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub com.orama_interactive.Pixelorama
+flatpak install flathub org.inkscape.Inkscape
 
 # enable networkmanager
 sudo systemctl enable --now NetworkManager
