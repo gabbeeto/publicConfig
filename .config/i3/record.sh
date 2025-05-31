@@ -6,8 +6,8 @@ record() {
        -f pulse -i default \
        -c:v libx264 -preset veryfast -tune zerolatency -b:v 3500k -maxrate 3500k -minrate 3500k -bufsize 3500k -g 60 \
        -c:a aac -b:a 128k \
-       -vf "scale=1088:614:flags=bilinear" \
-       ~/Videos/"$(date +'%m-%d %H-%M')".mp4 &
+        -f flv "rtmp://live.twitch.tv/app/live_887634316_A3GmXS2mk7xVAOKG5K3LAJSyvhlR10"
+        &
   echo $! > /tmp/recpid
 
 

@@ -1,4 +1,4 @@
-sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf python3-pip python3
+sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf python3-pip python3 feh
 
 # enables flatpak(you have to reboot though)
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -20,3 +20,9 @@ nvm install 22
 
 
 echo "alias hx='helix'" >> ~/.bashrc
+
+# dependencies for bashscript to make chat switch to different workspace
+sudo apt install  jq  # Debian/Ubuntu
+
+# this is so I can execute java programs like chatty
+sudo apt install default-jre # Debian/Ubuntu
