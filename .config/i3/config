@@ -5,7 +5,7 @@ exec echo '' > /tmp/moveChatty.txt
 # Welcome screen workspace
 bindsym $mod+F1  workspace "welcome";  exec --no-startup-id feh  --scale-down  ~/.config/i3/assets/welcome.png ; exec ~/.config/i3/moveChatToWorkspace.sh;exec  killall polybar
 # BRB screen workspace
-bindsym $mod+F2  workspace "brb"; exec --no-startup-id ~/.config/i3/brbSwitch.sh
+bindsym $mod+F2  workspace "brb"; exec --no-startup-id feh  --scale-down  ~/.config/i3/assets/brb.png ; exec ~/.config/i3/moveChatToWorkspace.sh;exec ~/.config/i3/toggleMic.sh;exec killall polybar
 
 bindsym $mod+m; exec ~/.config/i3/toggleMic.sh
 
