@@ -2,7 +2,7 @@
 direction=$1
 
 # List your workspaces IN ORDER - EDIT THESE TO MATCH YOURS
-WORKSPACES="terminals video godot blender discord obs browsers"
+WORKSPACES="terminals video godot art discord obs browsers"
 
 # Get current workspace
 current=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')

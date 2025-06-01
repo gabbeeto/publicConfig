@@ -139,7 +139,7 @@ bindsym $mod+a focus parent
 set $terminalsWorspace "terminals"
 set $videoWorkspace "videos"
 set $godotWorkspace "godot"
-set $blenderWorkspace "blender"
+set $blenderWorkspace "art"
 set $discordWorkspace "discord"
 set $obsWorkspace "obs"
 set $browserWorkspace "browsers"
@@ -149,7 +149,6 @@ set $settingWorkspace "settings"
 assign [class="kitty"] $terminalsWorspace
 assign [class="mpv"] $videoWorkspace
 assign [class="Godot"] $godotWorkspace
-assign [class="Blender"] $blenderWorkspace
 assign [class="firefox"] $browserWorkspace
 assign [class="obs"] $obsWorkspace
 assign [class="discord"] $discordWorkspace
@@ -162,6 +161,10 @@ assign [class="lxqt-config-monitor"] $settingWorkspace
 
 
 
+assign [class="Blender"] $blenderWorkspace
+assign [class="krita"] $blenderWorkspace
+assign [class="Inkscape"] $blenderWorkspace
+assign [class="Gimp"] $blenderWorkspace
 
 # start a terminal
 bindsym $mod+Return exec kitty;workspace $terminalsWorspace ; exec i3-msg  "`cat /tmp/moveChatty.txt`"
