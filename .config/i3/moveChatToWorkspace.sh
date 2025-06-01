@@ -22,6 +22,5 @@ i3-msg "resize shrink width 32 px or 32 ppt"
 
 # unfocus chat
 i3-msg "focus left"
-i3-msg "focus down"
 
 
