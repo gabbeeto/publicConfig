@@ -3,7 +3,7 @@ for_window [class="^.*"] border pixel 1
 exec echo '' > /tmp/moveChatty.txt
 
 # Welcome screen workspace
-bindsym $mod+F1  workspace "welcome"; exec --no-startup-id feh --fullscreen ~/.config/i3/assets/welcome.png 
+bindsym $mod+F1  workspace "welcome";  exec --no-startup-id feh  --scale-down  ~/.config/i3/assets/welcome.png ; exec ~/.config/i3/moveChatToWorkspace.sh;exec  killall polybar
 # BRB screen workspace
 bindsym $mod+F2  workspace "brb"; exec --no-startup-id ~/.config/i3/brbSwitch.sh
 
@@ -291,6 +291,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Toggle Polybar (kill if running, start if not running)
 bindsym $mod+p exec --no-startup-id "if pgrep -x polybar >/dev/null; then killall polybar; else ~/.config/polybar/launch.sh; fi"
+
 
 
 # this is for the tray
