@@ -67,6 +67,7 @@ tiling_drag modifier titlebar
 
 # kill focused window
 bindsym $mod+q kill
+bindsym $mod+x kill
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -243,6 +244,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
         bindsym $mod+x mode "default"
+        bindsym $mod+q mode "default"
 }
 
 bindsym $mod+r mode "resize"

@@ -8,6 +8,8 @@ auto-format = false
 
 [keys.insert]
 "C-x" = "normal_mode"  
+"C-q" = "normal_mode"  
 
 [keys.select]
 "C-x" = "normal_mode"  
+"C-q" = "normal_mode"  
