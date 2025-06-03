@@ -1,4 +1,16 @@
-sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf python3-pip python3 feh
+# updates
+sudo apt update
+sudo apt upgrade
+
+
+sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitty mpv fzf python3-pip python3
+
+# to show images with super + f1 and super + f2
+sudo apt install feh
+
+# install ssh
+sudo apt install openssh-server -y
+sudo systemctl enable --now ssh
 
 # enables flatpak(you have to reboot though)
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -21,8 +33,14 @@ nvm install 22
 
 echo "alias hx='helix'" >> ~/.bashrc
 
-# dependencies for bashscript to make chat switch to different workspace
-sudo apt install  jq  # Debian/Ubuntu
+# to record and streamc
+sudo add-apt-repository ppa:jonathonf/ffmpeg-4
+sudo apt update
+sudo apt install ffmpeg
 
 # this is so I can execute java programs like chatty
 sudo apt install default-jre # Debian/Ubuntu
+
+# dependencies for bashscript to make chat switch to different workspace
+sudo apt install  jq  # Debian/Ubuntu
+
