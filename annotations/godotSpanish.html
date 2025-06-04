@@ -118,16 +118,113 @@
               <p><span class="value">2<span class="comparison">==</span>2</span>(2 es igual a 2)</p>
               <p>resultado=<span class="value">true</span></p>
             </li>
-            <li><span class="comparison">&GT;=</span>(más grande que o igual que)</li>
             <li>
-              <span class="comparison">&LT;=</span>(menor que o igual que)
+              <p><span class="comparison">&GT;=</span>(más grande que o igual que)</p>
+              <p>ejemplos:</p>
+              <p><span class="value">2<span class="comparison">&GT;=</span>2</span>(2 es igual o mayor a 2)</p>
+              <p>resultado=<span class="value">true</span></p>
+              <p><span class="value">2<span class="comparison">&GT;=</span>3</span>(2 es igual o mayor a 3)</p>
+              <p>resultado=<span class="value">false</span></p>
+            </li>
+            <li>
+              <p><span class="comparison">&LT;=</span>(menor que o igual que)</p>
+              <p>ejemplos:</p>
+              <p><span class="value">2<span class="comparison">&LT;=</span>2</span>(2 es igual o menor que 2)</p>
+              <p>resultado=<span class="value">true</span></p>
+              <p><span class="value">2<span class="comparison">&LT;=</span>3</span>(2 es igual o menor que 3)</p>
+              <p>resultado=<span class="value">false</span></p>
             </li>
           </ol>
+          <p><span class="value">not</span> invierte el bool</p>
+          <p><span class="value">not true</span> convierte el <span class="value">true</span> en <span class="value">false</span></p>
         </li>
       </ul>
     </article>
     <article>
-      <h2>funciones mas comunes de los nodos por preterminado</h2>
+      <h2>funciones mas comunes</h2>
+      <ul>
+        <li>
+          <h3>Input.get_vector(xNegativo: <span class="type">StringName</span>, xPositivo: <span
+              class="type">StringName</span>, yNegativo: <span class="type">StringName</span>, yPositivo: <span
+              class="type">StringName</span> )</h3>
+          <p>
+            obtener un vector2 como entrada especificando 4 acciones/teclas con los ejes 'x' e 'y' positivos y
+            negativos.
+          </p>
+          <p>regresa: <span class="type">Vector2</span></p>
+        </li>
+
+        <li>
+          <h3>Input.is_action_just_pressed(accion: <span class="type">StringName</span>)</h3>
+          <p>
+            regresa <span class="value">true</span>cuando el usuario empezeo a precionar la accion en el fotograma
+            actual. Solo en el fotograma en donde el jugador apreto el boton.
+
+
+          </p>
+          <p>regresa: <span class="type">bool</span></p>
+        </li>
+
+        <li>
+          <h3>Node2D.position</h3>
+          <p>
+          posicion local, relativo al padre del nodo
+          </p>
+          <p>regresa: <span class="type">Vector2</span></p>
+        </li>
+
+        <li>
+          <h3>Node2D.global_position</h3>
+          <p>posicion global</p>
+          <p>regresa: <span class="type">Vector2</span></p>
+        </li>
+
+        <li>
+          <h3>Node2D.rotation</h3>
+          <p>rotacion en ridianos</p>
+          <p>regresa: <span class="type">float</span></p>
+        </li>
+
+        <li>
+          <h3>Node2D.rotation_degrees</h3>
+          <p>rotacion en grados como en el inspector de GODOT</p>
+          <p>regresa: <span class="type">float</span></p>
+        </li>
+
+        <li>
+          <h3>Node3D.position</h3>
+          <p>
+          posicion local, relativo al padre del nodo
+          </p>
+          <p>regresa: <span class="type">Vector3</span></p>
+        </li>
+
+        <li>
+          <h3>Node3D.global_position</h3>
+          <p>posicion global</p>
+          <p>regresa: <span class="type">Vector3</span></p>
+        </li>
+
+        <li>
+          <h3>Node3D.rotation</h3>
+          <p>rotacion en ridianos, especificado en los 3 Ángulos de Euler</p>
+          <p>regresa: <span class="type">Vector3</span></p>
+        </li>
+
+        <li>
+          <h3>Node3D.rotation_degrees</h3>
+          <p>rotacion en grados como en el inspector de GODOT, Ángulos de Euler</p>
+          <p>regresa: <span class="type">Vector3</span></p>
+        </li>
+
+
+        <li>
+          <h3>Timer.start()</h3>
+          <p>empieza el temporizador en codigo. Casi siempre se usa con la señal "timeout"</p>
+        </li>
+
+      </ul>
+
     </article>
   </main>
 
