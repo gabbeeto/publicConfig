@@ -7,13 +7,12 @@ APP_CLASS="chatty"  # e.g., "firefox" or "discord"
 CURRENT_WS=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')
 
 
-# focus chat to move it
-i3-msg "[class=$APP_CLASS] focus"
-# move it to the workspace I'm in
-i3-msg " move container to workspace $CURRENT_WS"
 
-# go to the currentWorkspace(because focus gets out of current workspace)
-i3-msg " workspace $CURRENT_WS"
+# move chat to workspace
+i3-msg "[class=$APP_CLASS] move container to workspace $CURRENT_WS"
+
+# move avatar to workspace
+i3-msg "[class='2dAvatar'] move container to workspace $CURRENT_WS"
 
 # focus again to resize
 i3-msg "[class=$APP_CLASS] focus"
