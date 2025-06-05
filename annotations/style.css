@@ -1,9 +1,50 @@
-.value{
-color:red;
+html {
+  --main: black;
+  --secondary: white;
+  --value: red;
+  --type: blue;
+  --comparison: green;
+
+  background-color: var(--main);
+  color: var(--secondary);
 }
-.type{
-  color:blue;
+
+.value {
+  color: var(--value);
 }
+
+.type {
+  color: var(--type);
+}
+
 .comparison {
-color:green;
-  }
+  color: var(--comparison);
+}
+
+.center {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border: 2px solid var(--secondary);
+  border-radius: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+code {
+  align-self: center;
+  text-align: center;
+  display: block;
+  background-color: var(--secondary);
+  color: var(--main);
+  padding: 7px;
+  border-radius: 10px;
+  margin: 2px;
+}

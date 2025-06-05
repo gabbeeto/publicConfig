@@ -16,6 +16,8 @@
 
     <article>
       <h2>asignar una variable</h2>
+      <div class="list">
+
       <section>
         <p>podes asigar una variable de la siguiente manera para declarar una variable y asignarle un valor</p>
         <code>var nombreDeVariable: <span class="type">tipoDeVariable</span> <br>nombreDeVariable = <span
@@ -36,12 +38,13 @@
         <code>const nombreDeVariable: <span class="type">tipoDeVariable</span> = <span
             class="value">valorParaVariable</span> </code>
         <p>ejemplo:</p>
-        <code>const lum: <span class="type">Vector2</span> = Vector2(3,4)</code>
+        <code>const lum: <span class="type">Vector2</span> = <span class="value">Vector2(3,4)</span></code>
       </section>
+      </div>
     </article>
     <article>
       <h2>Tipos de variable</h2>
-      <ul>
+      <ul class="list">
         <li>
           <p><span class="type">int</span></p>
           <p>Numeros enteros positivos y negativos como: <span class="value">3</span>, <span class="value">-4</span>,
@@ -136,13 +139,14 @@
             </li>
           </ol>
           <p><span class="value">not</span> invierte el bool</p>
-          <p><span class="value">not true</span> convierte el <span class="value">true</span> en <span class="value">false</span></p>
+          <p><span class="value">not true</span> convierte el <span class="value">true</span> en <span
+              class="value">false</span></p>
         </li>
       </ul>
     </article>
     <article>
       <h2>funciones mas comunes</h2>
-      <ul>
+      <ul class="list">
         <li>
           <h3>Input.get_vector(xNegativo: <span class="type">StringName</span>, xPositivo: <span
               class="type">StringName</span>, yNegativo: <span class="type">StringName</span>, yPositivo: <span
@@ -153,76 +157,71 @@
           </p>
           <p>regresa: <span class="type">Vector2</span></p>
         </li>
-
         <li>
           <h3>Input.is_action_just_pressed(accion: <span class="type">StringName</span>)</h3>
           <p>
             regresa <span class="value">true</span>cuando el usuario empezeo a precionar la accion en el fotograma
             actual. Solo en el fotograma en donde el jugador apreto el boton.
-
-
           </p>
           <p>regresa: <span class="type">bool</span></p>
         </li>
-
-        <li>
-          <h3>Node2D.position</h3>
-          <p>
-          posicion local, relativo al padre del nodo
-          </p>
-          <p>regresa: <span class="type">Vector2</span></p>
-        </li>
-
-        <li>
-          <h3>Node2D.global_position</h3>
-          <p>posicion global</p>
-          <p>regresa: <span class="type">Vector2</span></p>
-        </li>
-
-        <li>
-          <h3>Node2D.rotation</h3>
-          <p>rotacion en ridianos</p>
-          <p>regresa: <span class="type">float</span></p>
-        </li>
-
-        <li>
-          <h3>Node2D.rotation_degrees</h3>
-          <p>rotacion en grados como en el inspector de GODOT</p>
-          <p>regresa: <span class="type">float</span></p>
-        </li>
-
-        <li>
-          <h3>Node3D.position</h3>
-          <p>
-          posicion local, relativo al padre del nodo
-          </p>
-          <p>regresa: <span class="type">Vector3</span></p>
-        </li>
-
-        <li>
-          <h3>Node3D.global_position</h3>
-          <p>posicion global</p>
-          <p>regresa: <span class="type">Vector3</span></p>
-        </li>
-
-        <li>
-          <h3>Node3D.rotation</h3>
-          <p>rotacion en ridianos, especificado en los 3 Ángulos de Euler</p>
-          <p>regresa: <span class="type">Vector3</span></p>
-        </li>
-
-        <li>
-          <h3>Node3D.rotation_degrees</h3>
-          <p>rotacion en grados como en el inspector de GODOT, Ángulos de Euler</p>
-          <p>regresa: <span class="type">Vector3</span></p>
-        </li>
-
-
         <li>
           <h3>Timer.start()</h3>
           <p>empieza el temporizador en codigo. Casi siempre se usa con la señal "timeout"</p>
         </li>
+        <div class="center">
+          <li>
+            <h3>Node2D.position</h3>
+            <p>
+              posicion local, relativo al padre del nodo
+            </p>
+            <p>regresa: <span class="type">Vector2</span></p>
+          </li>
+          <li>
+            <h3>Node3D.position</h3>
+            <p>
+              posicion local, relativo al padre del nodo
+            </p>
+            <p>regresa: <span class="type">Vector3</span></p>
+          </li>
+        </div>
+        <div class="center">
+          <li>
+            <h3>Node2D.global_position</h3>
+            <p>posicion global</p>
+            <p>regresa: <span class="type">Vector2</span></p>
+          </li>
+          <li>
+            <h3>Node3D.global_position</h3>
+            <p>posicion global</p>
+            <p>regresa: <span class="type">Vector3</span></p>
+          </li>
+        </div>
+        <div class="center">
+          <li>
+            <h3>Node2D.rotation</h3>
+            <p>rotacion en ridianos</p>
+            <p>regresa: <span class="type">float</span></p>
+          </li>
 
+          <li>
+            <h3>Node3D.rotation</h3>
+            <p>rotacion en ridianos, especificado en los 3 Ángulos de Euler</p>
+            <p>regresa: <span class="type">Vector3</span></p>
+          </li>
+        </div>
+        <div class="center">
+          <li>
+            <h3>Node2D.rotation_degrees</h3>
+            <p>rotacion en grados como en el inspector de GODOT</p>
+            <p>regresa: <span class="type">float</span></p>
+          </li>
+          <li>
+            <h3>Node3D.rotation_degrees</h3>
+            <p>rotacion en grados como en el inspector de GODOT, Ángulos de Euler</p>
+            <p>regresa: <span class="type">Vector3</span></p>
+          </li>
+        </div>
       </ul>
 
     </article>
