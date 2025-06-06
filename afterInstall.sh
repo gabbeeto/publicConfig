@@ -42,3 +42,14 @@ pip3 install "gdtoolkit==4.*"
 # for go
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+
+# this is for nvim package manager
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# open godot this way in your godot project
+# nvim --listen ./godothost
+
+ 
+# this is the exec flag for godot
+#  --server ./godothost --remote-send "<C-\><C-N>:n {file}<CR>{line}G{col}|"

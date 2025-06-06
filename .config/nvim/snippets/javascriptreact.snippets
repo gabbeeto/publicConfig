@@ -1,0 +1,149 @@
+snippet importUtilForVocabularyClass "import all the utilities from a Vocabulary class" 
+import {Word, TinyExplanation, ExplanationContainer, TitleContainer, ListOfTest, TinyExplanationContainer } from './../../../explanationUtilities'
+endsnippet
+
+
+snippet importUtilForGrammarClass "import all the utilities from a grammar Class" 
+import {Word, TinyExplanation, ExplanationContainer, TitleContainer, ListOfTest, TinyExplanationContainer } from './../../explanationUtilities'
+endsnippet
+
+
+snippet Word "Word utility" 
+<Word word={[(<>WordEnglish</>), (<>WordSpanish</>)]}/>
+endsnippet
+
+
+snippet Verb "Word utility" 
+<Word word={[(<><span className="textSize-3">To</span> verb</>), (<>WordSpanish</>)]}/>
+endsnippet
+
+snippet TinyEC "Word utility" 
+<TinyExplanationContainer  explanation={<>explanation</>} / >
+endsnippet
+
+snippet ExplanationC "Word utility" 
+<ExplanationContainer  explanation={<>explanation</>} example={(<div className="flex flex-col items-center justify-center text-center">
+example
+</div>)} / >
+endsnippet
+
+
+snippet TinyE "Word utility"  
+	<TinyExplanation title={[(<> EnglishTitle</>), (<> spanishTitle</>)]} explanation={[(</>EnglishExplanation</>),(</>SpanishExplanation</>)]}  example={(<>example</>)} / >
+endsnippet
+
+
+
+snippet Comp "Word utility"  
+export function Component(){
+return (<> content </>);
+}
+endsnippet
+
+
+
+snippet TitleC "Word utility" 
+<TitleContainer  title={<>title</>} / >
+endsnippet
+
+
+snippet flexCenter "tailwind for centering something with flex container" 
+className="flex items-center justify-center text-center"
+endsnippet
+
+
+snippet flexColCenter "tailwind for centering something with flex container with column" 
+className="flex flex-col items-center justify-center text-center"
+endsnippet
+
+
+
+
+snippet Tests "tests" 
+<ListOfTest list={
+	[
+	[(<div>spanishWord</div>), (<div>expectedEnglish</div>)],
+	[(<div>spanishWord2</div>), (<div>expectedEnglish2</div>)],
+	[(<div>spanishWord3</div>), (<div>expectedEnglish3</div>)],
+	]
+} / >
+endsnippet
+
+
+snippet blueS "span with blue text" 
+<span className='text-blue-400'></span>
+endsnippet
+
+
+snippet blueBS "span with blue background" 
+<span className='bg-blue-800'></span>
+endsnippet
+
+
+snippet orangeS "span with orange text" 
+<span className='text-orange-400'></span>
+endsnippet
+
+
+snippet orangeBS "span with orange background" 
+<span className='bg-orange-800'></span>
+endsnippet
+
+snippet greenS "span with green text" 
+<span className='text-green-400'></span>
+endsnippet
+
+
+snippet greenBS "span with green background" 
+<span className='bg-green-800'></span>
+endsnippet
+
+
+snippet cyanBS "span with cyan text" 
+<span className='bg-cyan-800'></span>
+endsnippet
+
+
+snippet cyanS "span with cyan background" 
+<span className='text-cyan-400'></span>
+endsnippet
+
+
+snippet skyS "span with sky text" 
+<span className='text-sky-400'></span>
+endsnippet
+
+
+snippet skyBS "span with sky background" 
+<span className='bg-sky-800'></span>
+endsnippet
+
+
+snippet amberBS "span with amber background" 
+<span className='bg-amber-800'></span>
+endsnippet
+
+
+snippet amberS "span with amber text" 
+<span className='text-amber-400'></span>
+endsnippet
+
+
+snippet redS "span with red text" 
+<span className='text-red-400'></span>
+endsnippet
+
+
+snippet redBS "span with red background" 
+<span className='bg-red-800'></span>
+endsnippet
+
+
+snippet purpleS "span with purple text" 
+<span className='text-purple-400'></span>
+endsnippet
+
+
+snippet purpleBS "span with purple background" 
+<span className='bg-purple-800'></span>
+endsnippet
