@@ -3,10 +3,12 @@ html {
   --secondary: white;
   --value: red;
   --type: blue;
+  --varInitializer: purple;
   --comparison: green;
 
   background-color: var(--main);
   color: var(--secondary);
+
 }
 
 .value {
@@ -17,6 +19,9 @@ html {
   color: var(--type);
 }
 
+.var{
+  color: var(--varInitializer)
+}
 .comparison {
   color: var(--comparison);
 }
@@ -24,6 +29,36 @@ html {
 .center {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+
+.centerExample {
+  display: grid;
+  grid-template:
+   "t te"  
+   "c ce" / 1.5fr 1fr;
+}
+
+.centerExample > *:first-child{
+grid-area: t;
+}
+
+.centerExample > *:nth-child(2){
+grid-area: c;
+}
+
+
+.centerExample > *:nth-child(3){
+border: 2px solid var(--secondary);
+justify-self: center;
+padding: 10px;
+border-radius: 10px;
+grid-area: te;
+}
+
+
+.centerExample > *:nth-child(4){
+grid-area: ce;
 }
 
 .list {
@@ -47,4 +82,10 @@ code {
   padding: 7px;
   border-radius: 10px;
   margin: 2px;
+}
+
+code.block{
+  align-self: center;
+  text-align:left;
+  
 }
