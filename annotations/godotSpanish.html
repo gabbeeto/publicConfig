@@ -163,25 +163,95 @@
       <h2>if/elif/else statement</h2>
       <section class="list">
         <div class="centerExample">
-
           <p>
-            si queres hacer ciertas instruciones solo si un <span class="value">bool</span> es verdadero podes usar if
+            si queres hacer ciertas instruciones solo si un <span class="type">bool</span> es <span
+              class="value">verdadero</span> podes usar if
             statements
           </p>
           <code class="block">
-          #cualquier <span class="type">bool</span> <span class="value">verdadero</span> 
-          <br/>
+            #cualquier <span class="type">bool</span> <span class="value">verdadero</span>
+            <br />
             if <span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
           </code>
           <p>ejemplo</p>
           <code class="block">
-
-            <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span class="value">"jorge"</span>  <br/>        <span class="var">var</span> esJuan: <var class="type">bool</var> = <span class="value">"juan" == nombreDeUsuario</span> <br/>
-            if <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span> )<br />&emsp;&emsp;#esto no va a suceder en este caso
+            <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
+              class="value">"jorge"</span> <br /> <span class="var">var</span> esJuan: <var class="type">bool</var> =
+            <span class="value">"juan" == nombreDeUsuario</span> <br />
+            if <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
+            )<br />&emsp;&emsp;#esto no va a suceder en este caso
           </code>
-
         </div>
-
+        <div class="centerExample">
+          <p>tambien podes agregar una instruccion en el caso de que el <span class="type">bool</span> no es <span
+              class="value">verdadero</span> usando
+            'else'</p>
+          <code class="block">
+            #cualquier <span class="type">bool</span> <span class="value">verdadero</span>
+            <br />
+            if <span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
+            <br />
+            else:<br />&emsp;&emsp;#instrucciones en caso de que el <span class="type">bool</span> es <span
+              class="value">falso</span>
+          </code>
+          <p>ejemplo</p>
+          <code class="block">
+            <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
+              class="value">"jorge"</span> <br /> <span class="var">var</span> esJuan: <var class="type">bool</var> =
+            <span class="value">"juan" == nombreDeUsuario</span> <br />
+            if <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
+            )<br />&emsp;&emsp;#esto no va a suceder en este caso
+            <br />
+            else:<br />&emsp;&emsp;#esto si va a pasar porque <span class="value">esJuan</span> es <span
+              class="value">falso</span>
+            <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes"</span>)</code>
+        </div>
+        <div class="centerExample">
+          <p>tambien podes agregar 'elif' con otro <span class="value">bool</span> para agregar diferentes
+            instrucciones en differente condiciones(podes agregar la cantidad de elif que vos quieras)</p>
+          <code class="block">
+            #las instrucciones del primer if/elif que es <span class="value">verdadero</span> va a suceder
+            <br />
+            if <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="value">bool verdadero</span>
+            <br />
+            elif <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="value">bool verdadero</span>
+            <br />
+            elif <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="value">bool verdadero</span>
+            <br />
+            else:<br />&emsp;&emsp;#instrucciones en caso de que ningun if/elif tiene un <span class="type">bool</span>
+            que es <span class="value">verdadero</span>
+          </code>
+          <p>ejemplo</p>
+          <code class="block">
+            <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
+              class="value">"jorge"</span>
+              <br/>
+              <br/> <span class="var">var</span> esJuan: <var class="type">bool</var> = <span class="value">"juan" == nombreDeUsuario</span>
+              <br/> <span class="var">var</span> esMartin: <var class="type">bool</var> = <span class="value">"martin" == nombreDeUsuario</span>
+              <br/> <span class="var">var</span> esJorge: <var class="type">bool</var> = <span class="value">"jorge" == nombreDeUsuario</span>
+              <br/> <span class="var">var</span> esJorge2: <var class="type">bool</var> = <span class="value">"jorge" == nombreDeUsuario</span>
+              <br/>
+              <br/>if <span class="value">esJuan</span>:
+              <br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>)
+              <br />&emsp;&emsp;#esto no va a suceder en este caso
+              <br/>if <span class="value">esMartin</span>:
+              <br />&emsp;&emsp;print(<span class="value">"hola Martin"</span>)
+              <br />&emsp;&emsp;#esto no va a suceder en este caso
+              <br/>if <span class="value">esJorge</span>:
+              <br />&emsp;&emsp;print(<span class="value">"hola Jorge"</span>)
+              <br />&emsp;&emsp;#en este caso esta es la instruccion que va a suceder porque es el primer <span class="type">bool</span> <span class="value">verdadero</span>
+              <br/>if <span class="value">esJorge2</span>:
+              <br />&emsp;&emsp;print(<span class="value">"hola Jorge, sos un groso!"</span>)
+              <br />&emsp;&emsp;#esto no va a suceder en este caso incluso si es <span class="value">verdadero</span> porque no es el primer  if/elif que es <span class="value">verdadero</span>
+            <br />
+            else:<br />&emsp;&emsp;#esto no a va a pasar porque <span class="value">esJorge</span> es <span
+              class="value">verdadero</span>
+            <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes, jorges y martines nomas"</span>)
+          </code>
+        </div>
       </section>
     </article>
     <article>
