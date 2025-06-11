@@ -171,11 +171,29 @@
         </li>
         <li>
           <p><span class="type">Array</span></p>
-          <p>lista de valores con orden de 0 hasta el infinito</p>
+          <p>lista de valores(los valores pueden ser cualquier tipo.. Incluso otros Arrays o Dictionaries) con orden de
+            0 hasta el infinito</p>
+          <code><span class="var">var</span> frutas: <span class="type">Array</span> = <span
+              class="value">["banana","manzana", "naranja"]</span><br />
+              #indice 0 = "banana" <br/>
+              #indice 1 = "manzana" <br/>
+              #indice 2 = "naranja" <br/>
+              <br/>
+            #[indice:<span class="type">int</span>] accede el valor especifico de ese Array asi que esto va a imprimir "manzana"<br />
+            print(frutas[1]) <br />
+          </code>
         </li>
         <li>
           <p><span class="type">Dictionary</span></p>
-          <p>lista de valores con pares de {llaves:valores}</p>
+          <p>lista con pares de {llaves:valores}(la llaves puedn ser <span class="type">bool</span>, <span class="type">int</span> o <span class="type">String</span> mientras que los valores pueden ser de cualquier tipo de variables, incluso <span class="type">Arrays</span>  y <span class="type">Dictionaries</span>)</p>
+          <code><span class="var">var</span> comida1: <span class="type">Dictionary</span> = <span
+              class="value">{"nombre": "manzana", "color": "rojo", "saludable": true }</span><br />
+              #llave "nombre" = "manzana" <br/>
+              #llave "color" = rojo <br/>
+              #llave "saludable" = true <br/>
+              <br/>
+            #[llave] accede el valor de la llave asi que va a imprimir "rojo"<br />
+            print(frutas["color"]) <br /></code>
         </li>
       </ul>
     </article>
@@ -286,14 +304,19 @@
       <article>
         <h2>loops/bucles</h2>
         <section>
-          <p>while loop es el fundamental cada vez que quieras crear bucles o loops. Todos los bucles están basado en el while loop</p>
-          <p>el while loop es como el if pero las instrucciones no paran de correr hasta que <span class="value">bool</span> sea <span class="value">falso</span></p>
+          <p>while loop es el fundamental cada vez que quieras crear bucles o loops. Todos los bucles están basado en el
+            while loop</p>
+          <p>el while loop es como el if pero las instrucciones no paran de correr hasta que <span
+              class="value">bool</span> sea <span class="value">falso</span></p>
           <p></p>
           <code class="block">
-          #while[english] = mientras[español]
-          <br/>#mientras que el <span class="value">bool</span> sea <span class="value">verdadero</span>, las siguientes instrucciones van a correr(para siempre si <span class="value">bool</span> siempre es <span class="value">verdadero</span>)
+            #while[english] = mientras[español]
+            <br />#mientras que el <span class="value">bool</span> sea <span class="value">verdadero</span>, las
+            siguientes instrucciones van a correr(para siempre si <span class="value">bool</span> siempre es <span
+              class="value">verdadero</span>)
             <br />while <span class="value">true</span>:
-            <br />&emsp;&emsp;#instrucciones hasta que el <span class="value">bool</span> sea <span class="value">falso</span> 
+            <br />&emsp;&emsp;#instrucciones hasta que el <span class="value">bool</span> sea <span
+              class="value">falso</span>
           </code>
         </section>
       </article>
