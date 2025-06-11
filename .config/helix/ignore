@@ -1,7 +1,10 @@
 # unignore in file picker and global search
 !.github/
 !.gitignore
+*.gitignore
 !.gitattributes
+*.gitattributes
+*.svg
 *.svg.import
 *.SVG.import
 *.png
@@ -22,3 +25,6 @@
 *.blend1.import
 *.x86_64
 *.x86_64.import
+*.tscn
+*.uid
+*.godot
