@@ -116,7 +116,7 @@
               class="value">true</span>, <span class="value">2 <span class="comparison">&GT;</span> 4</span>,
             <span class="value">false</span>
           </p>
-          <p>comparison operators:</p>
+          <p>comparison operators(funcionan igual que matematica):</p>
           <ol>
             <li>
               <p><span class="comparison">&GT;</span>(más grande que)</p>
@@ -153,6 +153,12 @@
               <p>resultado=<span class="value">false</span></p>
             </li>
           </ol>
+          <p>las comparaciones funcionan como matematicas(los numeros positivos mientras mas lejos del 0 son considerados mayores mientras que los numeros negativos mientras más lejos del 0 son considerados más menores)</p>
+          <img src="./assets/numberline1.png" alt="comparaciones">
+          <p>2 > 1 > -1 > -2(2 es mayor que 1, 1 es mayor que -1, -1 es mayor que -2)</p>
+          <img src="assets/numberline2.png" alt="comparacion con la linea de numeros">
+          <p>esto es importante porque vas a poder usar estas comparaciones para comparar la posicion de algo con la posicion de otra cosa con Node3D.global_position por ejemplo</p>
+
           <p><span class="value">not</span> invierte el bool</p>
           <p><span class="value">not true</span> convierte el <span class="value">true</span> en <span
               class="value">false</span></p>
@@ -228,28 +234,35 @@
           <code class="block">
             <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
               class="value">"jorge"</span>
-              <br/>
-              <br/> <span class="var">var</span> esJuan: <var class="type">bool</var> = <span class="value">"juan" == nombreDeUsuario</span>
-              <br/> <span class="var">var</span> esMartin: <var class="type">bool</var> = <span class="value">"martin" == nombreDeUsuario</span>
-              <br/> <span class="var">var</span> esJorge: <var class="type">bool</var> = <span class="value">"jorge" == nombreDeUsuario</span>
-              <br/> <span class="var">var</span> esJorge2: <var class="type">bool</var> = <span class="value">"jorge" == nombreDeUsuario</span>
-              <br/>
-              <br/>if <span class="value">esJuan</span>:
-              <br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>)
-              <br />&emsp;&emsp;#esto no va a suceder en este caso
-              <br/>if <span class="value">esMartin</span>:
-              <br />&emsp;&emsp;print(<span class="value">"hola Martin"</span>)
-              <br />&emsp;&emsp;#esto no va a suceder en este caso
-              <br/>if <span class="value">esJorge</span>:
-              <br />&emsp;&emsp;print(<span class="value">"hola Jorge"</span>)
-              <br />&emsp;&emsp;#en este caso esta es la instruccion que va a suceder porque es el primer <span class="type">bool</span> <span class="value">verdadero</span>
-              <br/>if <span class="value">esJorge2</span>:
-              <br />&emsp;&emsp;print(<span class="value">"hola Jorge, sos un groso!"</span>)
-              <br />&emsp;&emsp;#esto no va a suceder en este caso incluso si es <span class="value">verdadero</span> porque no es el primer  if/elif que es <span class="value">verdadero</span>
+            <br />
+            <br /> <span class="var">var</span> esJuan: <var class="type">bool</var> = <span class="value">"juan" ==
+              nombreDeUsuario</span>
+            <br /> <span class="var">var</span> esMartin: <var class="type">bool</var> = <span class="value">"martin" ==
+              nombreDeUsuario</span>
+            <br /> <span class="var">var</span> esJorge: <var class="type">bool</var> = <span class="value">"jorge" ==
+              nombreDeUsuario</span>
+            <br /> <span class="var">var</span> esJorge2: <var class="type">bool</var> = <span class="value">"jorge" ==
+              nombreDeUsuario</span>
+            <br />
+            <br />if <span class="value">esJuan</span>:
+            <br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>)
+            <br />&emsp;&emsp;#esto no va a suceder en este caso
+            <br />if <span class="value">esMartin</span>:
+            <br />&emsp;&emsp;print(<span class="value">"hola Martin"</span>)
+            <br />&emsp;&emsp;#esto no va a suceder en este caso
+            <br />if <span class="value">esJorge</span>:
+            <br />&emsp;&emsp;print(<span class="value">"hola Jorge"</span>)
+            <br />&emsp;&emsp;#en este caso esta es la instruccion que va a suceder porque es el primer <span
+              class="type">bool</span> <span class="value">verdadero</span>
+            <br />if <span class="value">esJorge2</span>:
+            <br />&emsp;&emsp;print(<span class="value">"hola Jorge, sos un groso!"</span>)
+            <br />&emsp;&emsp;#esto no va a suceder en este caso incluso si es <span class="value">verdadero</span>
+            porque no es el primer if/elif que es <span class="value">verdadero</span>
             <br />
             else:<br />&emsp;&emsp;#esto no a va a pasar porque <span class="value">esJorge</span> es <span
               class="value">verdadero</span>
-            <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes, jorges y martines nomas"</span>)
+            <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes, jorges y martines
+              nomas"</span>)
           </code>
         </div>
       </section>
@@ -334,6 +347,14 @@
         </div>
       </ul>
 
+    </article>
+    <article>
+      <h2>
+        señales más comunes
+      </h2>
+      <ul class="list">
+        <li></li>
+      </ul>
     </article>
   </main>
 
