@@ -21,7 +21,7 @@
         <section>
 
           <div class="centerExample">
-            <p>podes asigar una variable de la siguiente manera para declarar una variable y asignarle un valor</p>
+            <p>podes asigar una variable de la siguiente manera para declarar una variable y asignarle un <span class="value">valor</span></p>
             <code><span class="var">var</span> nombreDeVariable: <span class="type">tipoDeVariable</span>
               <br>nombreDeVariable = <span class="value">valorParaVariable</span> </code>
 
@@ -171,33 +171,33 @@
         </li>
         <li>
           <p><span class="type">Array</span></p>
-          <p>lista de valores(los valores pueden ser cualquier tipo.. Incluso otros Arrays o Dictionaries) con orden de
+          <p>lista de <span class="value">valores</span>(los <span class="value">valores </span> pueden ser cualquier tipo.. Incluso otros <span class="type">Arrays</span> o  <span class="type">Dictionaries</span>) con orden de
             0 hasta el infinito</p>
           <code><span class="var">var</span> frutas: <span class="type">Array</span> = <span
               class="value">["banana","manzana", "naranja"]</span><br />
-            #indice 0 = "banana" <br />
-            #indice 1 = "manzana" <br />
-            #indice 2 = "naranja" <br />
+            #indice <span class="index">0 </span> = <span class="value">"banana"</span> <br />
+            #indice <span class="index">1 </span> = <span class="value">"manzana"</span> <br />
+            #indice <span class="index">2 </span> = <span class="value">"naranja"</span> <br />
             <br />
-            #[indice:<span class="type">int</span>] accede el valor especifico de ese Array asi que esto va a imprimir
-            "manzana"<br />
-            print(frutas[1]) <br />
+            #[<span class="index">indice</span>:<span class="type">int</span>] accede el valor especifico de ese <span class="type">Array </span> asi que esto va a imprimir
+            <span class="value">"manzana"</span> <br />
+            print(frutas[<span class="index">1</span>]) <br />
           </code>
         </li>
         <li>
           <p><span class="type">Dictionary</span></p>
-          <p>lista con pares de {llaves:valores}(la llaves pueden ser <span class="type">bool</span>, <span
-              class="type">int</span> o <span class="type">String</span> mientras que los valores pueden ser de
+          <p>lista con pares de {<span class="index">llaves</span>:<span class="value">valores</span>} <br/> (la <span class="index">llaves</span> pueden ser <span class="type">bool</span>, <span
+              class="type">int</span> o <span class="type">String</span> mientras que los <span class="value">valores </span>pueden ser de
             cualquier tipo de variables, incluso <span class="type">Arrays</span> y <span
               class="type">Dictionaries</span>)</p>
           <code><span class="var">var</span> comida1: <span class="type">Dictionary</span> = <span
               class="value">{"nombre": "manzana", "color": "rojo", "saludable": true }</span><br />
-            #llave "nombre" = "manzana" <br />
-            #llave "color" = rojo <br />
-            #llave "saludable" = true <br />
+            #llave <span class="index">"nombre"</span>  = <span class="value">"manzana"</span>  <br />
+            #llave <span class="index">"color"</span>  = <span class="value">"rojo"</span>  <br />
+            #llave <span class="index">"saludable"</span>  = <span class="value">true</span> <br />
             <br />
-            #[llave] accede el valor de la llave asi que va a imprimir "rojo"<br />
-            print(frutas["color"]) <br /></code>
+            #[<span class="index">llave</span>] accede el <span class="value">valor</span> de la <span class="index">llave</span> asi que va a imprimir <span class="value">"rojo"</span><br />
+            print(comida1[<span class="index">"color"</span>]) <br /></code>
         </li>
       </ul>
     </article>
@@ -341,14 +341,14 @@
             &emsp;&emsp;print(la)
           </code>
           <p>Tambien se puede usar para que se repita dependiendo el tamaño de una Array y tambien podes acceder sus
-            valores</p>
+            <span class="value">valores</span></p>
           <code class="block">
-            #comida es como una variable, puedes poner el nombre que quieras. Se convierte en el valor que tiene en la
+            #comida es como una variable, puedes poner el nombre que quieras. Se convierte en el <span class="value">valor</span>  que tiene en la
             <span class="type">Array</span>
             <br />
             for comida: <span class="type">String</span> in <span class="value">["pizza", "helado", "fideos"]</span>:
             <br />
-            &emsp;&emsp;#estas instrucciones van a repetirse dependiendo la cantidad de valores que tiene el <span
+            &emsp;&emsp;#estas instrucciones van a repetirse dependiendo la cantidad de <span class="value">valores</span> que tiene el <span
               class="type">Array</span>
             <br />
             &emsp;&emsp;#comida primero va a valer <span class="value">"pizza"</span> pero despues cuando se terminen
