@@ -5,8 +5,8 @@ html {
   --type: blue;
   --varInitializer: purple;
   --comparison: green;
-  --index:chocolate;
-
+  --index:hotpink;
+  --if:darkorange;
   background-color: var(--main);
   color: var(--secondary);
 
@@ -30,6 +30,10 @@ html {
 }
 .comparison {
   color: var(--comparison);
+}
+
+.if{
+  color: var(--if);
 }
 
 .center {

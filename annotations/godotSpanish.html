@@ -191,7 +191,7 @@
             cualquier tipo de variables, incluso <span class="type">Arrays</span> y <span
               class="type">Dictionaries</span>)</p>
           <code><span class="var">var</span> comida1: <span class="type">Dictionary</span> = <span
-              class="value">{"nombre": "manzana", "color": "rojo", "saludable": true }</span><br />
+              class="value">{ <span class="index">"nombre"</span>: "manzana", <span class="index">"color"</span> : "rojo",<span class="index">"saludable"</span>: true }</span><br />
             #llave <span class="index">"nombre"</span>  = <span class="value">"manzana"</span>  <br />
             #llave <span class="index">"color"</span>  = <span class="value">"rojo"</span>  <br />
             #llave <span class="index">"saludable"</span>  = <span class="value">true</span> <br />
@@ -202,38 +202,38 @@
       </ul>
     </article>
     <article>
-      <h2>if/elif/else statement</h2>
+      <h2>declaraciones <span class="if">if</span>/<span class="if">elif</span>/<span class="if">else</span></h2>
       <section class="list">
         <div class="centerExample">
           <p>
             si queres hacer ciertas instruciones solo si un <span class="type">bool</span> es <span
-              class="value">verdadero</span> podes usar if
-            statements
+              class="value">verdadero</span> podes usar declaraciones <span class="if">if</span> 
+            
           </p>
           <code class="block">
             #cualquier <span class="type">bool</span> <span class="value">verdadero</span>
             <br />
-            if <span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
+            <span class="if">if </span><span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
           </code>
           <p>ejemplo</p>
           <code class="block">
             <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
               class="value">"jorge"</span> <br /> <span class="var">var</span> esJuan: <var class="type">bool</var> =
             <span class="value">"juan" == nombreDeUsuario</span> <br />
-            if <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
+            <span class="if">if</span> <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
             )<br />&emsp;&emsp;#esto no va a suceder en este caso
           </code>
         </div>
         <div class="centerExample">
           <p>tambien podes agregar una instruccion en el caso de que el <span class="type">bool</span> no es <span
               class="value">verdadero</span> usando
-            'else'</p>
+            <span class="if">else</span></p>
           <code class="block">
             #cualquier <span class="type">bool</span> <span class="value">verdadero</span>
             <br />
-            if <span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
+            <span class="if">if</span> <span class="value">true</span>:<br />&emsp;&emsp;#instrucciones
             <br />
-            else:<br />&emsp;&emsp;#instrucciones en caso de que el <span class="type">bool</span> es <span
+            <span class="if">else</span>:<br />&emsp;&emsp;#instrucciones en caso de que el <span class="type">bool</span> es <span
               class="value">falso</span>
           </code>
           <p>ejemplo</p>
@@ -241,29 +241,29 @@
             <span class="var">var</span> nombreDeUsuario: <var class="type">String</var> = <span
               class="value">"jorge"</span> <br /> <span class="var">var</span> esJuan: <var class="type">bool</var> =
             <span class="value">"juan" == nombreDeUsuario</span> <br />
-            if <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
+            <span class="if">if</span> <span class="value">esJuan</span>:<br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>
             )<br />&emsp;&emsp;#esto no va a suceder en este caso
             <br />
-            else:<br />&emsp;&emsp;#esto si va a pasar porque <span class="value">esJuan</span> es <span
+            <span class="if">else</span>:<br />&emsp;&emsp;#esto si va a pasar porque <span class="value">esJuan</span> es <span
               class="value">falso</span>
             <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes"</span>)</code>
         </div>
         <div class="centerExample">
-          <p>tambien podes agregar 'elif' con otro <span class="value">bool</span> para agregar diferentes
-            instrucciones en differente condiciones(podes agregar la cantidad de elif que vos quieras)</p>
+          <p>tambien podes agregar <span class="if">elif</span>  con otro <span class="value">bool</span> para agregar diferentes
+            instrucciones en differente condiciones(podes agregar la cantidad de <span class="if">elif</span> que vos quieras)</p>
           <code class="block">
             #las instrucciones del primer if/elif que es <span class="value">verdadero</span> va a suceder
             <br />
-            if <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="if">if</span> <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
             <span class="value">bool verdadero</span>
             <br />
-            elif <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="if">elif</span> <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
             <span class="value">bool verdadero</span>
             <br />
-            elif <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
+            <span class="if">elif</span> <span class="value">bool</span>:<br />&emsp;&emsp;#estas instrucciones van a suceder si es el primer
             <span class="value">bool verdadero</span>
             <br />
-            else:<br />&emsp;&emsp;#instrucciones en caso de que ningun if/elif tiene un <span class="type">bool</span>
+            <span class="if">else</span>:<br />&emsp;&emsp;#instrucciones en caso de que ningun if/elif tiene un <span class="type">bool</span>
             que es <span class="value">verdadero</span>
           </code>
           <p>ejemplo</p>
@@ -280,22 +280,22 @@
             <br /> <span class="var">var</span> esJorge2: <var class="type">bool</var> = <span class="value">"jorge" ==
               nombreDeUsuario</span>
             <br />
-            <br />if <span class="value">esJuan</span>:
+            <br /><span class="if">if</span> <span class="value">esJuan</span>:
             <br />&emsp;&emsp;print(<span class="value">"hola Juan"</span>)
             <br />&emsp;&emsp;#esto no va a suceder en este caso
-            <br />if <span class="value">esMartin</span>:
+            <br /><span class="if">elif</span> <span class="value">esMartin</span>:
             <br />&emsp;&emsp;print(<span class="value">"hola Martin"</span>)
             <br />&emsp;&emsp;#esto no va a suceder en este caso
-            <br />if <span class="value">esJorge</span>:
+            <br /><span class="if">elif</span> <span class="value">esJorge</span>:
             <br />&emsp;&emsp;print(<span class="value">"hola Jorge"</span>)
             <br />&emsp;&emsp;#en este caso esta es la instruccion que va a suceder porque es el primer <span
               class="type">bool</span> <span class="value">verdadero</span>
-            <br />if <span class="value">esJorge2</span>:
+            <br /><span class="if">elif</span> <span class="value">esJorge2</span>:
             <br />&emsp;&emsp;print(<span class="value">"hola Jorge, sos un groso!"</span>)
             <br />&emsp;&emsp;#esto no va a suceder en este caso incluso si es <span class="value">verdadero</span>
             porque no es el primer if/elif que es <span class="value">verdadero</span>
             <br />
-            else:<br />&emsp;&emsp;#esto no a va a pasar porque <span class="value">esJorge</span> es <span
+            <span class="if">else</span>:<br />&emsp;&emsp;#esto no a va a pasar porque <span class="value">esJorge</span> es <span
               class="value">verdadero</span>
             <br />&emsp;&emsp;print(<span class="value">"este programa solo funciona con juanes, jorges y martines
               nomas"</span>)
@@ -308,9 +308,9 @@
       <article>
         <h2>loops/bucles</h2>
         <section class="list">
-          <p>while loop es el fundamental cada vez que quieras crear bucles o loops. Todos los bucles están basado en el
-            while loop</p>
-          <p>el while loop es como el if pero las instrucciones no paran de correr hasta que <span
+          <p><span class="if">while</span> loop es el fundamental cada vez que quieras crear bucles o loops. Todos los bucles están basado en el
+           <span class="if">while</span> loop</p>
+          <p>el <span class="if">while</span>  loop es como el <span class="if">if</span> pero las instrucciones no paran de correr hasta que <span
               class="value">bool</span> sea <span class="value">falso</span></p>
           <p></p>
           <code class="block">
@@ -318,19 +318,19 @@
             <br />#mientras que el <span class="value">bool</span> sea <span class="value">verdadero</span>, las
             siguientes instrucciones van a correr(para siempre si <span class="value">bool</span> siempre es <span
               class="value">verdadero</span>)
-            <br />while <span class="value">true</span>:
+            <br /><span class="if">while</span> <span class="value">true</span>:
             <br />&emsp;&emsp;#instrucciones hasta que el <span class="value">bool</span> sea <span
               class="value">falso</span>
           </code>
-          <p>Despues está el <strong>for loop</strong></p>
-          <p>Uno de los usos del for loop es cuando querés hacer repeticiones que duran cierta cantidad de numeros</p>
+          <p>Despues está el <strong><span class="if">for</span> loop</strong></p>
+          <p>Uno de los usos del <span class="if">for</span> loop es cuando querés hacer repeticiones que duran cierta cantidad de numeros</p>
           <code class="block">#la es como una variable, puedes poner el nombre que quieras. Se convierte en un <span
               class="type">int</span> y es
             como un indice de una array.. Empieza con <span class="value">0</span> y termina en el numero anterior que
             pusiste.. En mi caso <span class="value">7</span>
             porque yo puse el <span class="type">int</span> <span class="value">8</span>
             <br />
-            for la: <span class="type">int</span> in <span class="value">8</span>:
+            <span class="if">for</span> la: <span class="type">int</span> in <span class="value">8</span>:
             <br />
             &emsp;&emsp;#estas instrucciones van a pasar la cantidad de veces que vos pusiste en el numero.. En mi caso
             8 veces
@@ -340,13 +340,13 @@
             <br />
             &emsp;&emsp;print(la)
           </code>
-          <p>Tambien se puede usar para que se repita dependiendo el tamaño de una Array y tambien podes acceder sus
+          <p>Tambien se puede usar para que se repita dependiendo el tamaño de una <span class="type">Array</span> y tambien podes acceder sus
             <span class="value">valores</span></p>
           <code class="block">
             #comida es como una variable, puedes poner el nombre que quieras. Se convierte en el <span class="value">valor</span>  que tiene en la
             <span class="type">Array</span>
             <br />
-            for comida: <span class="type">String</span> in <span class="value">["pizza", "helado", "fideos"]</span>:
+            <span class="if">for</span> comida: <span class="type">String</span> in <span class="value">["pizza", "helado", "fideos"]</span>:
             <br />
             &emsp;&emsp;#estas instrucciones van a repetirse dependiendo la cantidad de <span class="value">valores</span> que tiene el <span
               class="type">Array</span>
@@ -357,22 +357,22 @@
               class="value">"fideos"</span> <br />
             &emsp;&emsp;print(comida)
           </code>
-          <p>Tambien se puede usar para que se repita dependiendo el tamaño de un Dictionary y tambien podes acceder sus
-            llaves</p>
+          <p>Tambien se puede usar para que se repita dependiendo el tamaño de un <span class="type">Dictionary</span> y tambien podes acceder sus
+            <span class="index">llaves</span></p>
           <code class="block">
             #llaveDeComida es como una variable, puedes poner el nombre que quieras. Se convierte en la llave que tiene
             el
             <span class="type">Dictionary</span>
             <br />
-            for llaveDeComida: <span class="type">String</span> in <span class="value">{"nombre": "banana", "color":
-              "amarillo", "saludable": true}</span> :
+            <span class="if">for</span> llaveDeComida: <span class="type">String</span> in <span class="value">{ <span class="index">"nombre"</span> : "banana", <span class="index">"color"</span> :
+              "amarillo", <span class="index">"saludable"</span> : true}</span> :
             <br />
-            &emsp;&emsp;#estas instrucciones van a repetirse dependiendo la cantidad de llaves que tiene el <span
+            &emsp;&emsp;#estas instrucciones van a repetirse dependiendo la cantidad de <span class="index">llaves</span>  que tiene el <span
               class="type">Dictionary</span>
             <br />
-            &emsp;&emsp;#llaveDeComida primero va a valer <span class="value">"nombre"</span> pero despues cuando se
+            &emsp;&emsp;#llaveDeComida primero va a valer <span class="index">"nombre"</span> pero despues cuando se
             terminen las instrucciones y
-            empieze de nuevo, comida va a valer <span class="value">"color"</span> y despues <span
+            empieze de nuevo, comida va a valer <span class="index">"color"</span> y despues <span
               class="value">"saludable"</span> <br />
             &emsp;&emsp;print(llaveDeComida)
           </code>
