@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # App identifier (use WM_CLASS from xprop)
-APP_CLASS="chatty"  # e.g., "firefox" or "discord"
+APP_CLASS="chatterino"  # e.g., "firefox" or "discord"
 
 # Get current workspace
 CURRENT_WS=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')

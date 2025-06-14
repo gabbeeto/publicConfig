@@ -9,7 +9,7 @@ bindsym $mod+F2  workspace "brb"; exec --no-startup-id feh  --scale-down  ~/.con
 bindsym $mod+m; exec ~/.config/i3/toggleMic.sh
 
 
-bindsym $mod+F3 exec --no-startup-id ~/.config/i3/toggleChatty.sh
+bindsym $mod+F3 exec --no-startup-id ~/.config/i3/toggleChatterino.sh
 
 
 

@@ -6,6 +6,7 @@ flatpak install flathub org.kde.krita
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub com.orama_interactive.Pixelorama
 flatpak install flathub org.inkscape.Inkscape
+flatpak install flathub com.chatterino.chatterino
 
 # enable networkmanager
 sudo systemctl enable --now NetworkManager
