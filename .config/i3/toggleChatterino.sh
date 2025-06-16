@@ -8,6 +8,7 @@ if [ -z "$CONTENT" ]; then
     ~/2davatar/export/1360x768.x86_64 &
     notify-send "chat and avatar opened"
     echo 'exec ~/.config/i3/moveChatToWorkspace.sh' > /tmp/moveChatty.txt
+    firefox https://dashboard.twitch.tv/u/gabbeeto/stream-manager
 else
     # Kill both apps
     pkill -f "1360x768.x86_64"  # Example for 2DAvatar
