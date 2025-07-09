@@ -28,3 +28,9 @@
 *.tscn
 *.uid
 *.godot
+*.tres
+*.wav
+*.wav.import
+*.dat
+*.ogv
+*.mmpz
