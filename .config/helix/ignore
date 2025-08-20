@@ -37,3 +37,11 @@
 *.png~
 *.kra~
 *.kra
+*.bak
+*.mp3
+*.mp3.import
+*.ogg
+*.ogg.import
+*.ttf
+*.ttf.import
+*.data
