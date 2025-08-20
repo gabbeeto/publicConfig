@@ -54,3 +54,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
  
 # this is the exec flag for godot
 #  --server ./godothost --remote-send "<C-\><C-N>:n {file}<CR>{line}G{col}|"
+
+
+# https://github.com/nolanderc/glsl_analyzer get the binary from release and send it to your $PATH
