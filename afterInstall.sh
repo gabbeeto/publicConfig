@@ -12,8 +12,8 @@ flatpak install flathub com.chatterino.chatterino
 sudo systemctl enable --now NetworkManager
 
 # install language servers
-npm i -g vscode-langservers-extracted
-npm i -g @olrtg/emmet-language-server
+sudo npm i -g vscode-langservers-extracted
+sudo npm i -g @olrtg/emmet-language-server
 
 # make folders I always use
 mkdir ~/Pictures
