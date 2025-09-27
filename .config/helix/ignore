@@ -45,3 +45,5 @@
 *.ttf
 *.ttf.import
 *.data
+*.res
+*.psd
