@@ -292,7 +292,7 @@ workspace $blenderWorkspace gaps inner 1px
 
 
 # take screenshoot
-bindsym Print exec scrot 
+bindsym Print exec flameshot gui
 
 # add background color
 exec --no-startup-id xsetroot -solid "#aaffe3"
