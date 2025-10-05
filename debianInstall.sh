@@ -8,6 +8,10 @@ sudo apt install brightnessctl pavucontrol rofi i3 polybar flatpak npm tmux kitt
 # to show images with super + f1 and super + f2
 sudo apt install feh
 
+
+# install clang for c++
+sudo apt install clangd
+
 # install ssh
 sudo apt install openssh-server -y
 sudo systemctl enable --now ssh
