@@ -3,7 +3,7 @@ echo "PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
 
 cargo install ripdrag
 
-plugin to use drag and drop inside yazi with "md" keybindings
+# plugin to use drag and drop inside yazi with "md" keybindings
 ya pkg add Joao-Queiroga/drag
 
 # install krita and gimp and pixelorama and inkscape
