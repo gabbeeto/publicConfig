@@ -20,7 +20,7 @@ systemctl --user enable pulseaudio --now
 sudo usermod -aG video $USER
 
 echo "alias hx='helix'" >> ~/.bashrc
-
+echo "export EDITOR=\"helix\"" >> ~/.bashrc
 
 echo "function y() {
 	local tmp=\"\$(mktemp -t \"yazi-cwd.XXXXXX\")\" cwd
