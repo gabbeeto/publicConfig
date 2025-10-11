@@ -1,5 +1,10 @@
-# install tlp-ui
-flatpak install flathub com.github.d4nj1.tlpui
+echo "PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
+
+
+cargo install ripdrag
+
+plugin to use drag and drop inside yazi with "md" keybindings
+ya pkg add Joao-Queiroga/drag
 
 # install krita and gimp and pixelorama and inkscape
 flatpak install flathub org.kde.krita
