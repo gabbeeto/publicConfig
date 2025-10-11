@@ -18,6 +18,18 @@ roots = [".git"]
 language-servers = [ "vscode-html-language-server","emmet-lsp"]
 
 
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server", "emmet-lsp"] # Add emmet-lsp to js
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "emmet-lsp"] # For JSX files as well
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "emmet-lsp"] # For TSX files as well
+
 [language-server.glsl_analyzer]
 command = "glsl_analyzer" 
 
