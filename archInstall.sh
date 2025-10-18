@@ -6,11 +6,18 @@ sudo pacman -Syu
 # long list of installs
 sudo pacman -S curl kitty unzip obs-studio go helix tmux npm nodejs npm  python-pip python-certifi discord udisks2 openbsd-netcat nvm nmap  git pacman-contrib  pulseaudio noto-fonts noto-fonts-emoji ttf-font-awesome xorg-xsetroot brightnessctl rofi polybar curl pavucontrol  network-manager-applet xorg-xbacklight  lxqt-config networkmanager tlp flatpak mpv fzf arch-wiki-docs libnotify dunst jre-openjdk jq feh ffmpeg openssh flameshot
 
+
 # dependencie for private stuff
 sudo pacman -S uberzugpp
 
-# for c++
-sudo pacman -S clang
+# for c++ and godot
+sudo pacman -S clang scons python3
+
+# for assembly stuff
+sudo pacman -S nasm gdb gcc make
+
+# for other monitor stuff
+sudo pacman -S autorandr arandr
 
 # file manager
 sudo pacman -S thunar tumbler

@@ -257,6 +257,32 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# mode "workspace" {
+#         # These bindings trigger as soon as you enter the workspace mode
+
+
+#        bindsym h move workspace to output next
+#        bindsym j move workspace to output down
+#        bindsym k move workspace to output up
+#        bindsym l move workspace to output right
+
+
+#        bindsym Left move workspace to output left
+#        bindsym Down move workspace to output down
+#        bindsym Up move workspace to output up
+#        bindsym Right move workspace to output right
+
+
+#         # back to normal: Enter or Escape or $mod+r, etc
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+#         bindsym $mod+r mode "default"
+#         bindsym $mod+x mode "default"
+#         bindsym $mod+q mode "default"
+# }
+
+
+bindsym $mod+c move workspace to output next
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
