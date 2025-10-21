@@ -13,3 +13,8 @@ auto-format = false
 [keys.select]
 "C-x" = "normal_mode"  
 "C-q" = "normal_mode"  
+
+[keys.normal.space.i]
+c = ":toggle inline-diagnostics.cursor-line hint disable"
+e = ":toggle end-of-line-diagnostics warning disable"
+o = ":toggle inline-diagnostics.other-lines error disable"
