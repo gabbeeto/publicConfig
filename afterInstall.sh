@@ -19,6 +19,7 @@ sudo systemctl enable --now NetworkManager
 # install language servers
 sudo npm i -g vscode-langservers-extracted
 sudo npm i -g @olrtg/emmet-language-server
+sudo npm install -g typescript typescript-language-server
 
 # make folders I always use
 mkdir ~/Pictures
