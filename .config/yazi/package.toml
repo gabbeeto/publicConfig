@@ -1,7 +1,0 @@
-[[plugin.deps]]
-use = "Joao-Queiroga/drag"
-rev = "2760668"
-hash = "3360123b833e8ce6a5b64a46f1a3ceb9"
-
-[flavor]
-deps = []
