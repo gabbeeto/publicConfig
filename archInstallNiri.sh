@@ -30,6 +30,15 @@ sudo pacman -S swaylock --noconfirm
 # to install ripdrag
 sudo pacman -Sy --needed rust gtk4 base-devel --noconfirm
 
+
+# add cargo to path
+echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
+source ~/.bashrc
+
+
+# install ripdrag
+cargo install ripdrag
+
 # best terminal file manager and dependencies
 sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick ttf-nerd-fonts-symbols wf-recorder --noconfirm
 
@@ -48,6 +57,9 @@ echo "alias hx='helix'" >> ~/.bashrc
 
 # helix is my default editor
 echo "export EDITOR=\"helix\"" >> ~/.bashrc
+
+# add cargo to path
+echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
 
 # I use the y command to navegate through yazi
 echo "function y() {
@@ -87,7 +99,6 @@ sudo mkdir -p /mnt/usb
 # make directory to my machine so I can use it with software
 sudo mkdir -p ~/Videos/Me
 sudo mkdir -p ~/Pictures
-
 
 # to copy key ssh key
 sudo pacman -S wl-clipboard
