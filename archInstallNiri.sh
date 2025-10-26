@@ -80,8 +80,10 @@ flatpak install flathub com.chatterino.chatterino --assumeyes
 flatpak install flathub org.kde.kdenlive --assumeyes
 flatpak install https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref --assumeyes
 flatpak install flathub org.libreoffice.LibreOffice --assumeyes
-
-# install language servers for helix
+flatpak install flathub org.luanti.luanti --assumeyes
+flatpak install flathub org.vinegarhq.Vinegar --assumeyes
+flatpak install flathub org.vinegarhq.Sober --assumeyes
+ # install language servers for helix
 sudo npm i -g vscode-langservers-extracted
 sudo npm i -g @olrtg/emmet-language-server
 sudo npm install -g typescript typescript-language-server
