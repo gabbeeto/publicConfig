@@ -17,8 +17,13 @@ sudo pacman -S otf-font-awesome --noconfirm
 # app to search on niri
 sudo pacman -S fuzzel --noconfirm
 
+
 # manage x11 apps
 sudo pacman -S xwayland-satellite --noconfirm
+
+mkdir ~/games
+wget https://launcher.mojang.com/download/Minecraft.tar.gz ~/games
+
 
 
 # notification
@@ -83,6 +88,8 @@ flatpak install flathub org.libreoffice.LibreOffice --assumeyes
 flatpak install flathub org.luanti.luanti --assumeyes
 flatpak install flathub org.vinegarhq.Vinegar --assumeyes
 flatpak install flathub org.vinegarhq.Sober --assumeyes
+flatpak install flathub org.libretro.RetroArch --assumeyes
+
  # install language servers for helix
 sudo npm i -g vscode-langservers-extracted
 sudo npm i -g @olrtg/emmet-language-server
@@ -104,6 +111,7 @@ sudo mkdir -p ~/Pictures
 
 # to copy key ssh key
 sudo pacman -S wl-clipboard
+
 
  # -- git section --
 # got this on the odin project set up section
