@@ -1,4 +1,7 @@
 
+# update system
+sudo pacman -Syu
+
 # niri and wayland
 sudo pacman -S niri --noconfirm
 sudo pacman -S wayland --noconfirm
@@ -55,6 +58,13 @@ sudo pacman -S clang scons python3 --noconfirm
 # apps for that I use daily
 sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender --noconfirm
 
+# uncomment [multilib] section so you can install other libraries
+sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
+sudo pacman -Syu
+# install gaming stuff
+sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm
+# install retroarch
+sudo pacman -S retroarch --noconfirm
 
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
@@ -88,7 +98,6 @@ flatpak install flathub org.libreoffice.LibreOffice --assumeyes
 flatpak install flathub org.luanti.luanti --assumeyes
 flatpak install flathub org.vinegarhq.Vinegar --assumeyes
 flatpak install flathub org.vinegarhq.Sober --assumeyes
-flatpak install flathub org.libretro.RetroArch --assumeyes
 
  # install language servers for helix
 sudo npm i -g vscode-langservers-extracted
@@ -110,7 +119,8 @@ sudo mkdir -p ~/Videos/Me
 sudo mkdir -p ~/Pictures
 
 # to copy key ssh key
-sudo pacman -S wl-clipboard
+sudo pacman -S wl-clipboard --noconfirm
+
 
 
  # -- git section --

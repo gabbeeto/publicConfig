@@ -1,3 +1,16 @@
+
+# connect to wifi
+
+rfkill unblock wlan
+sudo systemctl enable iwd
+iwctl
+device list
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect [wifi name]
+exit
+
+
 # make links
 ln
 
