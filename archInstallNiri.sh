@@ -1,4 +1,3 @@
-
 # update system
 sudo pacman -Syu
 
@@ -24,10 +23,19 @@ sudo pacman -S fuzzel --noconfirm
 # manage x11 apps
 sudo pacman -S xwayland-satellite --noconfirm
 
-mkdir ~/games
+# creates folder
+mkdir -p ~/games
+# downloads minecraft and puts it in the folder
 wget https://launcher.mojang.com/download/Minecraft.tar.gz ~/games
-
-
+# extract minecraft file
+tar -xvf ~/games/*.tar*
+# rm tar file
+rm ~/games/*.tar*
+# move executable
+mv ~/games/m*r/m*r ~/games/minecraft
+# remove empty folder
+rmdir ~/games/m*r
+echo "export PATH=\$PATH:~/games" >> ~/.bashrc
 
 # notification
 sudo pacman -S mako --noconfirm
@@ -58,9 +66,13 @@ sudo pacman -S clang scons python3 --noconfirm
 # apps for that I use daily
 sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender --noconfirm
 
+# dependencies for raylib
+sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm
+
+
 # uncomment [multilib] section so you can install other libraries
 sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 # install gaming stuff
 sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm
 # install retroarch
@@ -142,5 +154,9 @@ cat ~/.ssh/id_ed25519.pub | wl-copy
 firefox https://github.com/settings/keys
 
 # only for my private configs lol
-# git clone git@github.com:gabbeeto/privateConfig.git
+mkdir -p ~/private/config
+mkdir -p ~/private/avatar
+
+# my private configs
+# git clone git@github.com:gabbeeto/privateConfig.git ~/private/config
 
