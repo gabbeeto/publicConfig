@@ -113,7 +113,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 3
 
-    background-color "#94FFD8"
+    background-color "#F5CBED"
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
     // - "always", the focused column will always be centered.

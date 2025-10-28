@@ -1,4 +1,4 @@
-theme = "vim_dark_high_contrast"
+theme = "merionette"
 
 [editor]
 line-number = "relative"

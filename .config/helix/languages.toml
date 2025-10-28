@@ -1,3 +1,11 @@
+[language-server.python]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[[language]]
+name = "python"
+language-servers =  ["python"]
+formatter = {command = 'black', args = ["--quiet", "-"]}
 
 
 [language-server.godot]
