@@ -8,6 +8,8 @@ sudo pacman -S wayland-utils wayland-protocols --noconfirm
 sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm
 # download firefox
 sudo pacman -S firefox
+# I like this window manager lol
+sudo pacman -S nautilus
 
 
 # bar on top
@@ -87,7 +89,7 @@ sudo pacman -S clang scons python3 --noconfirm
 
 
 # apps for that I use daily
-sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder --noconfirm
+sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder man-db man-pages less --noconfirm
 
 
 
@@ -207,7 +209,7 @@ rm ~/godot-4.5.1-linux.zip
 chmod +x ~/Godot.x86_64
 
 
-# Create Minecraft desktop file
+# Create godot desktop file for fuzzel
 cat > ~/.local/share/applications/godot.desktop << EOF
 [Desktop Entry]
 Version=1.0
