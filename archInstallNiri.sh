@@ -73,7 +73,6 @@ sudo pacman -Sy --needed rust gtk4 base-devel --noconfirm
 
 # add cargo to path
 echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
-source ~/.bashrc
 
 
 # install ripdrag
@@ -140,6 +139,21 @@ flatpak install flathub org.vinegarhq.Sober --assumeyes
 sudo npm i -g vscode-langservers-extracted
 sudo npm i -g @olrtg/emmet-language-server
 sudo npm install -g typescript typescript-language-server
+# for godot language server
+sudo pacman -S nmap
+pip3 install "gdtoolkit==4.*" --break-system-packages
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+
+# for gdshaders and glsl
+curl -L --retry 3 -o ~/x86_64-linux-musl.zip "https://github.com/nolanderc/glsl_analyzer/releases/download/v1.7.1/x86_64-linux-musl.zip" \
+     --retry 3 \
+     --progress-bar
+
+unzip ~/x86_64-linux-musl.zip -d ~/Downloads/
+
+mv ~/Downloads/x86_64-linux-musl/bin/glsl_analyzer ~/.local/bin/glsl_analyzer
+rm ~/Downloads/x86_64-linux-musl.zip -f
+rm ~/Downloads/x86_64-linux-musl -rf
 
 # copy the configs
 cp .config/* ~/.config/ -r
@@ -209,3 +223,5 @@ Terminal=false
 MimeType=application/x-godot-project;
 EOF
 
+
+source ~/.bashrc
