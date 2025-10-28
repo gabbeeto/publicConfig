@@ -6,6 +6,9 @@ sudo pacman -S niri --noconfirm
 sudo pacman -S wayland --noconfirm
 sudo pacman -S wayland-utils wayland-protocols --noconfirm
 sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm
+# download firefox
+sudo pacman -S firefox
+
 
 # bar on top
 sudo pacman -S waybar --noconfirm
@@ -16,6 +19,8 @@ sudo pacman -S ttf-nerd-fonts-symbols --noconfirm
 sudo pacman -S ttf-roboto-mono noto-fonts --noconfirm
 sudo pacman -S otf-font-awesome --noconfirm
 
+sudo pacman -S noto-fonts-emoji --noconfirm
+
 # app to search on niri
 sudo pacman -S fuzzel --noconfirm
 
@@ -25,10 +30,10 @@ sudo pacman -S xwayland-satellite --noconfirm
 
 # creates folder
 mkdir -p ~/games
-# downloads minecraft and puts it in the folder
-wget https://launcher.mojang.com/download/Minecraft.tar.gz ~/games
+# downloads minecraft
+curl -L --retry 3 -o ~/games/minecraft.tar.gz "https://launcher.mojang.com/download/Minecraft.tar.gz"
 # extract minecraft file
-tar -xvf ~/games/*.tar*
+tar -xzf ~/games/minecraft.tar.gz -C ~/games/
 # rm tar file
 rm ~/games/*.tar*
 # move executable
@@ -36,6 +41,25 @@ mv ~/games/m*r/m*r ~/games/minecraft
 # remove empty folder
 rmdir ~/games/m*r
 echo "export PATH=\$PATH:~/games" >> ~/.bashrc
+
+# Create desktop directory if it doesn't exist
+mkdir -p ~/.local/share/applications
+
+# Create Minecraft desktop file
+cat > ~/.local/share/applications/minecraft.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Minecraft
+Comment=Official Minecraft Launcher
+Exec=/home/$USER/games/minecraft
+Icon=minecraft
+Categories=Game;
+Keywords=minecraft;game;
+StartupNotify=false
+Terminal=false
+EOF
+
 
 # notification
 sudo pacman -S mako --noconfirm
@@ -56,7 +80,7 @@ source ~/.bashrc
 cargo install ripdrag
 
 # best terminal file manager and dependencies
-sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick ttf-nerd-fonts-symbols wf-recorder --noconfirm
+sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick ttf-nerd-fonts-symbols  --noconfirm
 
 
 # for c++ and godot
@@ -64,10 +88,8 @@ sudo pacman -S clang scons python3 --noconfirm
 
 
 # apps for that I use daily
-sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender --noconfirm
+sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder --noconfirm
 
-# dependencies for raylib
-sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm
 
 
 # uncomment [multilib] section so you can install other libraries
@@ -77,6 +99,9 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm
 # install retroarch
 sudo pacman -S retroarch --noconfirm
+
+# dependencies for raylib
+sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm
 
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
@@ -147,7 +172,6 @@ git config --global core.editor "hx"
 ssh-keygen -t ed25519
 
 
-
 # shows key
 cat ~/.ssh/id_ed25519.pub | wl-copy
 # opens firefox in this website so I can add my key
@@ -159,4 +183,29 @@ mkdir -p ~/private/avatar
 
 # my private configs
 # git clone git@github.com:gabbeeto/privateConfig.git ~/private/config
+
+# download godot
+mkdir ~/Downloads -p
+curl -L --retry 3 -o ~/godot-4.5.1-linux.zip "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=linux.x86_64.zip&platform=linux.64"
+unzip ~/godot-4.5.1-linux.zip -d ~/
+mv ~/Godot_v4.5.1-stable_linux.x86_64 ~/Godot.x86_64
+rm ~/godot-4.5.1-linux.zip
+chmod +x ~/Godot.x86_64
+
+
+# Create Minecraft desktop file
+cat > ~/.local/share/applications/godot.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Godot
+Comment=Godot 4.5.1
+Exec=/home/$USER/Godot.x86_64
+Icon=godot
+Categories=Development;IDE;
+Keywords=godot;engine;godot engine;
+StartupNotify=false
+Terminal=false
+MimeType=application/x-godot-project;
+EOF
 

@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 18, // Waybar height (to be removed for auto height)
+    "height": 10, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     "margin-left": 4, // margin around waybar
@@ -44,13 +44,14 @@
         "warp-on-scroll": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
+            "1": "💙",
+            "2": "🤍",
+            "3": "💙",
+            "4": "🤍",
+            "5": "💙",
+            "6": "🤍",
             "urgent": "",
-            "focused": "",
+            "focused": "😊",
             "default": ""
         }
     },
@@ -113,7 +114,7 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 5,
+        "spacing": 5
         // "icons": {
           // "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
@@ -199,7 +200,9 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -216,13 +219,9 @@
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+		// "menu": "on-click",
+      "on-click": "systemctl suspend"
+    // "on-click-right": "systemctl reboot",
+    // "on-click-middle": "systemctl reboot"
     }
 }

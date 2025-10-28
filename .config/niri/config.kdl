@@ -113,7 +113,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 5
 
-    background-color "#193838"
+    background-color "#94FFD8"
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -137,7 +137,13 @@ layout {
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
+    preset-window-heights {
+
+        proportion 0.25
+        proportion 0.5
+        proportion 0.75
+        proportion 1.0
+    }
 
     // You can change the default width of the new windows.
     default-column-width { proportion 1.0; }
@@ -161,7 +167,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1.5
+        width 1.7
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -169,7 +175,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#8BAFC7"
+        active-color "#F2A122"
 
         // Color of the ring on inactive monitors.
         //
