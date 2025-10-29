@@ -168,10 +168,12 @@ npm-install-if-needed typescript-language-server
 
 sudo pacman -S python-lsp-server --noconfirm -needed
 pipx install PySide6
+pipx upgrade PySide6
 
 # for godot language server
 sudo pacman -S nmap -needed --noconfirm
 pipx install "gdtoolkit==4.*"
+pipx upgrade "gdtoolkit==4.*"
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 ls ~/.local/lib | grep python3.*
 
