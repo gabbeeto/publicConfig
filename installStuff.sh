@@ -19,27 +19,16 @@ sudo pacman -S yt-dlp --noconfirm --needed
 # bar on top
 sudo pacman -S waybar --noconfirm --needed
 
-# waybar fonts
-sudo pacman -S ttf-font-awesome --noconfirm --needed
-sudo pacman -S ttf-nerd-fonts-symbols --noconfirm --needed
-sudo pacman -S ttf-roboto-mono noto-fonts --noconfirm --needed
-sudo pacman -S otf-font-awesome --noconfirm --needed
-
-sudo pacman -S noto-fonts-emoji --noconfirm --needed
 
 # app to search on niri
 sudo pacman -S fuzzel --noconfirm --needed
 
 
-# manage x11 apps
-sudo pacman -S xwayland-satellite --noconfirm --needed
 
 # to copy key ssh key
 sudo pacman -S wl-clipboard --noconfirm --needed
 
 
-# bar on top
-sudo pacman -S waybar --noconfirm --needed
 
 # waybar fonts
 sudo pacman -S ttf-font-awesome --noconfirm --needed
@@ -49,8 +38,6 @@ sudo pacman -S otf-font-awesome --noconfirm --needed
 
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
 
-# app to search on niri
-sudo pacman -S fuzzel --noconfirm --needed
 
 
 # manage x11 apps
@@ -68,7 +55,7 @@ sudo pacman -Sy ---needed rust gtk4 base-devel --noconfirm --needed
 
 
 # best terminal file manager and dependencies
-sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick ttf-nerd-fonts-symbols  --noconfirm --needed
+sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick   --noconfirm --needed
 
 
 # for c++ and godot
