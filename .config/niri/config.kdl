@@ -166,7 +166,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -174,7 +174,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#F2A122"
+        active-color "#2980b9"
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
@@ -319,7 +319,7 @@ clip-to-geometry true
 
 window-rule {
     match is-active=false
-    opacity 0.9
+    opacity 0.85
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -382,6 +382,7 @@ binds {
     Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+F hotkey-overlay-title="open firefox" { spawn "firefox"; }
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
+    Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
     Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
     Mod+E hotkey-overlay-title="file manager" { spawn "nautilus"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
