@@ -8,3 +8,10 @@ ssh-keygen -t ed25519
 cat ~/.ssh/id_ed25519.pub | wl-copy
 # opens firefox in this website so I can add my key
 firefox https://github.com/settings/keys
+
+# only for my private configs lol
+mkdir -p ~/private/config
+mkdir -p ~/private/avatar
+
+# my private configs
+# git clone git@github.com:gabbeeto/privateConfig.git ~/private/config

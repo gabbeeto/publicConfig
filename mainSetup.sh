@@ -91,12 +91,6 @@ git config --global pull.rebase false
 git config --global core.editor "helix"
 
 
-# only for my private configs lol
-mkdir -p ~/private/config
-mkdir -p ~/private/avatar
-
-# my private configs
-# git clone git@github.com:gabbeeto/privateConfig.git ~/private/config
 
 # download godot
 curl -L --retry 3 -o ~/godot-4.5.1-linux.zip "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=linux.x86_64.zip&platform=linux.64"
