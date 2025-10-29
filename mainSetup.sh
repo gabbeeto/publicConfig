@@ -6,6 +6,7 @@ bash ./installStuff.sh
 
 bash ./structureFolders.sh
 
+xdg-settings set default-web-browser firefox.desktop
 # downloads minecraft
 curl -L --retry 3 -o ~/games/minecraft.tar.gz "https://launcher.mojang.com/download/Minecraft.tar.gz"
 # extract minecraft file
@@ -43,6 +44,10 @@ echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
 
+# add update to update packages and updateSystem to update all the changes
+echo "alias updateSystem=bash sh ~/publicConfig/update.sh" >> ~/.bashrc
+echo "alias update=bash sh ~/scripts/update.sh" >> ~/.bashrc
+
 # helix is my default editor
 echo "export EDITOR=\"helix\"" >> ~/.bashrc
 
@@ -71,7 +76,8 @@ curl -L --retry 3 -o ~/x86_64-linux-musl.zip "https://github.com/nolanderc/glsl_
 unzip ~/x86_64-linux-musl.zip -d ~/Downloads/
 
 mv ~/Downloads/x86_64-linux-musl/bin/glsl_analyzer ~/.local/bin/glsl_analyzer
-rm ~/Downloads/x86_64-linux-musl.zip -f
+# clean stuff
+rm ~/x86_64-linux-musl.zip -f
 rm ~/Downloads/x86_64-linux-musl -rf
 
 
@@ -80,20 +86,10 @@ rm ~/Downloads/x86_64-linux-musl -rf
 
  # -- git section --
 # got this on the odin project set up section
-git config --global user.name "gabbeeto"
-git config --global user.email "124828006+gabbeeto@users.noreply.github.com"
 git config --global init.defaultBranch main
 git config --global pull.rebase false
 git config --global core.editor "helix"
 
-# generate key for github
-ssh-keygen -t ed25519
-
-
-# shows key
-cat ~/.ssh/id_ed25519.pub | wl-copy
-# opens firefox in this website so I can add my key
-firefox https://github.com/settings/keys
 
 # only for my private configs lol
 mkdir -p ~/private/config

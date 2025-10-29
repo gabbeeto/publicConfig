@@ -97,7 +97,7 @@ flatpak-install-if-needed org.luanti.luanti
 flatpak-install-if-needed org.vinegarhq.Vinegar
 flatpak-install-if-needed org.vinegarhq.Sober 
 flatpak-install-if-needed io.github.jliljebl.Flowblade
-
+flatpak-install-if-needed org.zealdocs.Zeal
 
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
@@ -114,8 +114,9 @@ npm-install-if-needed typescript
 npm-install-if-needed typescript-language-server
 
 sudo pacman -S python-lsp-server --noconfirm --needed
-pipx install PySide6
+pipx install pyside6 --include-deps
 pipx upgrade PySide6
+# pyside6-designer
 
 
 
