@@ -37,3 +37,4 @@ sudo umount /mnt/usb
 
 # remove packages on arch
 sudo pacman -Rsnu packageName
+

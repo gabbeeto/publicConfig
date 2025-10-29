@@ -12,6 +12,9 @@ sudo pacman -S firefox
 sudo pacman -S nautilus
 
 
+# for when firefox cannot handle 360p and you're in a very old devie
+sudo pacman -S yt-dlp --noconfirm
+
 # bar on top
 sudo pacman -S waybar --noconfirm
 
@@ -67,7 +70,7 @@ EOF
 sudo pacman -S mako --noconfirm
 
 # lock screen
-sudo pacman -S swaylock --noconfirm
+sudo pacman -S swaylock  --noconfirm
 
 # to install ripdrag
 sudo pacman -Sy --needed rust gtk4 base-devel --noconfirm
@@ -100,6 +103,8 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm
 # install retroarch
 sudo pacman -S retroarch --noconfirm
+
+
 
 # dependencies for raylib
 sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm
