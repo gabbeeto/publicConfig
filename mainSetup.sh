@@ -1,7 +1,11 @@
+
+# this will make multilib work to make it possible to install 32bits libraries from steam
+sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
+
 bash ./installStuff.sh
 
-# creates folder
-mkdir -p ~/games
+bash ./structureFolders.sh
+
 # downloads minecraft
 curl -L --retry 3 -o ~/games/minecraft.tar.gz "https://launcher.mojang.com/download/Minecraft.tar.gz"
 # extract minecraft file
@@ -14,8 +18,6 @@ mv ~/games/m*r/m*r ~/games/minecraft
 rmdir ~/games/m*r
 echo "export PATH=\$PATH:~/games" >> ~/.bashrc
 
-# Create desktop directory if it doesn't exist
-mkdir -p ~/.local/share/applications
 
 # Create Minecraft desktop file
 cat > ~/.local/share/applications/minecraft.desktop << EOF
@@ -32,25 +34,14 @@ StartupNotify=false
 Terminal=false
 EOF
 
-
+# install ripdrag
+cargo install ripdrag
 
 # add cargo to path
 echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
 
-
-# install ripdrag
-cargo install ripdrag
-
-
-
-
-
-
-
-
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
-
 
 # helix is my default editor
 echo "export EDITOR=\"helix\"" >> ~/.bashrc
@@ -69,9 +60,6 @@ echo "function y() {
 
 
 
-
-
-
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 ls ~/.local/lib | grep python3.*
 
@@ -86,22 +74,7 @@ mv ~/Downloads/x86_64-linux-musl/bin/glsl_analyzer ~/.local/bin/glsl_analyzer
 rm ~/Downloads/x86_64-linux-musl.zip -f
 rm ~/Downloads/x86_64-linux-musl -rf
 
-# copy the configs
-cp .config/* ~/.config/ -r
 
-sudo mkdir -p ~/scripts
-cp scripts ~/scripts
-
-# make directory to mount pendrive
-sudo mkdir -p /mnt/usb
-
-
-# make directory to my machine so I can use it with software
-sudo mkdir -p ~/Videos/Me
-sudo mkdir -p ~/Pictures
-
-# to copy key ssh key
-sudo pacman -S wl-clipboard --noconfirm -needed
 
 
 
@@ -130,7 +103,6 @@ mkdir -p ~/private/avatar
 # git clone git@github.com:gabbeeto/privateConfig.git ~/private/config
 
 # download godot
-mkdir ~/Downloads -p
 curl -L --retry 3 -o ~/godot-4.5.1-linux.zip "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=linux.x86_64.zip&platform=linux.64"
 unzip ~/godot-4.5.1-linux.zip -d ~/
 mv ~/Godot_v4.5.1-stable_linux.x86_64 ~/Godot.x86_64

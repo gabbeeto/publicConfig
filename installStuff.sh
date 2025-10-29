@@ -1,5 +1,5 @@
 # update system
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 # niri and wayland
 sudo pacman -S niri --noconfirm -needed
@@ -33,8 +33,9 @@ sudo pacman -S fuzzel --noconfirm -needed
 
 # manage x11 apps
 sudo pacman -S xwayland-satellite --noconfirm -needed
-# update system
-sudo pacman -Syu
+
+# to copy key ssh key
+sudo pacman -S wl-clipboard --noconfirm -needed
 
 # niri and wayland
 sudo pacman -S niri --noconfirm -needed
@@ -149,3 +150,5 @@ pipx upgrade PySide6
 sudo pacman -S nmap -needed --noconfirm
 pipx install "gdtoolkit==4.*"
 pipx upgrade "gdtoolkit==4.*"
+
+
