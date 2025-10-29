@@ -7,7 +7,8 @@ sudo pacman -S wayland --noconfirm
 sudo pacman -S wayland-utils wayland-protocols --noconfirm
 sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm
 # download firefox
-sudo pacman -S firefox
+sudo pacman -S firefox chromium  --noconfirm
+
 # I like this window manager lol
 sudo pacman -S nautilus
 
@@ -146,10 +147,15 @@ flatpak install flathub org.vinegarhq.Sober --assumeyes
 sudo npm i -g vscode-langservers-extracted
 sudo npm i -g @olrtg/emmet-language-server
 sudo npm install -g typescript typescript-language-server
+sudo pacman -S python-lsp-server
+pip3 install eel --break-system-packages
+
+pip install git+https://github.com/psf/black --break-system-packages
 # for godot language server
 sudo pacman -S nmap
 pip3 install "gdtoolkit==4.*" --break-system-packages
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+ls ~/.local/lib | grep python3.*
 
 # for gdshaders and glsl
 curl -L --retry 3 -o ~/x86_64-linux-musl.zip "https://github.com/nolanderc/glsl_analyzer/releases/download/v1.7.1/x86_64-linux-musl.zip" \
@@ -187,7 +193,7 @@ git config --global user.name "gabbeeto"
 git config --global user.email "124828006+gabbeeto@users.noreply.github.com"
 git config --global init.defaultBranch main
 git config --global pull.rebase false
-git config --global core.editor "hx"
+git config --global core.editor "helix"
 
 # generate key for github
 ssh-keygen -t ed25519
