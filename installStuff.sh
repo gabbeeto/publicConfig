@@ -10,7 +10,7 @@ sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm --needed
 sudo pacman -S firefox chromium  --noconfirm --needed
 
 # I like this window manager lol
-sudo pacman -S nautilus --needed
+sudo pacman -S nautilus --needed --noconfirm
 
 
 # for when firefox cannot handle 360p and you're in a very old devie
@@ -51,7 +51,7 @@ sudo pacman -S mako --noconfirm --needed
 sudo pacman -S swaylock  --noconfirm --needed
 
 # to install ripdrag
-sudo pacman -Sy ---needed rust gtk4 base-devel --noconfirm --needed
+sudo pacman -Sy  rust gtk4 base-devel --noconfirm --needed
 
 
 # best terminal file manager and dependencies
@@ -77,7 +77,7 @@ sudo pacman -S retroarch --noconfirm --needed
 sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm --needed
 
 
-flatpak-install-if--needed() {
+flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
         flatpak install --noninteractive flathub "$1"
     else
@@ -86,20 +86,20 @@ flatpak-install-if--needed() {
 }
 
 
-flatpak-install-if--needed org.kde.krita
-flatpak-install-if--needed org.gimp.GIMP
-flatpak-install-if--needed com.orama_interactive.Pixelorama
-flatpak-install-if--needed org.inkscape.Inkscape
-flatpak-install-if--needed com.chatterino.chatterino
-flatpak-install-if--needed org.kde.kdenlive
-flatpak-install-if--needed org.libreoffice.LibreOffice
-flatpak-install-if--needed org.luanti.luanti
-flatpak-install-if--needed org.vinegarhq.Vinegar
-flatpak-install-if--needed org.vinegarhq.Sober 
-flatpak-install-if--needed io.github.jliljebl.Flowblade
+flatpak-install-if-needed org.kde.krita
+flatpak-install-if-needed org.gimp.GIMP
+flatpak-install-if-needed com.orama_interactive.Pixelorama
+flatpak-install-if-needed org.inkscape.Inkscape
+flatpak-install-if-needed com.chatterino.chatterino
+flatpak-install-if-needed org.kde.kdenlive
+flatpak-install-if-needed org.libreoffice.LibreOffice
+flatpak-install-if-needed org.luanti.luanti
+flatpak-install-if-needed org.vinegarhq.Vinegar
+flatpak-install-if-needed org.vinegarhq.Sober 
+flatpak-install-if-needed io.github.jliljebl.Flowblade
 
 
-npm-install-if--needed() {
+npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
         sudo npm install -g "$1" --no-fund --no-audit
     else
@@ -108,10 +108,10 @@ npm-install-if--needed() {
 }
 
  # install language servers for helix
-npm-install-if--needed vscode-langservers-extracted
-npm-install-if--needed @olrtg/emmet-language-server
-npm-install-if--needed typescript
-npm-install-if--needed typescript-language-server
+npm-install-if-needed vscode-langservers-extracted
+npm-install-if-needed @olrtg/emmet-language-server
+npm-install-if-needed typescript
+npm-install-if-needed typescript-language-server
 
 sudo pacman -S python-lsp-server --noconfirm --needed
 pipx install PySide6
@@ -120,7 +120,7 @@ pipx upgrade PySide6
 
 
 # for godot language server
-sudo pacman -S nmap ---needed --noconfirm
+sudo pacman -S nmap --needed --noconfirm
 pipx install "gdtoolkit==4.*"
 pipx upgrade "gdtoolkit==4.*"
 
