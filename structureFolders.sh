@@ -11,7 +11,7 @@ mkdir -p ~/scripts
 # copy the configs
 cp .config/* ~/.config/ -r
 
-cp -r scripts/* ~/scripts/
+sudo cp -r scripts/* ~/scripts/
 
 # make directory to mount pendrive
 sudo mkdir -p /mnt/usb

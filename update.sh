@@ -1,5 +1,5 @@
 echo "=== Starting Update ==="
-flatpak update --asumeyes
+flatpak update --assumeyes
 echo "Updating flatpaks..."
 echo "Updating configuration files..."
 git pull
