@@ -2,9 +2,11 @@
 # this will make multilib work to make it possible to install 32bits libraries from steam
 sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
 
+
 bash ./installStuff.sh
 
 bash ./structureFolders.sh
+
 
 xdg-settings set default-web-browser firefox.desktop
 # downloads minecraft
@@ -35,18 +37,20 @@ StartupNotify=false
 Terminal=false
 EOF
 
-# install ripdrag
-cargo install ripdrag
 
 # add cargo to path
 echo "export PATH=\$PATH:~/.cargo/bin" >> ~/.bashrc
+
+# install ripdrag
+cargo install ripdrag
+
 
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
 
 # add update to update packages and updateSystem to update all the changes
-echo "alias updateSystem='bash sh ~/publicConfig/update.sh'" >> ~/.bashrc
-echo "alias update='bash sh ~/scripts/update.sh'" >> ~/.bashrc
+echo "alias updateSystem='bash  ~/publicConfig/update.sh'" >> ~/.bashrc
+echo "alias update='bash ~/scripts/update.sh'" >> ~/.bashrc
 
 # helix is my default editor
 echo "export EDITOR=\"helix\"" >> ~/.bashrc
@@ -118,3 +122,4 @@ EOF
 
 
 source ~/.bashrc
+

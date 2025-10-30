@@ -76,6 +76,9 @@ sudo pacman -S retroarch --noconfirm --needed
 # dependencies for raylib
 sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm --needed
 
+# raylib lol
+sudo pacman -S raylib --noconfirm --needed
+
 
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
@@ -113,11 +116,10 @@ npm-install-if-needed @olrtg/emmet-language-server
 npm-install-if-needed typescript
 npm-install-if-needed typescript-language-server
 
+# other cool stuff I use to develop on python
 sudo pacman -S python-lsp-server --noconfirm --needed
-pipx install pyside6 --include-deps
-pipx upgrade PySide6
-# pyside6-designer
-
+sudo pacman -S tcl --noconfirm --needed
+sudo pacman -S tk --noconfirm --needed
 
 
 # for godot language server
