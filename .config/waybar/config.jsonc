@@ -221,7 +221,7 @@
 		"tooltip": false,
 		// "menu": "on-click",
       // "on-click": "systemctl suspend"
-      "on-clickt": "systemctl poweroff",
+      "on-clickt": "shutdown --now",
       "on-click-right": "systemctl suspend"
     // "on-click-right": "systemctl reboot",
     // "on-click-middle": "systemctl reboot"
