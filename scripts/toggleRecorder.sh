@@ -15,7 +15,7 @@ if [ -f "$TEMP_FILE" ]; then
 else
     # Start recording
     touch "$TEMP_FILE"
-    wf-recorder -audio --file="$OUTPUT_DIR/$FILENAME" &
+    wf-recorder --file="$OUTPUT_DIR/$FILENAME" &
     echo $! > "$TEMP_FILE"
     notify-send "Screen Recording" "$FILENAME"
 fi
