@@ -116,10 +116,9 @@ npm-install-if-needed @olrtg/emmet-language-server
 npm-install-if-needed typescript
 npm-install-if-needed typescript-language-server
 
-# other cool stuff I use to develop on python
 sudo pacman -S python-lsp-server --noconfirm --needed
-sudo pacman -S tcl --noconfirm --needed
-sudo pacman -S tk --noconfirm --needed
+# other cool stuff I use to develop on python
+pip3 install pywebview --break-system-packages
 
 
 # for godot language server
