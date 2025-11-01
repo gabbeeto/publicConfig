@@ -12,6 +12,6 @@ class ColorInClipboard:
         os._exit(0)
 userHome: str = str(Path.home())
 
-window = webview.create_window(
+webview.create_window(
     "select Color", str(Path.home()) + '/publicConfig/scripts/colorPicker/frontend/index.html',js_api=ColorInClipboard(), width=100, height= 140)
 webview.start()

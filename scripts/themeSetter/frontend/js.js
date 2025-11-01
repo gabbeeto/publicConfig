@@ -1,4 +1,4 @@
-let colorChanged = false
+// let colorChanged = false
 
 document.querySelector('button').addEventListener('click', setColor);
 function setColor() {
@@ -9,8 +9,3 @@ function setColor() {
   }
 }
 
-document.addEventListener("keydown", (e) => {
-  if ((e.key == "Escape" || e.key == "x" ||  e.key == "Enter" || e.key == "z") && colorChanged) {
-  setColor()
-  }
-})
