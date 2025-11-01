@@ -64,11 +64,17 @@ def turnColorsIntoHexColorsForJson(hex:str):
     return hexColorsInJson
     
 
+def dealWithWritingFile(hexColorsInJson:str):
+    file =open(f"{Path.home()}/.config/theme/color.json","w")
+    file.write(hexColorsInJson)
+    file.close()
 
 class ThemeClass:
     def setColor(self, hex):
         hexColorsInJson =turnColorsIntoHexColorsForJson(hex)
-        print(hexColorsInJson)
+        dealWithWritingFile(hexColorsInJson)
+
+
 
 # "select Color", str(Path.home()) + '/publicConfig/scripts/colorPicker/frontend/index.html',js_api=ColorInClipboard()
 webview.create_window("themer",str(Path.home()) + '/publicConfig/scripts/themeSetter/frontend/index.html',js_api=ThemeClass(),width=150,height=200)

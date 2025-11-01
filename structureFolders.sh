@@ -22,3 +22,6 @@ sudo mkdir -p ~/Videos/Me
 sudo mkdir -p ~/Pictures
 
 mkdir ~/Downloads -p
+
+
+mkdir -p ~/.config/theme
