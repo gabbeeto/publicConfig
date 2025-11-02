@@ -23,43 +23,44 @@ waybarLeftModules= [
         }
     },""",
     "contentCSS": """
-#workspaces button {
-    padding: 0 5px;
-    margin: 0 2px;
-    background-color: transparent;
-    color: #000000;
-}
+        #workspaces button {
+            padding: 0 5px;
+            margin: 0 2px;
+            background-color: transparent;
+            color: #000000;
+        }
 
 
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    padding:0 5px;
-    border-radius:10px;
-    margin-top:2px;
-    margin-bottom:2px;
-}
+        #workspaces button:hover {
+            background: rgba(0, 0, 0, 0.2);
+            padding:0 5px;
+            border-radius:10px;
+            margin-top:2px;
+            margin-bottom:2px;
+        }
 
-#workspaces button.focused {
-    background-color: rgb(86, 96, 105);
-    border-radius: 10px;
-    margin-top:2px;
-    margin-bottom:2px;
-}
+        #workspaces button.focused {
+            background-color: rgb(86, 96, 105);
+            border-radius: 10px;
+            margin-top:2px;
+            margin-bottom:2px;
+        }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
+        #workspaces button.urgent {
+            background-color: #eb4d4b;
+        }
 
-#workspaces {
-    margin: 4 4px;
-}
+        #workspaces {
+            margin: 4 4px;
+        }
     """,
 
     "cssBackgroundTargets":[
     {
     "cssTargetForBackgroundColor":"#workspaces",
     "extraContentInTarget":"margin-left:10px;",}],
-    "enable": True},
+    "enable": True
+},
 
 {
     "name":"niri/window",
@@ -318,91 +319,91 @@ waybarRightModules= [
 ]
 
 waybarCSS ="""
-* {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-}
+    * {
+        /* `otf-font-awesome` is required to be installed for icons */
+        font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+    }
 
-window#waybar {
-    /* background-image: linear-gradient(70deg, #64727D 90%, black); */
-    background-color:rgba(255, 148, 156, .8);
+    window#waybar {
+        /* background-image: linear-gradient(70deg, #64727D 90%, black); */
+        background-color:rgba(255, 148, 156, .8);
 
-    border-bottom: 0px solid transparent;
-    border:2px solid black;
-    color: black;
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 10px;
-}
+        border-bottom: 0px solid transparent;
+        border:2px solid black;
+        color: black;
+        transition-property: background-color;
+        transition-duration: .5s;
+        border-radius: 10px;
+    }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
+    window#waybar.hidden {
+        opacity: 0.2;
+    }
 
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
+    window#waybar.termite {
+        background-color: #3F3F3F;
+    }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
+    window#waybar.chromium {
+        background-color: #000000;
+        border: none;
+    }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    /* border-radius: 0; */
-}
+    button {
+        /* Use box-shadow instead of border so the text isn't offset */
+        box-shadow: inset 0 -3px transparent;
+        /* Avoid rounded borders under each button name */
+        border: none;
+        /* border-radius: 0; */
+    }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #f0932b;
-}
+    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+    button:hover {
+        background: inherit;
+        box-shadow: inset 0 -3px #f0932b;
+    }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd,
-#custom-power,
-#workspaces
- {
-    padding: 1px 20px;
-    margin-bottom:10px;
-    margin-top:10px;
-    color: black;
-    border-radius: 12px;
-    border:2px solid black
-}
-"""
+    #clock,
+    #battery,
+    #cpu,
+    #memory,
+    #disk,
+    #temperature,
+    #backlight,
+    #network,
+    #pulseaudio,
+    #wireplumber,
+    #custom-media,
+    #tray,
+    #mode,
+    #idle_inhibitor,
+    #scratchpad,
+    #power-profiles-daemon,
+    #mpd,
+    #custom-power,
+    #workspaces
+     {
+        padding: 1px 20px;
+        margin-bottom:10px;
+        margin-top:10px;
+        color: black;
+        border-radius: 12px;
+        border:2px solid black
+    }
+    """
 
 waybar = {
     "generalConfig":
-    """    "height": 10, // Waybar height (to be removed for auto height)
+    """{
+        "height": 10, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     "margin-left": 4, // margin around waybar
     "margin-right": 4, // margin around waybar
     "margin-top": 4, // margin around waybar
     // Choose the order of the modules
-    "modules-left": [
     """
 }
 
@@ -1085,6 +1086,35 @@ def createNiriConfig():
 
     return niriConfigContent 
 
-def createWaybarConfig():
+def createWaybarNormalConfig():
     colors  = getColors()
+    moduleLeft:str = ["""
+    "modules-left": [
+    """,
+    ]
 
+    for module in waybarLeftModules:
+        newModule:str = f"\"{module["name"]}\",\n"
+        moduleLeft.append(newModule)
+
+    moduleLeft.append("""
+    ],
+    """)
+    moduleRight: str =["""
+    "modules-right": [
+        """
+    ]
+
+    for module in waybarRightModules:
+        newModule:str = f"\"{module["name"]}\",\n"
+        moduleRight.append(newModule)
+
+
+
+    moduleRight.append("""
+    ],
+    """)
+
+    return "".join([waybar["generalConfig"],*moduleLeft, *moduleRight])
+
+print(createWaybarNormalConfig())
