@@ -3,8 +3,8 @@ import json
 
 waybarLeftModules= [
 {
-    name:"niri/workspaces",
-    content: """
+    "name":"niri/workspaces",
+    "content": """
     "niri/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -22,7 +22,7 @@ waybarLeftModules= [
             "default": ""
         }
     },""",
-    contentCSS: """
+    "contentCSS": """
 #workspaces button {
     padding: 0 5px;
     margin: 0 2px;
@@ -55,71 +55,68 @@ waybarLeftModules= [
 }
     """,
 
-    cssBackgroundTargets:[
+    "cssBackgroundTargets":[
     {
-    cssTargetForBackgroundColor:"#workspaces",
-    extraContentInTarget:"margin-left:10px;",}]
-    enable: True
-},
+    "cssTargetForBackgroundColor":"#workspaces",
+    "extraContentInTarget":"margin-left:10px;",}],
+    "enable": True},
 
 {
-    name:"niri/window",
-    content: """
+    "name":"niri/window",
+    "content": """
     "niri/window":{
         "disable-scroll": true,
         "all-outputs": true
         
     },
     """,
-    contentCSS: """
+    "contentCSS": """
 #window
 {
     margin: 4 4px;
 }
     """,
 
-    cssBackgroundTargets:[
+    "cssBackgroundTargets":[
         {
-        cssTargetForBackgroundColor::"#window",
-        extraContentInTarget:"""
+        "cssTargetForBackgroundColor":"#window",
+        "extraContentInTarget":"""
         border:2px solid black;
         padding: 5px;
         border-radius: 10px;
-        """},]
-    enable: True
+        """}],
+    "enable": True,
 }
 ]
 
 
 waybarRightModules= [
 {
-    name:"idle_inhibitor",
-    content: """
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    """,
-
-    contentCSS: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#idle_inhibitor",
-    extraContentInTarget:"""
-    color:black;
-    """},
-    {cssTargetForBackgroundColor:"#idle_inhibitor.activated",
-    extraContentInTarget:"""
-    color: black;
-    """},
-    ]
-    enable: True
+    "name":"idle_inhibitor",
+    "content":"""
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        """,
+    "contentCSS": "",
+    "cssBackgroundTargets":[
+        {"cssTargetForBackgroundColor":"#idle_inhibitor",
+        "extraContentInTarget":"""
+        color:black;
+        """},
+        {"cssTargetForBackgroundColor":"#idle_inhibitor.activated",
+        "extraContentInTarget":"""
+        color: black;
+        """},],
+    "enable": True,
 },
 {
-    name: "pulseaudio",
-    content: """
+    "name": "pulseaudio",
+    "content": """
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -142,22 +139,22 @@ waybarRightModules= [
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
         """,
-    contentCSS: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#pulseaudio:hover",
-    extraContentInTarget:"""
+    "contentCSS": "",
+    "cssBackgroundTargets":[
+    {"cssTargetForBackgroundColor":"#pulseaudio:hover",
+    "extraContentInTarget":"""
     color: white;
     """},
     {
-    cssTargetForBackgroundColor:"#pulseaudio",
-    extraContentInTarget:""
+    "cssTargetForBackgroundColor":"#pulseaudio",
+    "extraContentInTarget":""
 },
-    ]
-    enable: True
+    ],
+    "enable": True,
 },   
 {
-    name:"network",
-    content: """
+    "name":"network",
+    "content": """
         "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " ({signalStrength}%) ",
@@ -168,35 +165,35 @@ waybarRightModules= [
         "format-alt": "{ifname}: {ipaddr}/{essid}"
     },
     """,
-    contentCSS: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#network",
-    extraContentInTarget:""},
-    {cssTargetForBackgroundColor:"#network.disconnected",
-    extraContentInTarget:""},
-    ]
-    enable: True
+    "contentCSS": "",
+    "cssBackgroundTargets":[
+    {"cssTargetForBackgroundColor":"#network",
+    "extraContentInTarget":""},
+    {"cssTargetForBackgroundColor":"#network.disconnected",
+    "extraContentInTarget":""},
+    ],
+    "enable": True,
 },
 {
-    name:"backlight",
-    content: """
+    "name":"backlight",
+    "content": """
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     """,
-    contentCSS: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#backlight",
-    extraContentInTarget:""},
-    ]
-    enable: True
+    "contentCSS": "",
+    "cssBackgroundTargets":[
+    {"cssTargetForBackgroundColor":"#backlight",
+    "extraContentInTarget":""},
+    ],
+    "enable": True,
 },
 
 {
-    name:"battery",
-    content: """
+    "name":"battery",
+    "content": """
         "battery": {
         "states": {
             // "good": 95,
@@ -213,7 +210,7 @@ waybarRightModules= [
         "format-icons": ["", "", "", "", ""]
     },
     """,
-    contentCSS: """
+    "contentCSS": """
     #battery.critical:not(.charging) {
         background-color: #f53c3c;
         color: #ffffff;
@@ -238,33 +235,33 @@ waybarRightModules= [
     animation-direction: alternate;
     }
     """,
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#battery",
-    extraContentInTarget:"""color: #000000;"""},
-    ]
-    enable: True
+    "cssBackgroundTargets":[
+        {"cssTargetForBackgroundColor":"#battery",
+        "extraContentInTarget":"""color: #000000;"""},
+        ],
+    "enable": True,
 },
 {
-    name:"clock",
-    content: """
+    "name":"clock",
+    "content": """
         "clock": {
         "timezone": "America/Argentina/Buenos_Aires",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     """,
-    contentCSS: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#clock",
-    extraContentInTarget:""},
-    ]
-    enable: True
+    "contentCSS": "",
+    "cssBackgroundTargets":[
+    {"cssTargetForBackgroundColor":"#clock",
+    "extraContentInTarget":""},
+    ],
+    "enable": True,
 },
 
 
 {
-    name:"tray",
-    content: """
+    "name":"tray",
+    "content": """
         "tray": {
         // "icon-size": 21,
         "spacing": 5
@@ -275,7 +272,7 @@ waybarRightModules= [
     },
 
     """,
-    contentCSS: """
+    "contentCSS": """
         #tray > .passive {
         -gtk-icon-effect: dim;
     }
@@ -286,16 +283,16 @@ waybarRightModules= [
     }
 
     """,
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor":#tray",
-    extraContentInTarget:""},
-    ]
-    enable: True
+    "cssBackgroundTargets":[
+        {"cssTargetForBackgroundColor":"#tray",
+        "extraContentInTarget":""},
+    ],
+    "enable": True,
 },
 
 {
-    name:"custom/power",
-    content: """
+    "name":"custom/power",
+    "content": """
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
@@ -307,16 +304,16 @@ waybarRightModules= [
     // "on-click-middle": "systemctl reboot"
     }
     """,
-    contentcss: "",
-    cssBackgroundTargets:[
-    {cssTargetForBackgroundColor:"#custom-power",
-    extraContentInTarget:"""
+    "contentcss": "",
+    "cssBackgroundTargets":[
+    {"cssTargetForBackgroundColor":"#custom-power",
+    "extraContentInTarget":"""
     padding-left: 10px;
     padding-right: 1px;
     margin-right:10px;
     """},
-    ]
-    enable: True
+    ],
+    "enable": True,
 }
 ]
 
@@ -1068,16 +1065,26 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 } """]
 
-file =open(f"{Path.home()}/.config/theme/color.json","r")
-jsonText = file.read()
-file.close()
-colors= json.loads(jsonText)
-# print(colors)
-newContent = "".join([niriConfig[0],
-      colors['color'],
-      niriConfig[1],
-      colors['color2'],
-      niriConfig[2]
-      ]
-  )
-print(newContent)
+
+def getColors():
+    file =open(f"{Path.home()}/.config/theme/color.json","r")
+    jsonText = file.read()
+    file.close()
+    colors= json.loads(jsonText)
+    return colors
+
+def createNiriConfig():
+    colors  = getColors()
+    niriConfigContent = "".join([niriConfig[0],
+          colors['color'],
+          niriConfig[1],
+          colors['color2'],
+          niriConfig[2]
+          ]
+      )
+
+    return niriConfigContent 
+
+def createWaybarConfig():
+    colors  = getColors()
+
