@@ -1,10 +1,10 @@
 from pathlib import Path
 import json
 
-waybarLeftModules= [
-{
-    "name":"niri/workspaces",
-    "content": """
+waybarLeftModules = [
+    {
+        "name": "niri/workspaces",
+        "content": """
     "niri/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -22,7 +22,7 @@ waybarLeftModules= [
             "default": ""
         }
     },""",
-    "contentCSS": """
+        "contentCSS": """
         #workspaces button {
             padding: 0 5px;
             margin: 0 2px;
@@ -54,47 +54,48 @@ waybarLeftModules= [
             margin: 4 4px;
         }
     """,
-
-    "cssBackgroundTargets":[
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#workspaces",
+                "extraContentInTarget": "margin-left:10px;",
+            }
+        ],
+        "enable": True,
+    },
     {
-    "cssTargetForBackgroundColor":"#workspaces",
-    "extraContentInTarget":"margin-left:10px;",}],
-    "enable": True
-},
-
-{
-    "name":"niri/window",
-    "content": """
+        "name": "niri/window",
+        "content": """
     "niri/window":{
         "disable-scroll": true,
         "all-outputs": true
         
     },
     """,
-    "contentCSS": """
+        "contentCSS": """
 #window
 {
     margin: 4 4px;
 }
     """,
-
-    "cssBackgroundTargets":[
-        {
-        "cssTargetForBackgroundColor":"#window",
-        "extraContentInTarget":"""
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#window",
+                "extraContentInTarget": """
         border:2px solid black;
         padding: 5px;
         border-radius: 10px;
-        """}],
-    "enable": True,
-}
+        """,
+            }
+        ],
+        "enable": True,
+    },
 ]
 
 
-waybarRightModules= [
-{
-    "name":"idle_inhibitor",
-    "content":"""
+waybarRightModules = [
+    {
+        "name": "idle_inhibitor",
+        "content": """
         "idle_inhibitor": {
             "format": "{icon}",
             "format-icons": {
@@ -103,21 +104,26 @@ waybarRightModules= [
             }
         },
         """,
-    "contentCSS": "",
-    "cssBackgroundTargets":[
-        {"cssTargetForBackgroundColor":"#idle_inhibitor",
-        "extraContentInTarget":"""
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#idle_inhibitor",
+                "extraContentInTarget": """
         color:black;
-        """},
-        {"cssTargetForBackgroundColor":"#idle_inhibitor.activated",
-        "extraContentInTarget":"""
+        """,
+            },
+            {
+                "cssTargetForBackgroundColor": "#idle_inhibitor.activated",
+                "extraContentInTarget": """
         color: black;
-        """},],
-    "enable": True,
-},
-{
-    "name": "pulseaudio",
-    "content": """
+        """,
+            },
+        ],
+        "enable": True,
+    },
+    {
+        "name": "pulseaudio",
+        "content": """
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -140,22 +146,21 @@ waybarRightModules= [
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
         """,
-    "contentCSS": "",
-    "cssBackgroundTargets":[
-    {"cssTargetForBackgroundColor":"#pulseaudio:hover",
-    "extraContentInTarget":"""
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#pulseaudio:hover",
+                "extraContentInTarget": """
     color: white;
-    """},
+    """,
+            },
+            {"cssTargetForBackgroundColor": "#pulseaudio", "extraContentInTarget": ""},
+        ],
+        "enable": True,
+    },
     {
-    "cssTargetForBackgroundColor":"#pulseaudio",
-    "extraContentInTarget":""
-},
-    ],
-    "enable": True,
-},   
-{
-    "name":"network",
-    "content": """
+        "name": "network",
+        "content": """
         "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " ({signalStrength}%) ",
@@ -166,35 +171,34 @@ waybarRightModules= [
         "format-alt": "{ifname}: {ipaddr}/{essid}"
     },
     """,
-    "contentCSS": "",
-    "cssBackgroundTargets":[
-    {"cssTargetForBackgroundColor":"#network",
-    "extraContentInTarget":""},
-    {"cssTargetForBackgroundColor":"#network.disconnected",
-    "extraContentInTarget":""},
-    ],
-    "enable": True,
-},
-{
-    "name":"backlight",
-    "content": """
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {"cssTargetForBackgroundColor": "#network", "extraContentInTarget": ""},
+            {
+                "cssTargetForBackgroundColor": "#network.disconnected",
+                "extraContentInTarget": "",
+            },
+        ],
+        "enable": True,
+    },
+    {
+        "name": "backlight",
+        "content": """
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     """,
-    "contentCSS": "",
-    "cssBackgroundTargets":[
-    {"cssTargetForBackgroundColor":"#backlight",
-    "extraContentInTarget":""},
-    ],
-    "enable": True,
-},
-
-{
-    "name":"battery",
-    "content": """
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {"cssTargetForBackgroundColor": "#backlight", "extraContentInTarget": ""},
+        ],
+        "enable": True,
+    },
+    {
+        "name": "battery",
+        "content": """
         "battery": {
         "states": {
             // "good": 95,
@@ -211,7 +215,7 @@ waybarRightModules= [
         "format-icons": ["", "", "", "", ""]
     },
     """,
-    "contentCSS": """
+        "contentCSS": """
     #battery.critical:not(.charging) {
         background-color: #f53c3c;
         color: #ffffff;
@@ -236,33 +240,32 @@ waybarRightModules= [
     animation-direction: alternate;
     }
     """,
-    "cssBackgroundTargets":[
-        {"cssTargetForBackgroundColor":"#battery",
-        "extraContentInTarget":"""color: #000000;"""},
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#battery",
+                "extraContentInTarget": """color: #000000;""",
+            },
         ],
-    "enable": True,
-},
-{
-    "name":"clock",
-    "content": """
+        "enable": True,
+    },
+    {
+        "name": "clock",
+        "content": """
         "clock": {
         "timezone": "America/Argentina/Buenos_Aires",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     """,
-    "contentCSS": "",
-    "cssBackgroundTargets":[
-    {"cssTargetForBackgroundColor":"#clock",
-    "extraContentInTarget":""},
-    ],
-    "enable": True,
-},
-
-
-{
-    "name":"tray",
-    "content": """
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {"cssTargetForBackgroundColor": "#clock", "extraContentInTarget": ""},
+        ],
+        "enable": True,
+    },
+    {
+        "name": "tray",
+        "content": """
         "tray": {
         // "icon-size": 21,
         "spacing": 5
@@ -273,7 +276,7 @@ waybarRightModules= [
     },
 
     """,
-    "contentCSS": """
+        "contentCSS": """
         #tray > .passive {
         -gtk-icon-effect: dim;
     }
@@ -284,16 +287,14 @@ waybarRightModules= [
     }
 
     """,
-    "cssBackgroundTargets":[
-        {"cssTargetForBackgroundColor":"#tray",
-        "extraContentInTarget":""},
-    ],
-    "enable": True,
-},
-
-{
-    "name":"custom/power",
-    "content": """
+        "cssBackgroundTargets": [
+            {"cssTargetForBackgroundColor": "#tray", "extraContentInTarget": ""},
+        ],
+        "enable": True,
+    },
+    {
+        "name": "custom/power",
+        "content": """
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
@@ -305,20 +306,22 @@ waybarRightModules= [
     // "on-click-middle": "systemctl reboot"
     }
     """,
-    "contentcss": "",
-    "cssBackgroundTargets":[
-    {"cssTargetForBackgroundColor":"#custom-power",
-    "extraContentInTarget":"""
+        "contentCSS": "",
+        "cssBackgroundTargets": [
+            {
+                "cssTargetForBackgroundColor": "#custom-power",
+                "extraContentInTarget": """
     padding-left: 10px;
     padding-right: 1px;
     margin-right:10px;
-    """},
-    ],
-    "enable": True,
-}
+    """,
+            },
+        ],
+        "enable": True,
+    },
 ]
 
-waybarCSS ="""
+waybarCSS = """
     * {
         /* `otf-font-awesome` is required to be installed for icons */
         font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -395,8 +398,7 @@ waybarCSS ="""
     """
 
 waybar = {
-    "generalConfig":
-    """{
+    "generalConfig": """{
         "height": 10, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
@@ -407,7 +409,8 @@ waybar = {
     """
 }
 
-niriConfig = ["""// This config is in the KDL format: https://kdl.dev
+niriConfig = [
+    """// This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
@@ -522,7 +525,8 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 3
 
-    background-color """ , """
+    background-color """,
+    """
     
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -584,7 +588,8 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color """,""" 
+        active-color """,
+    """ 
 
         // Color of the ring on inactive monitors.
         //
@@ -1064,57 +1069,113 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
-} """]
+} """,
+]
 
 
 def getColors():
-    file =open(f"{Path.home()}/.config/theme/color.json","r")
+    file = open(f"{Path.home()}/.config/theme/color.json", "r")
     jsonText = file.read()
     file.close()
-    colors= json.loads(jsonText)
+    colors = json.loads(jsonText)
     return colors
 
-def createNiriConfig():
-    colors  = getColors()
-    niriConfigContent = "".join([niriConfig[0],
-          colors['color'],
-          niriConfig[1],
-          colors['color2'],
-          niriConfig[2]
-          ]
-      )
 
-    return niriConfigContent 
+def createNiriConfig():
+    colors = getColors()
+    niriConfigContent = "".join(
+        [niriConfig[0], colors["color"], niriConfig[1], colors["color2"], niriConfig[2]]
+    )
+
+    return niriConfigContent
+
 
 def createWaybarNormalConfig():
-    colors  = getColors()
-    moduleLeft:str = ["""
+    moduleLeft: str = [
+        """
     "modules-left": [
     """,
     ]
 
     for module in waybarLeftModules:
-        newModule:str = f"\"{module["name"]}\",\n"
+        newModule: str = f'"{module["name"]}",\n'
         moduleLeft.append(newModule)
 
-    moduleLeft.append("""
+    moduleLeft.append(
+        """
     ],
-    """)
-    moduleRight: str =["""
+    """
+    )
+
+    moduleRight: str = [
+        """
     "modules-right": [
         """
     ]
 
     for module in waybarRightModules:
-        newModule:str = f"\"{module["name"]}\",\n"
+        newModule: str = f'"{module["name"]}",\n'
         moduleRight.append(newModule)
 
-
-
-    moduleRight.append("""
+    moduleRight.append(
+        """
     ],
-    """)
+    """
+    )
 
-    return "".join([waybar["generalConfig"],*moduleLeft, *moduleRight])
+    moduleSettings = []
 
-print(createWaybarNormalConfig())
+    for module in waybarLeftModules:
+        newModule: str = f"{module["content"]}\n"
+        moduleSettings.append(newModule)
+
+    for module in waybarRightModules:
+        newModule: str = f"{module["content"]}\n"
+        moduleSettings.append(newModule)
+
+    return (
+        "".join([waybar["generalConfig"], *moduleLeft, *moduleRight, *moduleSettings])
+        + "\n}"
+    )
+
+
+def createWaybarCSSConfig():
+    colors = getColors()
+    i: int = 0
+    cssModule = []
+
+    allModules = [*waybarLeftModules, *waybarRightModules]
+    while i < len(allModules):
+        i2: int = 0
+        module = allModules[i]
+        cssModule.append(module["contentCSS"])
+
+        isFirstModuleOrisLastModule = (i == 0) or (i == ( len(allModules) - 1))
+        while i2 < len(module["cssBackgroundTargets"]):
+            evenNumberForIndex = i % 2 == 0
+            evenNumberForIndex2 = i2 % 2 == 0
+            module2 = module["cssBackgroundTargets"][i2]
+
+            adder = 0 if evenNumberForIndex2 else (1 if evenNumberForIndex else -1)
+            stringNumber: str = str((i % 2) + adder + 1)
+
+            selectedColor: str = colors["color" + stringNumber]
+            textColor: str = colors["textColor"]
+            cssModule.append(
+                "\n"
+                + module2["cssTargetForBackgroundColor"]
+                + " {\n"
+                + module2["extraContentInTarget"]
+                + "\nbackground-color: "
+                + selectedColor
+                + ";\ncolor: "
+                + textColor
+                + ";\n}"
+            )
+            i2 = i2 + 1
+        i = i + 1
+
+    return waybarCSS + "".join(cssModule)
+
+
+print(createWaybarCSSConfig())

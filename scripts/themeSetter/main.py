@@ -46,8 +46,11 @@ def turnColorsIntoHexColorsForJson(hex:str):
     r2,g2,b2 =colorsys.hsv_to_rgb(t2,s,v)
     r3,g3,b3 =colorsys.hsv_to_rgb(t3,s,v)
 
+    r4,g4,b4 =colorsys.hsv_to_rgb(t3,1 - s,v)
+
     hex2: str =rgbToHex(r2,g2,b2)
     hex3: str =rgbToHex(r3,g3,b3)
+    hex4: str =rgbToHex(r4,g4,b4)
 
     isDarkColor: bool= v < 0.48
     textValue: float = 1.0 - v if isDarkColor else 0.0
@@ -55,9 +58,10 @@ def turnColorsIntoHexColorsForJson(hex:str):
     hexForText: str =rgbToHex(txtR,txtG,txtB)
 
     hexColorDictionaries = {
-    "color": hex,
+    "color1": hex,
     "color2": hex2,
     "color3": hex3,
+    "color4": hex4,
     "textColor": hexForText
     }
     hexColorsInJson = json.dumps(hexColorDictionaries )
