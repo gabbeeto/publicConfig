@@ -91,7 +91,6 @@ waybarLeftModules= [
 ]
 
 
-# continue from pulseaudio
 waybarRightModules= [
 {
     name:"idle_inhibitor",
@@ -117,7 +116,208 @@ waybarRightModules= [
     """},
     ]
     enable: True
-},    
+},
+{
+    name: "pulseaudio",
+    content: """
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    },
+        """,
+    contentCSS: "",
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#pulseaudio:hover",
+    extraContentInTarget:"""
+    color: white;
+    """},
+    {
+    cssTargetForBackgroundColor:"#pulseaudio",
+    extraContentInTarget:""
+},
+    ]
+    enable: True
+},   
+{
+    name:"network",
+    content: """
+        "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " ({signalStrength}%) ",
+        "format-ethernet": "{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{essid}"
+    },
+    """,
+    contentCSS: "",
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#network",
+    extraContentInTarget:""},
+    {cssTargetForBackgroundColor:"#network.disconnected",
+    extraContentInTarget:""},
+    ]
+    enable: True
+},
+{
+    name:"backlight",
+    content: """
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    """,
+    contentCSS: "",
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#backlight",
+    extraContentInTarget:""},
+    ]
+    enable: True
+},
+
+{
+    name:"battery",
+    content: """
+        "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    """,
+    contentCSS: """
+    #battery.critical:not(.charging) {
+        background-color: #f53c3c;
+        color: #ffffff;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: steps(12);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    #battery.charging, #battery.plugged {
+        color: #ffffff;
+        background-color: #26A65B;
+    }
+
+    #battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
+    """,
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#battery",
+    extraContentInTarget:"""color: #000000;"""},
+    ]
+    enable: True
+},
+{
+    name:"clock",
+    content: """
+        "clock": {
+        "timezone": "America/Argentina/Buenos_Aires",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    """,
+    contentCSS: "",
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#clock",
+    extraContentInTarget:""},
+    ]
+    enable: True
+},
+
+
+{
+    name:"tray",
+    content: """
+        "tray": {
+        // "icon-size": 21,
+        "spacing": 5
+        // "icons": {
+          // "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+
+    """,
+    contentCSS: """
+        #tray > .passive {
+        -gtk-icon-effect: dim;
+    }
+
+    #tray > .needs-attention {
+        -gtk-icon-effect: highlight;
+        background-color: #eb4d4b;
+    }
+
+    """,
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor":#tray",
+    extraContentInTarget:""},
+    ]
+    enable: True
+},
+
+{
+    name:"custom/power",
+    content: """
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		// "menu": "on-click",
+      // "on-click": "systemctl suspend"
+      "on-click": "shutdown --now",
+      "on-click-right": "systemctl suspend"
+    // "on-click-right": "systemctl reboot",
+    // "on-click-middle": "systemctl reboot"
+    }
+    """,
+    contentcss: "",
+    cssBackgroundTargets:[
+    {cssTargetForBackgroundColor:"#custom-power",
+    extraContentInTarget:"""
+    padding-left: 10px;
+    padding-right: 1px;
+    margin-right:10px;
+    """},
+    ]
+    enable: True
+}
 ]
 
 waybarCSS ="""
@@ -207,7 +407,6 @@ waybar = {
     // Choose the order of the modules
     "modules-left": [
     """
-
 }
 
 niriConfig = ["""// This config is in the KDL format: https://kdl.dev
