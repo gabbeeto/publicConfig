@@ -1,5 +1,8 @@
 from pathlib import Path
 import json
+import os
+
+from color import hexToRgb
 
 waybarLeftModules = [
     {
@@ -149,12 +152,14 @@ waybarRightModules = [
         "contentCSS": "",
         "cssBackgroundTargets": [
             {
+                "cssTargetForBackgroundColor": "#pulseaudio",
+                 "extraContentInTarget": ""
+            },
+            {
                 "cssTargetForBackgroundColor": "#pulseaudio:hover",
                 "extraContentInTarget": """
-    color: white;
-    """,
+                """,
             },
-            {"cssTargetForBackgroundColor": "#pulseaudio", "extraContentInTarget": ""},
         ],
         "enable": True,
     },
@@ -321,16 +326,10 @@ waybarRightModules = [
     },
 ]
 
-waybarCSS = """
-    * {
-        /* `otf-font-awesome` is required to be installed for icons */
-        font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-        font-size: 15px;
-    }
 
-    window#waybar {
-        /* background-image: linear-gradient(70deg, #64727D 90%, black); */
-        background-color:rgba(255, 148, 156, .8);
+
+
+waybarCSS2 = """ .8);
 
         border-bottom: 0px solid transparent;
         border:2px solid black;
@@ -395,7 +394,17 @@ waybarCSS = """
         border-radius: 12px;
         border:2px solid black
     }
-    """
+  
+"""
+waybarCSS = """
+    * {
+        /* `otf-font-awesome` is required to be installed for icons */
+        font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    window#waybar {
+        background-color:rgba("""
 
 waybar = {
     "generalConfig": """{
@@ -809,8 +818,9 @@ binds {
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
     Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
-    Mod+X hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
-    Mod+F1 hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/toggleRecorder.sh"; }
+    Mod+Z hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
+    Mod+Shift+Z hotkey-overlay-title="open picker for themer" { spawn "~/publicConfig/scripts/themeSetter/main.py"; }
+    Mod+F1 hotkey-overlay-title="record screen" { spawn "~/scripts/toggleRecorder.sh"; }
     Mod+E hotkey-overlay-title="file manager" { spawn "nautilus"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -1084,7 +1094,7 @@ def getColors():
 def createNiriConfig():
     colors = getColors()
     niriConfigContent = "".join(
-        [niriConfig[0], colors["color"], niriConfig[1], colors["color2"], niriConfig[2]]
+        [niriConfig[0],'"', colors["color1"],'"', niriConfig[1], '"',colors["color3"],'"' ,  niriConfig[2]]
     )
 
     return niriConfigContent
@@ -1157,9 +1167,12 @@ def createWaybarCSSConfig():
             module2 = module["cssBackgroundTargets"][i2]
 
             adder = 0 if evenNumberForIndex2 else (1 if evenNumberForIndex else -1)
-            stringNumber: str = str((i % 2) + adder + 1)
-
-            selectedColor: str = colors["color" + stringNumber]
+            adderForBeginnerAndEnd = 2 if isFirstModuleOrisLastModule else 0
+            stringNumber: str = str((i % 2) + adder + 1 + adderForBeginnerAndEnd)
+            if stringNumber != "1":
+                selectedColor: str = colors["color" + stringNumber]
+            else:
+                selectedColor: str = colors["hueColor"]
             textColor: str = colors["textColor"]
             cssModule.append(
                 "\n"
@@ -1175,7 +1188,33 @@ def createWaybarCSSConfig():
             i2 = i2 + 1
         i = i + 1
 
-    return waybarCSS + "".join(cssModule)
+    r,g,b = hexToRgb(colors['color1Value'])
+
+    rgbText = f"{int(r * 255)} , {int(g * 255)} , {int(b * 255)}, "
+    return waybarCSS + rgbText + waybarCSS2 + "".join(cssModule)
 
 
-print(createWaybarCSSConfig())
+def genrateFiles():
+    niriConfigString =  createNiriConfig()
+    fileForNiri = open(f"{Path.home()}/.config/niri/config.kdl","w")
+    fileForNiri.write(niriConfigString )
+    fileForNiri.close()
+
+    waybarCssString = createWaybarCSSConfig()
+
+    print(waybarCssString)
+    fileForWaybarCss = open(f"{Path.home()}/.config/waybar/style.css","w")
+    fileForWaybarCss.write(waybarCssString)
+    fileForWaybarCss.close()
+
+    normalConfigString = createWaybarNormalConfig()
+
+    fileForWaybarNormalConfig = open(f"{Path.home()}/.config/waybar/config.jsonc","w")
+    fileForWaybarNormalConfig.write(normalConfigString)
+    fileForWaybarNormalConfig.close()
+    os.system("pkill waybar")
+    os.system("systemctl --user restart waybar")
+    
+
+
+

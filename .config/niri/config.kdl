@@ -113,7 +113,8 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 3
 
-    background-color "#F5CBED"
+    background-color "#99c1f1"
+    
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
     // - "always", the focused column will always be centered.
@@ -174,7 +175,8 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#2980b9"
+        active-color "#c1f199" 
+
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
@@ -393,8 +395,9 @@ binds {
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
     Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
-    Mod+X hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
-    Mod+F1 hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/toggleRecorder.sh"; }
+    Mod+Z hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
+    Mod+Shift+Z hotkey-overlay-title="open picker for themer" { spawn "~/publicConfig/scripts/themeSetter/main.py"; }
+    Mod+F1 hotkey-overlay-title="record screen" { spawn "~/scripts/toggleRecorder.sh"; }
     Mod+E hotkey-overlay-title="file manager" { spawn "nautilus"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -653,4 +656,4 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
-}
+} 

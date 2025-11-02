@@ -1,41 +1,13 @@
+#!/usr/bin/env python3
+
 import webview
 from pathlib import Path
 import os
 import colorsys
 import json
+from update import genrateFiles
+from color import hexToRgb, rgbToHex, getTriadicsHue
 
-def hexToRgb(hex_color: str):
-    # Remove # and spaces
-    hex_color:str = hex_color.replace(' ', '').replace('#', '')
-
-    # Convert hex to integers
-    r:int = int(hex_color[0:2], 16)
-    g:int = int(hex_color[2:4], 16)
-    b:int = int(hex_color[4:6], 16)
-    
-    # returns a value between 0-1 again instead of degrees
-    return float(r)/255.0, float(g)/255.0, float(b)/255.0
-
-def getTriadicsHue(h: float):
-    # I want to think in terms of degrees
-    hueInDegrees: float= h * 360.0
-    # add 120 degrees to the hue(remove 1 revolution if it's bigger than 360 degrees)
-    firstExtraTriaticHue: float = hueInDegrees  + 120.0 if (hueInDegrees + 120.0 < 360.0) else ((hueInDegrees  + 120.0) - 360.0)
-    # add 240 degrees to the hue(remove 1 revolution if it's bigger than 360 degrees)
-    secondExtraTriaticHue: float= hueInDegrees  + 240.0 if (hueInDegrees + 240.0 < 360.0) else ((hueInDegrees  + 240.0) - 360.0)
-    # turn into a value between 0-1 again instead of degrees
-    firstExtraTriaticHue = firstExtraTriaticHue / 360.0
-    secondExtraTriaticHue = secondExtraTriaticHue / 360.0
-    return firstExtraTriaticHue,secondExtraTriaticHue 
-
-def rgbToHex(r: float, g: float, b: float) -> str:
-    # Convert from 0-1 back to 0-255
-    r = int(r * 255)
-    g = int(g * 255)
-    b = int(b * 255)
-    
-    # Convert to hex and format
-    return f"#{r:02x}{g:02x}{b:02x}"
 def turnColorsIntoHexColorsForJson(hex:str):
     r,g,b= hexToRgb(hex)
     h,s,v= colorsys.rgb_to_hsv(r,g,b)
@@ -57,12 +29,22 @@ def turnColorsIntoHexColorsForJson(hex:str):
     txtR,txtG,txtB =colorsys.hsv_to_rgb(0,0,textValue)
     hexForText: str =rgbToHex(txtR,txtG,txtB)
 
+
+    r5,g5,b5 =colorsys.hsv_to_rgb(0,0,v)
+    textHue: str =rgbToHex(r5,g5,b5)
+
+    incrementForNormalColor = 0.1
+    r6,g6,b6 =colorsys.hsv_to_rgb(h,s,v + incrementForNormalColor if v + incrementForNormalColor < 1.0 else v - incrementForNormalColor)
+    color1WithValue: str =rgbToHex(r6,g6,b6)
+
     hexColorDictionaries = {
     "color1": hex,
     "color2": hex2,
     "color3": hex3,
     "color4": hex4,
-    "textColor": hexForText
+    "hueColor": textHue,
+    "textColor": hexForText,
+    "color1Value": color1WithValue,
     }
     hexColorsInJson = json.dumps(hexColorDictionaries )
     return hexColorsInJson
@@ -77,7 +59,7 @@ class ThemeClass:
     def setColor(self, hex):
         hexColorsInJson =turnColorsIntoHexColorsForJson(hex)
         dealWithWritingFile(hexColorsInJson)
-
+        genrateFiles()
 
 
 # "select Color", str(Path.home()) + '/publicConfig/scripts/colorPicker/frontend/index.html',js_api=ColorInClipboard()
