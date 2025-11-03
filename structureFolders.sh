@@ -23,5 +23,7 @@ sudo mkdir -p ~/Pictures
 
 mkdir ~/Downloads -p
 
+mkdir ~/projects -p
+
 
 mkdir -p ~/.config/theme
