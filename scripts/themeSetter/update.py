@@ -1193,6 +1193,15 @@ def createWaybarCSSConfig():
     rgbText = f"{int(r * 255)} , {int(g * 255)} , {int(b * 255)}, "
     return waybarCSS + rgbText + waybarCSS2 + "".join(cssModule)
 
+def createFuzzelConfig():
+    return f"""[colors]
+background={getColors()['color1']}dd
+text={getColors()['textColor']}ff
+match={getColors()['color2']}ff
+selection-match={getColors()['color3']}ff
+selection={getColors()['color1Dark']}dd
+border={getColors()['color3']}ff
+"""
 
 def genrateFiles():
     niriConfigString =  createNiriConfig()
@@ -1215,6 +1224,12 @@ def genrateFiles():
     os.system("pkill waybar")
     os.system("systemctl --user restart waybar")
     
+
+    fuzzelConfigString = createFuzzelConfig()
+    fileForFuzzelConfig = open(f"{Path.home()}/.config/fuzzel/fuzzel.ini","w")
+    fileForFuzzelConfig.write(fuzzelConfigString)
+    fileForFuzzelConfig.close()
+
 
 
 
