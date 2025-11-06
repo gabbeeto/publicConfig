@@ -2,7 +2,7 @@ html{
   background-color:#f67878;
 }
 
-div{
+div#main{
 display:flex;  
 flex-direction: column;
 justify-content: center;
@@ -10,7 +10,16 @@ align-items: center;
 text-align: center;
 }
 
-input{
+
+div#notMain{
+display:flex;  
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+input[type="color"]{
 width: 80vw;
 height: 50vw;
 }

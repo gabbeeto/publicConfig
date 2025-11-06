@@ -5,7 +5,8 @@ function setColor() {
   let colorValue = document.querySelector('input').value;
   colorChanged = true
   if (colorValue) {
-    pywebview.api.setColor(colorValue);
+    checked = document.querySelector("#raylib").checked;
+    pywebview.api.setColor(colorValue, checked);
   }
 }
 

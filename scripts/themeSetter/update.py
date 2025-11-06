@@ -316,10 +316,10 @@ waybarRightModules = [
             {
                 "cssTargetForBackgroundColor": "#custom-power",
                 "extraContentInTarget": """
-    padding-left: 10px;
-    padding-right: 1px;
-    margin-right:10px;
-    """,
+                                        padding-left: 10px;
+                                        padding-right: 1px;
+                                        margin-right:10px;
+                                        """,
             },
         ],
         "enable": True,

@@ -10,12 +10,16 @@
 
 <body>
 
-<div>
+  <div id="main">
 
     <input type='color' onchange='pywebview.api.setColor()'>
 
-<button>apply</button>
-</div>
+    <div id="notMain">
+      <label for="raylib">raylib</label>
+      <input type="checkbox" id="raylib">
+    </div>
+    <button>apply</button>
+  </div>
   <script src="js.js">
   </script>
 </body>
