@@ -101,6 +101,7 @@ flatpak-install-if-needed org.vinegarhq.Vinegar
 flatpak-install-if-needed org.vinegarhq.Sober 
 flatpak-install-if-needed io.github.jliljebl.Flowblade
 flatpak-install-if-needed org.zealdocs.Zeal
+flatpak-install-if-needed flathub net.ankiweb.Anki
 
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
