@@ -121,5 +121,7 @@ MimeType=application/x-godot-project;
 EOF
 
 
-source ~/.bashrc
+sudo systemctl enable keyd --now
+sudo systemctl start keyd
 
+sudo keyd reload

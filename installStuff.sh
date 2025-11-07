@@ -20,9 +20,13 @@ sudo pacman -S yt-dlp --noconfirm --needed
 sudo pacman -S waybar --noconfirm --needed
 
 
-# app to search on niri
+# app launcher to search on niri
 sudo pacman -S fuzzel --noconfirm --needed
 
+
+
+# edit capslock
+sudo pacman -S keyd --noconfirm --needed
 
 
 # to copy key ssh key
@@ -74,7 +78,7 @@ sudo pacman -S retroarch --noconfirm --needed
 
 
 # dependencies for raylib
-sudo pacman -S alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm --needed
+sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm --needed
 
 # raylib lol
 sudo pacman -S raylib --noconfirm --needed
