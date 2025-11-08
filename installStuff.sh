@@ -105,7 +105,7 @@ flatpak-install-if-needed org.vinegarhq.Vinegar
 flatpak-install-if-needed org.vinegarhq.Sober 
 flatpak-install-if-needed io.github.jliljebl.Flowblade
 flatpak-install-if-needed org.zealdocs.Zeal
-flatpak-install-if-needed flathub net.ankiweb.Anki
+flatpak-install-if-needed net.ankiweb.Anki
 flatpak-install-if-needed net.nokyan.Resources
 
 npm-install-if-needed() {
