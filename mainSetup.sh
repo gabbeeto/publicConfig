@@ -10,32 +10,10 @@ bash ./structureFolders.sh
 
 xdg-settings set default-web-browser firefox.desktop
 # downloads minecraft
-curl -L --retry 3 -o ~/games/minecraft.tar.gz "https://launcher.mojang.com/download/Minecraft.tar.gz"
-# extract minecraft file
-tar -xzf ~/games/minecraft.tar.gz -C ~/games/
-# rm tar file
-rm ~/games/*.tar*
-# move executable
-mv ~/games/m*r/m*r ~/games/minecraft
-# remove empty folder
-rmdir ~/games/m*r
-echo "export PATH=\$PATH:~/games" >> ~/.bashrc
-
-
-# Create Minecraft desktop file
-cat > ~/.local/share/applications/minecraft.desktop << EOF
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Minecraft
-Comment=Official Minecraft Launcher
-Exec=/home/$USER/games/minecraft
-Icon=minecraft
-Categories=Game;
-Keywords=minecraft;game;
-StartupNotify=false
-Terminal=false
-EOF
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -s minecraft-launcher
 
 
 # add cargo to path
