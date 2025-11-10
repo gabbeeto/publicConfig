@@ -7,12 +7,11 @@ sudo pacman -S wayland --noconfirm --needed
 sudo pacman -S wayland-utils wayland-protocols --noconfirm --needed
 sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm --needed
 # download firefox
-sudo pacman -S firefox chromium  --noconfirm --needed
+sudo pacman -S firefox chromium qutebrowser --noconfirm --needed
 
 # I like this window manager lol
 sudo pacman -S nautilus --needed --noconfirm
-
-
+sudo pacman -S gnome-themes-extra --needed --noconfirm
 # for when firefox cannot handle 360p and you're in a very old devie
 sudo pacman -S yt-dlp --noconfirm --needed
 
@@ -107,6 +106,7 @@ flatpak-install-if-needed io.github.jliljebl.Flowblade
 flatpak-install-if-needed org.zealdocs.Zeal
 flatpak-install-if-needed net.ankiweb.Anki
 flatpak-install-if-needed net.nokyan.Resources
+flatpak-install-if-needed org.tenacityaudio.Tenacity
 
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
@@ -128,9 +128,18 @@ pip3 install pywebview --break-system-packages
 # this is an adblock for qutebrowser
 pip3 install adblock --break-system-packages
 
+
 # for godot language server
 sudo pacman -S nmap --needed --noconfirm
 pipx install "gdtoolkit==4.*"
 pipx upgrade "gdtoolkit==4.*"
 
 
+# darkmode
+sudo pacman -S gsettings-desktop-schemas --needed --noconfirm
+# Set dark theme for GTK3/GTK4 apps
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+
+sudo pacman -S qt5ct --needed --noconfirm

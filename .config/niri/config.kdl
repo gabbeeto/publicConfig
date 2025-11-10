@@ -113,7 +113,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 3
 
-    background-color "#99c1f1"
+    background-color "#32373b"
     
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -175,7 +175,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#c1f199" 
+        active-color "#b6cc9a" 
 
         // Color of the ring on inactive monitors.
         //
@@ -321,7 +321,7 @@ clip-to-geometry true
 
 window-rule {
     match is-active=false
-    opacity 0.85
+    opacity 0.75
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -390,7 +390,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+MouseLeft    { close-window; }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+F hotkey-overlay-title="open firefox" { spawn "firefox"; }
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }

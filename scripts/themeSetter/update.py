@@ -4,6 +4,13 @@ import os
 
 from color import hexToRgb
 
+def getColors():
+    file = open(f"{Path.home()}/.config/theme/color.json", "r")
+    jsonText = file.read()
+    file.close()
+    colors = json.loads(jsonText)
+    return colors
+
 waybarLeftModules = [
     {
         "name": "niri/workspaces",
@@ -83,8 +90,8 @@ waybarLeftModules = [
         "cssBackgroundTargets": [
             {
                 "cssTargetForBackgroundColor": "#window",
-                "extraContentInTarget": """
-        border:2px solid black;
+                "extraContentInTarget": f"""
+        border:1px solid {getColors()["textColor"]};
         padding: 5px;
         border-radius: 10px;
         """,
@@ -329,73 +336,6 @@ waybarRightModules = [
 
 
 
-waybarCSS2 = """ .8);
-
-        border-bottom: 0px solid transparent;
-        border:2px solid black;
-        color: black;
-        transition-property: background-color;
-        transition-duration: .5s;
-        border-radius: 10px;
-    }
-
-    window#waybar.hidden {
-        opacity: 0.2;
-    }
-
-
-    window#waybar.termite {
-        background-color: #3F3F3F;
-    }
-
-    window#waybar.chromium {
-        background-color: #000000;
-        border: none;
-    }
-
-    button {
-        /* Use box-shadow instead of border so the text isn't offset */
-        box-shadow: inset 0 -3px transparent;
-        /* Avoid rounded borders under each button name */
-        border: none;
-        /* border-radius: 0; */
-    }
-
-    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-    button:hover {
-        background: inherit;
-        box-shadow: inset 0 -3px #f0932b;
-    }
-
-    #clock,
-    #battery,
-    #cpu,
-    #memory,
-    #disk,
-    #temperature,
-    #backlight,
-    #network,
-    #pulseaudio,
-    #wireplumber,
-    #custom-media,
-    #tray,
-    #mode,
-    #idle_inhibitor,
-    #scratchpad,
-    #power-profiles-daemon,
-    #mpd,
-    #custom-power,
-    #workspaces
-     {
-        padding: 1px 20px;
-        margin-bottom:10px;
-        margin-top:10px;
-        color: black;
-        border-radius: 12px;
-        border:2px solid black
-    }
-  
-"""
 waybarCSS = """
     * {
         /* `otf-font-awesome` is required to be installed for icons */
@@ -744,7 +684,7 @@ clip-to-geometry true
 
 window-rule {
     match is-active=false
-    opacity 0.85
+    opacity 0.75
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -813,7 +753,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+MouseLeft    { close-window; }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+F hotkey-overlay-title="open firefox" { spawn "firefox"; }
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
@@ -1083,18 +1023,81 @@ binds {
 ]
 
 
-def getColors():
-    file = open(f"{Path.home()}/.config/theme/color.json", "r")
-    jsonText = file.read()
-    file.close()
-    colors = json.loads(jsonText)
-    return colors
 
+waybarCSS2 = f""" .8);
+
+        border-bottom: 0px solid transparent;
+        border:1px solid {getColors()["textColor"]};
+        color: black;
+        transition-property: background-color;
+        transition-duration: .5s;
+        border-radius: 10px;
+    }}
+
+    window#waybar.hidden {{
+        opacity: 0.2;
+    }}
+
+
+    window#waybar.termite {{
+        background-color: #3F3F3F;
+    }}
+
+    window#waybar.chromium {{
+        background-color: #000000;
+        border: none;
+    }}
+
+    button {{
+        /* Use box-shadow instead of border so the text isn't offset */
+        box-shadow: inset 0 -3px transparent;
+        /* Avoid rounded borders under each button name */
+        border: none;
+        /* border-radius: 0; */
+    }}
+
+    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+    button:hover {{
+        background: inherit;
+        box-shadow: inset 0 -3px #f0932b;
+    }}
+
+    #clock,
+    #battery,
+    #cpu,
+    #memory,
+    #disk,
+    #temperature,
+    #backlight,
+    #network,
+    #pulseaudio,
+    #wireplumber,
+    #custom-media,
+    #tray,
+    #mode,
+    #idle_inhibitor,
+    #scratchpad,
+    #power-profiles-daemon,
+    #mpd,
+    #custom-power,
+    #workspaces
+     {{
+        padding: 1px 20px;
+        margin-bottom:10px;
+        margin-top:10px;
+        color: black;
+        border-radius: 12px;
+        border:1px solid {getColors()["textColor"]}
+    }}
+  
+"""
 
 def createNiriConfig():
     colors = getColors()
+    backgroundColor = colors["color1"]
+    selectedColorOnFocusRing=colors["color3Value"]
     niriConfigContent = "".join(
-        [niriConfig[0],'"', colors["color1"],'"', niriConfig[1], '"',colors["color3"],'"' ,  niriConfig[2]]
+        [niriConfig[0],'"', backgroundColor,'"', niriConfig[1], '"',selectedColorOnFocusRing,'"' ,  niriConfig[2]]
     )
 
     return niriConfigContent

@@ -6,10 +6,10 @@
     }
 
     window#waybar {
-        background-color:rgba(148 , 136 , 215,  .8);
+        background-color:rgba(72 , 71 , 84,  .8);
 
         border-bottom: 0px solid transparent;
-        border:2px solid black;
+        border:1px solid #e8e8e8;
         color: black;
         transition-property: background-color;
         transition-duration: .5s;
@@ -69,7 +69,7 @@
         margin-top:10px;
         color: black;
         border-radius: 12px;
-        border:2px solid black
+        border:1px solid #e8e8e8
     }
   
 
@@ -106,8 +106,8 @@
     
 #workspaces {
 margin-left:10px;
-background-color: #c1f199;
-color: #000000;
+background-color: #373b32;
+color: #c3c3c3;
 }
 #window
 {
@@ -116,52 +116,52 @@ color: #000000;
     
 #window {
 
-        border:2px solid black;
+        border:1px solid #e8e8e8;
         padding: 5px;
         border-radius: 10px;
         
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
 #idle_inhibitor {
 
         color:black;
         
-background-color: #f1f1f1;
-color: #000000;
+background-color: #3b3b3b;
+color: #c3c3c3;
 }
 #idle_inhibitor.activated {
 
         color: black;
         
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
 #pulseaudio {
 
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
 #pulseaudio:hover {
 
                 
-background-color: #f1f1f1;
-color: #000000;
+background-color: #3b3b3b;
+color: #c3c3c3;
 }
 #network {
 
-background-color: #f1f1f1;
-color: #000000;
+background-color: #3b3b3b;
+color: #c3c3c3;
 }
 #network.disconnected {
 
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
 #backlight {
 
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
     #battery.critical:not(.charging) {
         background-color: #f53c3c;
@@ -189,13 +189,13 @@ color: #000000;
     
 #battery {
 color: #000000;
-background-color: #f1f1f1;
-color: #000000;
+background-color: #3b3b3b;
+color: #c3c3c3;
 }
 #clock {
 
-background-color: #f199c1;
-color: #000000;
+background-color: #3b3237;
+color: #c3c3c3;
 }
         #tray > .passive {
         -gtk-icon-effect: dim;
@@ -209,15 +209,15 @@ color: #000000;
     
 #tray {
 
-background-color: #f1f1f1;
-color: #000000;
+background-color: #3b3b3b;
+color: #c3c3c3;
 }
 #custom-power {
 
-    padding-left: 10px;
-    padding-right: 1px;
-    margin-right:10px;
-    
-background-color: #9df158;
-color: #000000;
+                                        padding-left: 10px;
+                                        padding-right: 1px;
+                                        margin-right:10px;
+                                        
+background-color: #243b09;
+color: #c3c3c3;
 }
