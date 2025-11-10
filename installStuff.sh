@@ -125,7 +125,8 @@ npm-install-if-needed typescript-language-server
 sudo pacman -S python-lsp-server --noconfirm --needed
 # other cool stuff I use to develop on python
 pip3 install pywebview --break-system-packages
-
+# this is an adblock for qutebrowser
+pip3 install adblock --break-system-packages
 
 # for godot language server
 sudo pacman -S nmap --needed --noconfirm
