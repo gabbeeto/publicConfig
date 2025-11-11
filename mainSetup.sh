@@ -113,4 +113,7 @@ echo "export QT_QPA_PLATFORMTHEME=qt5ct">> ~/.bashrc
 echo "export QT_STYLE_OVERRIDE=Breeze">> ~/.bashrc
 echo "export ELECTRON_OZONE_PLATFORM_HINT=auto" >> ~/.bashrc
 
+
+
+
 source ~/.bashrc

@@ -753,8 +753,10 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+MouseLeft    { close-window; }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+RETURN hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+F hotkey-overlay-title="open firefox" { spawn "firefox"; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal" { spawn "ghostty"; }
+    Mod+F hotkey-overlay-title="open browser" { spawn "qutebrowser"; }
+    Mod+T hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
+    Ctrl+Alt+Delete hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
     Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
     Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
@@ -1014,7 +1016,7 @@ binds {
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    Ctrl+Alt+Mod+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.

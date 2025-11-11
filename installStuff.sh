@@ -15,6 +15,7 @@ sudo pacman -S gnome-themes-extra --needed --noconfirm
 # for when firefox cannot handle 360p and you're in a very old devie
 sudo pacman -S yt-dlp --noconfirm --needed
 
+sudo pacman -S discover --noconfirm --needed
 # bar on top
 sudo pacman -S waybar --noconfirm --needed
 
@@ -65,8 +66,12 @@ sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick   --noco
 sudo pacman -S clang scons python3 --noconfirm --needed
 
 
+# terminals
+sudo pacman -S alacritty kitty ghostty --noconfirm --needed
+
 # apps for that I use daily
-sudo pacman -S curl kitty unzip obs-studio go helix tmux zellij npm nodejs python-pip python-pipx python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder man-db man-pages less --noconfirm --needed
+sudo pacman -S curl unzip obs-studio go helix tmux zellij npm nodejs python-pip python-pipx python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder man-db man-pages less --noconfirm --needed
+
 
 
 # install gaming stuff
@@ -82,6 +87,8 @@ sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcom
 # raylib lol
 sudo pacman -S raylib --noconfirm --needed
 
+# mhmm some mathematics
+sudo pacman -S sagemath --noconfirm --needed
 
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
@@ -107,6 +114,8 @@ flatpak-install-if-needed org.zealdocs.Zeal
 flatpak-install-if-needed net.ankiweb.Anki
 flatpak-install-if-needed net.nokyan.Resources
 flatpak-install-if-needed org.tenacityaudio.Tenacity
+flatpak-install-if-needed io.github.ebonjaeger.bluejay
+flatpak-install-if-needed org.gnome.Calculator
 
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
