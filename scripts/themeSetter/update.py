@@ -753,7 +753,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+MouseLeft    { close-window; }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+RETURN hotkey-overlay-title="Open a Terminal" { spawn "ghostty"; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+F hotkey-overlay-title="open browser" { spawn "qutebrowser"; }
     Mod+T hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
     Ctrl+Alt+Delete hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }

@@ -6,10 +6,10 @@
     }
 
     window#waybar {
-        background-color:rgba(32 , 37 , 38,  .8);
+        background-color:rgba(57 , 59 , 62,  .8);
 
         border-bottom: 0px solid transparent;
-        border:1px solid #f2f2f2;
+        border:1px solid #d9d9d9;
         color: black;
         transition-property: background-color;
         transition-duration: .5s;
@@ -69,7 +69,7 @@
         margin-top:10px;
         color: black;
         border-radius: 12px;
-        border:1px solid #f2f2f2
+        border:1px solid #d9d9d9
     }
   
 
@@ -106,8 +106,8 @@
     
 #workspaces {
 margin-left:10px;
-background-color: #0d0c0b;
-color: #f2f2f2;
+background-color: #252522;
+color: #dadada;
 }
 #window
 {
@@ -116,52 +116,52 @@ color: #f2f2f2;
     
 #window {
 
-        border:1px solid #f2f2f2;
+        border:1px solid #d9d9d9;
         padding: 5px;
         border-radius: 10px;
         
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
 #idle_inhibitor {
 
         color:black;
         
-background-color: #0d0d0d;
-color: #f2f2f2;
+background-color: #252525;
+color: #dadada;
 }
 #idle_inhibitor.activated {
 
         color: black;
         
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
 #pulseaudio {
 
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
 #pulseaudio:hover {
 
                 
-background-color: #0d0d0d;
-color: #f2f2f2;
+background-color: #252525;
+color: #dadada;
 }
 #network {
 
-background-color: #0d0d0d;
-color: #f2f2f2;
+background-color: #252525;
+color: #dadada;
 }
 #network.disconnected {
 
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
 #backlight {
 
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
     #battery.critical:not(.charging) {
         background-color: #f53c3c;
@@ -189,13 +189,13 @@ color: #f2f2f2;
     
 #battery {
 color: #000000;
-background-color: #0d0d0d;
-color: #f2f2f2;
+background-color: #252525;
+color: #dadada;
 }
 #clock {
 
-background-color: #0c0b0d;
-color: #f2f2f2;
+background-color: #252225;
+color: #dadada;
 }
         #tray > .passive {
         -gtk-icon-effect: dim;
@@ -209,8 +209,8 @@ color: #f2f2f2;
     
 #tray {
 
-background-color: #0d0d0d;
-color: #f2f2f2;
+background-color: #252525;
+color: #dadada;
 }
 #custom-power {
 
@@ -218,6 +218,6 @@ color: #f2f2f2;
                                         padding-right: 1px;
                                         margin-right:10px;
                                         
-background-color: #0d0702;
-color: #f2f2f2;
+background-color: #252503;
+color: #dadada;
 }
