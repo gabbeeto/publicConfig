@@ -9,8 +9,8 @@ sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm --needed
 # download firefox
 sudo pacman -S firefox chromium qutebrowser --noconfirm --needed
 
-# I like this window manager lol
-sudo pacman -S nautilus --needed --noconfirm
+# I like this window manager and imv to display images 
+sudo pacman -S nautilus imv --needed --noconfirm
 sudo pacman -S gnome-themes-extra --needed --noconfirm
 # for when firefox cannot handle 360p and you're in a very old devie
 sudo pacman -S yt-dlp --noconfirm --needed
@@ -88,7 +88,7 @@ sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcom
 sudo pacman -S raylib --noconfirm --needed
 
 # mhmm some mathematics
-sudo pacman -S sagemath --noconfirm --needed
+sudo pacman -S sagemath gnuplot gnuplot-qt  --noconfirm --needed
 
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
@@ -116,7 +116,8 @@ flatpak-install-if-needed net.nokyan.Resources
 flatpak-install-if-needed org.tenacityaudio.Tenacity
 flatpak-install-if-needed io.github.ebonjaeger.bluejay
 flatpak-install-if-needed org.gnome.Calculator
-
+flatpak-install-if-needed org.kde.labplot
+flatpak-install-if-needed org.kde.kalgebra
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
         sudo npm install -g "$1" --no-fund --no-audit
