@@ -110,7 +110,7 @@ echo "export GTK_THEME=Adwaita-dark">> ~/.bashrc
 echo "GTK_APPLICATION_PREFER_DARK_THEME=1">> ~/.bashrc
 
 echo "export QT_QPA_PLATFORMTHEME=qt5ct">> ~/.bashrc
-echo "export QT_STYLE_OVERRIDE=Breeze">> ~/.bashrc
+echo "export QT_STYLE_OVERRIDE=Fusion">> ~/.bashrc
 echo "export ELECTRON_OZONE_PLATFORM_HINT=auto" >> ~/.bashrc
 
 
