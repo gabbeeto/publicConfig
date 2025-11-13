@@ -37,3 +37,7 @@ name = "glsl"
 language-servers = ["glsl_analyzer"]
 file-types = ["gdshader"]
 
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"] # For JSX files as well
+file-types = ["lua", "script"]
