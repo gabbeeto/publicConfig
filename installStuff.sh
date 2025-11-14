@@ -88,7 +88,7 @@ sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcom
 sudo pacman -S raylib --noconfirm --needed
 
 # mhmm some mathematics
-sudo pacman -S sagemath gnuplot gnuplot-qt  --noconfirm --needed
+sudo pacman -S sagemath gnuplot   --noconfirm --needed
 
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
@@ -133,6 +133,9 @@ npm-install-if-needed typescript
 npm-install-if-needed typescript-language-server
 
 sudo pacman -S python-lsp-server --noconfirm --needed
+sudo pacman -S lua-language-server --noconfirm --needed
+
+
 # other cool stuff I use to develop on python
 pip3 install pywebview --break-system-packages
 # this is an adblock for qutebrowser
