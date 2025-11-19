@@ -1,4 +1,3 @@
-
 [language-server.godot]
 command = "ncat" # or nc
 args = [ "127.0.0.1", "6005"]
