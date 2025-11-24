@@ -677,6 +677,21 @@ animations {
 }
 
 window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"com\\.chatterino\\.chatterino$"#
+    open-floating true
+    opacity 0.75
+    default-column-width { proportion 0.2; }
+    default-window-height { proportion 0.65; }
+    default-floating-position x=0 y=0 relative-to="top-right"
+    open-focused false
+}
+
+
+
+window-rule {
 geometry-corner-radius 14
 clip-to-geometry true
 }
@@ -697,7 +712,7 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id=r#"^org\\.wezfurlong\\.wezterm$"#
     default-column-width {}
 }
 
@@ -722,8 +737,8 @@ window-rule {
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r#"^org\\.keepassxc\\.KeePassXC$"#
+    match app-id=r#"^org\\.gnome\\.World\\.Secrets$"#
 
     block-out-from "screen-capture"
 

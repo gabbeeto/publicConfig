@@ -313,6 +313,14 @@ animations {
     // slowdown 3.0
 }
 
+
+window-rule {
+geometry-corner-radius 14
+clip-to-geometry true
+
+match app-id=r#"^org\.wezfurlong\.wezterm$"#
+}
+
 window-rule {
 geometry-corner-radius 14
 clip-to-geometry true
@@ -334,8 +342,13 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id=r#"com.chatterino.chatterino$"#
+    open-floating true
+    opacity 0.75
+    default-column-width { proportion 0.25; }
+    default-window-height { proportion 0.7; }
+    default-floating-position x=0 y=0 relative-to="top-right"
+    open-focused false
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
