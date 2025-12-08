@@ -16,8 +16,6 @@ sudo pacman -S gnome-themes-extra --needed --noconfirm
 sudo pacman -S yt-dlp --noconfirm --needed
 
 sudo pacman -S discover --noconfirm --needed
-# bar on top
-sudo pacman -S waybar --noconfirm --needed
 
 
 # app launcher to search on niri

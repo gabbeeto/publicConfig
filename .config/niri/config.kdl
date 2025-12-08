@@ -111,7 +111,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 3
+    gaps 4
 
     background-color "#222525"
     
@@ -276,7 +276,6 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
 
 spawn-at-startup "mako"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -292,7 +291,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-prefer-no-csd
+// prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -307,7 +306,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    // off
+    off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
@@ -402,18 +401,20 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+MouseLeft    { close-window; }
+
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+RETURN hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+F hotkey-overlay-title="open browser" { spawn "qutebrowser"; }
     Mod+T hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
     Ctrl+Alt+Delete hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
-    Mod+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
+    Mod+Shift+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
     Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
     Mod+Z hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
-    Mod+Shift+Z hotkey-overlay-title="open picker for themer" { spawn "~/publicConfig/scripts/themeSetter/main.py"; }
-    Mod+F1 hotkey-overlay-title="record screen" { spawn "~/scripts/toggleRecorder.sh"; }
+    Mod+F1 hotkey-overlay-title="record screen" { spawn "~/publicConfig/scripts/toggleRecorder.sh"; }
     Mod+E hotkey-overlay-title="file manager" { spawn "nautilus"; }
+    Mod+C hotkey-overlay-title="open system dialog" { spawn "~/publicConfig/scripts/systemMenu.sh"; }
+    Mod+S hotkey-overlay-title="open system dialog" { spawn "~/publicConfig/scripts/systemMenu.sh"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -441,7 +442,6 @@ binds {
     Mod+O repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
-    Mod+C repeat=false { close-window; }
     Alt+f4 repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }

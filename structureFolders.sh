@@ -4,14 +4,9 @@ mkdir -p ~/games
 # Create desktop directory if it doesn't exist for custom apps
 mkdir -p ~/.local/share/applications
 
-# make folder for scripts
-mkdir -p ~/scripts
-
 
 # copy the configs
 cp .config/* ~/.config/ -r
-
-sudo cp -r scripts/* ~/scripts/
 
 # make directory to mount pendrive
 sudo mkdir -p /mnt/usb
@@ -26,8 +21,7 @@ mkdir ~/Downloads -p
 mkdir ~/projects -p
 
 
-mkdir -p ~/.config/theme
 
-
+# this is for keyboard stuff
 sudo mkdir -p /etc/keyd/
 sudo cp ~/publicConfig/etc/keyd/default.conf /etc/keyd/
