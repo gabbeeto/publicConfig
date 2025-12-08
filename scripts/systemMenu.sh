@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Show menu with fuzzel
-CHOICE=$(echo -e "Time\nAudio Control" | fuzzel --dmenu --lines=2)
+CHOICE=$(echo -e "Time\nAudio Control\nBattery" | fuzzel --dmenu --lines=3)
 
 # Handle selection
 case "$CHOICE" in
@@ -10,6 +10,9 @@ case "$CHOICE" in
         ;;
     "Audio Control")
         pavucontrol &
+        ;;
+    "Battery")
+        notify-send "`upower -i $(upower -e | grep battery) | grep -E "state|time|percentage"`"
         ;;
     *)
         exit 0
