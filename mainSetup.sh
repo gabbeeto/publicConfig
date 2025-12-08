@@ -104,6 +104,4 @@ sudo systemctl start keyd
 
 sudo keyd reload
 
-
-
 source ~/.bashrc
