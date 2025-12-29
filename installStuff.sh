@@ -88,6 +88,10 @@ sudo pacman -S raylib --noconfirm --needed
 # mhmm some mathematics
 sudo pacman -S sagemath gnuplot   --noconfirm --needed
 
+
+# mhmm some video editing
+sudo pacman -S kdenlive flowblade --noconfirm --needed
+
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
         flatpak install --noninteractive flathub "$1"
@@ -102,12 +106,10 @@ flatpak-install-if-needed org.gimp.GIMP
 flatpak-install-if-needed com.orama_interactive.Pixelorama
 flatpak-install-if-needed org.inkscape.Inkscape
 flatpak-install-if-needed com.chatterino.chatterino
-flatpak-install-if-needed org.kde.kdenlive
 flatpak-install-if-needed org.libreoffice.LibreOffice
 flatpak-install-if-needed org.luanti.luanti
 flatpak-install-if-needed org.vinegarhq.Vinegar
 flatpak-install-if-needed org.vinegarhq.Sober 
-flatpak-install-if-needed io.github.jliljebl.Flowblade
 flatpak-install-if-needed org.zealdocs.Zeal
 flatpak-install-if-needed net.ankiweb.Anki
 flatpak-install-if-needed net.nokyan.Resources
