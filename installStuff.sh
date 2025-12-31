@@ -148,11 +148,9 @@ pipx install "gdtoolkit==4.*"
 pipx upgrade "gdtoolkit==4.*"
 
 
-# darkmode
+# darkmode install
 sudo pacman -S gsettings-desktop-schemas --needed --noconfirm
-# Set dark theme for GTK3/GTK4 apps
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-
 sudo pacman -S qt5ct --needed --noconfirm
+
+#prism launcher for minecraft
+sudo pacman -S prismlauncher --needed --noconfirm
