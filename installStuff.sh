@@ -19,10 +19,10 @@ sudo pacman -S yt-dlp --noconfirm --needed
 sudo pacman -S discover --noconfirm --needed
 
 # install chinese stuff
-sudo pacman -S noto-fonts-cjk  # Google Noto CJK fonts
-sudo pacman -S wqy-microhei    # WenQuanYi Micro Hei
-sudo pacman -S adobe-source-han-sans-cn-fonts  # Source Han Sans
-sudo pacman -S adobe-source-han-serif-cn-fonts # Source Han Serif
+sudo pacman -S noto-fonts-cjk  --noconfirm --needed # Google Noto CJK fonts
+sudo pacman -S wqy-microhei    --noconfirm --needed # WenQuanYi Micro Hei
+sudo pacman -S adobe-source-han-sans-cn-fonts  --noconfirm --needed # Source Han Sans
+sudo pacman -S adobe-source-han-serif-cn-fonts --noconfirm --needed # Source Han Serif
 
 # app launcher to search on niri
 sudo pacman -S fuzzel --noconfirm --needed
