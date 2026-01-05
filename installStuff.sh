@@ -9,6 +9,7 @@ sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm --needed
 # download firefox
 sudo pacman -S firefox chromium qutebrowser --noconfirm --needed
 
+
 # I like this window manager and imv to display images 
 sudo pacman -S nautilus imv --needed --noconfirm
 sudo pacman -S gnome-themes-extra --needed --noconfirm
@@ -159,3 +160,6 @@ sudo pacman -S qt5ct --needed --noconfirm
 
 #prism launcher for minecraft
 sudo pacman -S prismlauncher --needed --noconfirm
+
+# install waybar
+sudo pacman -S waybar --noconfirm --needed

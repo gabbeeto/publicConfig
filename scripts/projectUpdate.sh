@@ -1,3 +1,5 @@
+cd ~/publicConfig/
+
 echo "=== Starting Update ==="
 flatpak update --assumeyes
 echo "Updating flatpaks..."
@@ -12,3 +14,6 @@ echo "=== Update Complete ==="
 # restart waybar
 pkill waybar
 systemctl --user restart waybar
+
+
+cd -

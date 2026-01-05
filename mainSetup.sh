@@ -27,8 +27,8 @@ cargo install ripdrag
 echo "alias hx='helix'" >> ~/.bashrc
 
 # add update to update packages and updateSystem to update all the changes
-echo "alias updateSystem='bash  ~/publicConfig/update.sh'" >> ~/.bashrc
-echo "alias update='bash ~/scripts/update.sh'" >> ~/.bashrc
+echo "alias updateSystem='bash  ~/publicConfig/scripts/systemMenu.sh'" >> ~/.bashrc
+echo "alias update='bash ~/publicConfig/scripts/update.sh'" >> ~/.bashrc
 
 # helix is my default editor
 echo "export EDITOR=\"helix\"" >> ~/.bashrc
@@ -105,3 +105,6 @@ sudo systemctl start keyd
 sudo keyd reload
 
 source ~/.bashrc
+
+pkill waybar
+sudo systemctl --user restart waybar
