@@ -9,13 +9,13 @@ sudo pacman -S libinput mesa vulkan-icd-loader --noconfirm --needed
 # download firefox
 sudo pacman -S firefox chromium qutebrowser --noconfirm --needed
 
-
 # I like this window manager and imv to display images 
 sudo pacman -S nautilus imv --needed --noconfirm
 sudo pacman -S gnome-themes-extra --needed --noconfirm
 # for when firefox cannot handle 360p and you're in a very old devie
 sudo pacman -S yt-dlp --noconfirm --needed
 
+# this is an app store 
 sudo pacman -S discover --noconfirm --needed
 
 # install chinese stuff
@@ -46,8 +46,6 @@ sudo pacman -S otf-font-awesome --noconfirm --needed
 
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
 
-
-
 # manage x11 apps
 sudo pacman -S xwayland-satellite --noconfirm --needed
 
@@ -61,10 +59,8 @@ sudo pacman -S swaylock  --noconfirm --needed
 # to install ripdrag
 sudo pacman -Sy  rust gtk4 base-devel --noconfirm --needed
 
-
 # best terminal file manager and dependencies
 sudo pacman -S yazi  7zip  poppler fd ripgrep  zoxide resvg imagemagick   --noconfirm --needed
-
 
 # for c++ and godot
 sudo pacman -S clang scons python3 --noconfirm --needed
@@ -82,14 +78,13 @@ sudo pacman -S curl unzip obs-studio go helix tmux zellij npm nodejs python-pip 
 sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm --needed
 # install retroarch
 sudo pacman -S retroarch --noconfirm --needed
+#prism launcher for minecraft
+sudo pacman -S prismlauncher --needed --noconfirm
 
 
 
-# dependencies for raylib
-sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon --noconfirm --needed
-
-# raylib lol
-sudo pacman -S raylib --noconfirm --needed
+# dependencies for raylib and raylib
+sudo pacman -S alsa-lib  libx11 libxrandr libxi libxcursor libxinerama libxkbcommon lib32-wayland lib32-libxkbcommon raylib --noconfirm --needed
 
 # mhmm some mathematics
 sudo pacman -S sagemath gnuplot   --noconfirm --needed
@@ -124,6 +119,10 @@ flatpak-install-if-needed io.github.ebonjaeger.bluejay
 flatpak-install-if-needed org.gnome.Calculator
 flatpak-install-if-needed org.kde.labplot
 flatpak-install-if-needed org.kde.kalgebra
+flatpak-install-if-needed org.learningequality.Kolibri
+flatpak-install-if-needed com.github.tchx84.Flatseal
+
+
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
         sudo npm install -g "$1" --no-fund --no-audit
@@ -157,9 +156,6 @@ pipx upgrade "gdtoolkit==4.*"
 # darkmode install
 sudo pacman -S gsettings-desktop-schemas --needed --noconfirm
 sudo pacman -S qt5ct --needed --noconfirm
-
-#prism launcher for minecraft
-sudo pacman -S prismlauncher --needed --noconfirm
 
 # install waybar
 sudo pacman -S waybar --noconfirm --needed
