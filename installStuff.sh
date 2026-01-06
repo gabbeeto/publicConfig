@@ -12,9 +12,13 @@ sudo pacman -S firefox chromium qutebrowser --noconfirm --needed
 # I like this window manager and imv to display images 
 sudo pacman -S nautilus imv --needed --noconfirm
 sudo pacman -S gnome-themes-extra --needed --noconfirm
+
+
+# keyring
+sudo pacman -S gnome-keyring libsecret --noconfirm --needed
+
 # for when firefox cannot handle 360p and you're in a very old devie
 sudo pacman -S yt-dlp --noconfirm --needed
-
 # this is an app store 
 sudo pacman -S discover --noconfirm --needed
 
