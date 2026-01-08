@@ -28,6 +28,10 @@ sudo pacman -S wqy-microhei    --noconfirm --needed # WenQuanYi Micro Hei
 sudo pacman -S adobe-source-han-sans-cn-fonts  --noconfirm --needed # Source Han Sans
 sudo pacman -S adobe-source-han-serif-cn-fonts --noconfirm --needed # Source Han Serif
 
+# fcitx5 for chinese input
+sudo pacman -S fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt --noconfirm --needed
+sudo pacman -S fcitx5-chinese-addons fcitx5-lua --noconfirm --needed  # For Chinese input methods
+
 # app launcher to search on niri
 sudo pacman -S fuzzel --noconfirm --needed
 

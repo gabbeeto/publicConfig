@@ -1,4 +1,11 @@
 
+# for chinese stuff input
+echo "export GTK_IM_MODULE=fcitx5" >> ~/.bashrc
+echo "export QT_IM_MODULE=fcitx5" >> ~/.bashrc
+echo "export XMODIFIERS=@im=fcitx5" >> ~/.bashrc
+echo "export SDL_IM_MODULE=fcitx5" >> ~/.bashrc
+
+
 # this will make multilib work to make it possible to install 32bits libraries from steam
 sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
 
@@ -104,7 +111,11 @@ sudo systemctl start keyd
 
 sudo keyd reload
 
+
+
 source ~/.bashrc
 
 pkill waybar
 sudo systemctl --user restart waybar
+
+
