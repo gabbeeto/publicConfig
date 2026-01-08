@@ -10,7 +10,9 @@
   "modules-left": [
     "niri/workspaces"
   ],
-  "modules-center": ["clock"],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "pulseaudio",
     "network",
