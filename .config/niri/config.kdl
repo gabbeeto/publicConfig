@@ -409,7 +409,7 @@ binds {
     Ctrl+Alt+Delete hotkey-overlay-title="open task manager" { spawn "~/publicConfig/scripts/open/taskmanager.sh"; }
     Mod+Shift+G hotkey-overlay-title="open godot" { spawn "~/Godot.x86_64"; }
     Mod+D hotkey-overlay-title="open discord" { spawn "discord"; }
-    Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/scripts/fuzzelEmoji.sh"; }
+    Mod+P hotkey-overlay-title="open picker for emoji" { spawn "~/publicConfig/scripts/fuzzelEmoji.sh"; }
     Mod+Z hotkey-overlay-title="open picker for color" { spawn "~/publicConfig/scripts/colorPicker/main.py"; }
     Mod+F1 hotkey-overlay-title="record screen" { spawn "~/publicConfig/scripts/toggleRecorder.sh"; }
     Mod+E hotkey-overlay-title="file manager" { spawn "nautilus"; }

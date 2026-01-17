@@ -46,12 +46,13 @@ sudo pacman -S wl-clipboard --noconfirm --needed
 
 
 
-# waybar fonts
+# waybar fonts and extra fonts that might be helpful
 sudo pacman -S ttf-font-awesome --noconfirm --needed
 sudo pacman -S ttf-nerd-fonts-symbols --noconfirm --needed
-sudo pacman -S ttf-roboto-mono noto-fonts --noconfirm --needed
+sudo pacman -S ttf-roboto-mono noto-fonts ttf-dejavu gnu-free-fonts noto-fonts-extra ttf-liberation otf-ipafont --noconfirm --needed
 sudo pacman -S otf-font-awesome --noconfirm --needed
 
+# emoji fonts
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
 
 # manage x11 apps
