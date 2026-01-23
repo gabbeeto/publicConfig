@@ -28,9 +28,6 @@ sudo pacman -S wqy-microhei    --noconfirm --needed # WenQuanYi Micro Hei
 sudo pacman -S adobe-source-han-sans-cn-fonts  --noconfirm --needed # Source Han Sans
 sudo pacman -S adobe-source-han-serif-cn-fonts --noconfirm --needed # Source Han Serif
 
-# fcitx5 for chinese input
-sudo pacman -S fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt --noconfirm --needed
-sudo pacman -S fcitx5-chinese-addons fcitx5-lua --noconfirm --needed  # For Chinese input methods
 
 # app launcher to search on niri
 sudo pacman -S fuzzel --noconfirm --needed
@@ -76,10 +73,10 @@ sudo pacman -S clang scons python3 --noconfirm --needed
 
 
 # terminals
-sudo pacman -S alacritty kitty ghostty --noconfirm --needed
+sudo pacman -S alacritty kitty  --noconfirm --needed
 
 # apps for that I use daily
-sudo pacman -S curl unzip obs-studio go helix tmux zellij npm nodejs python-pip python-pipx python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder man-db man-pages less --noconfirm --needed
+sudo pacman -S curl unzip obs-studio go helix zellij npm nodejs python-pip python-pipx python discord flatpak fzf arch-wiki-docs jre-openjdk mpv blender pavucontrol wf-recorder man-db man-pages less --noconfirm --needed
 
 
 
@@ -150,10 +147,6 @@ sudo pacman -S python-lsp-server --noconfirm --needed
 sudo pacman -S lua-language-server --noconfirm --needed
 
 
-# other cool stuff I use to develop on python
-pip3 install pywebview --break-system-packages
-# this is an adblock for qutebrowser
-pip3 install adblock --break-system-packages
 
 
 # for godot language server
@@ -162,9 +155,6 @@ pipx install "gdtoolkit==4.*"
 pipx upgrade "gdtoolkit==4.*"
 
 
-# darkmode install
-sudo pacman -S gsettings-desktop-schemas --needed --noconfirm
-sudo pacman -S qt5ct --needed --noconfirm
 
 # install waybar
 sudo pacman -S waybar --noconfirm --needed
