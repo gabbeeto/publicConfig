@@ -112,7 +112,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 4
 
-    background-color "#222525"
+    background-color "#ED6897"
     
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -204,8 +204,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
-        active-color "#58D1BD"
+        width 5
+        active-color "#E8C480"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -337,18 +337,20 @@ window-rule {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"com.chatterino.chatterino$"#
-    open-floating true
-    opacity 0.75
-    default-column-width { proportion 0.25; }
-    default-window-height { proportion 0.7; }
-    default-floating-position x=0 y=0 relative-to="top-right"
-    open-focused false
-}
+
+
+
+
+// chatterino settings
+// window-rule {
+//     match app-id=r#"com.chatterino.chatterino$"#
+//     open-floating true
+//     opacity 0.75
+//     default-column-width { proportion 0.25; }
+//     default-window-height { proportion 0.7; }
+//     default-floating-position x=0 y=0 relative-to="top-right"
+//     open-focused false
+// }
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {

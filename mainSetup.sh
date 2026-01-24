@@ -108,4 +108,3 @@ source ~/.bashrc
 pkill waybar
 sudo systemctl --user restart waybar
 
-

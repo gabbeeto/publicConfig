@@ -5,10 +5,10 @@
 }
 
 window#waybar {
-  background-color: rgba(57, 59, 62, .8);
+  background-color: #F0DBDB;
 
   border-bottom: 0px solid transparent;
-  border: 1px solid #d9d9d9;
+  border: 2px solid black;
   color: black;
   transition-property: background-color;
   transition-duration: .5s;
@@ -64,9 +64,10 @@ button:hover {
 #workspaces {
   padding: 2px 20px;
   margin: 10px 10px;
-  color: black;
+  color: #3E3E56;
+  background-color:#C0F7E4;
   border-radius: 12px;
-  border: 1px solid #d9d9d9;
+  border: 2px solid black;
 
 }
 
@@ -88,7 +89,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-  background-color: rgb(86, 96, 105);
+  background-color: white;
   border-radius: 10px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -105,48 +106,47 @@ button:hover {
 #workspaces {
   margin-left: 10px;
   margin-right: 10px;
-  background-color: #252522;
-  color: #dadada;
+  /* background-color: white; */
+  /* color: black; */
 }
 
 
 
 
 
-#pulseaudio {
+/* #pulseaudio { */
 
-  background-color: #252225;
-  color: #dadada;
-}
+  /* background-color: white; */
+  /* color: #dadada; */
+/* } */
 
-#pulseaudio:hover {
+/* #pulseaudio:hover { */
 
 
-  background-color: #252525;
-  color: #dadada;
-}
+  /* background-color: #252525; */
+  /* color: #dadada; */
+/* } */
 
-#network {
+/* #network { */
 
-  background-color: #252525;
-  color: #dadada;
-}
+  /* background-color: #252525; */
+  /* color: #dadada; */
+/* } */
 
-#network.disconnected {
+/* #network.disconnected { */
 
-  background-color: #252225;
-  color: #dadada;
-}
+  /* background-color: #252225; */
+  /* color: #dadada; */
+/* } */
 
-#backlight {
-
-  background-color: #252225;
-  color: #dadada;
-}
+/* #backlight { */
+  /* background-color: #252225; */
+  /* color: #dadada; */
+/* } */
 
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: #ffffff;
+  /* color: #ffffff; */
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -156,13 +156,13 @@ button:hover {
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
+  /* color: #ffffff; */
   background-color: #26A65B;
 }
 
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: #ffffff;
+  /* color: #ffffff; */
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -170,18 +170,18 @@ button:hover {
   animation-direction: alternate;
 }
 
-#battery {
-  color: #000000;
-  background-color: #252525;
-  color: #dadada;
-}
+/* #battery { */
+  /* color: #000000; */
+  /* background-color: #252525; */
+  /* color: #dadada; */
+/* } */
 
 #clock {
 
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #252225;
-  color: #dadada;
+  background-color: #F7C0D3;
+  color: #3E3E56;
 }
 
 #tray>.passive {
@@ -194,9 +194,9 @@ button:hover {
 }
 
 
-#tray {
+/* #tray { */
 
-  background-color: #252525;
-  color: #dadada;
-}
+  /* background-color: #252525; */
+  /* color: black; */
+/* } */
 
