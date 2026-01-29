@@ -23,6 +23,9 @@ cargo install ripdrag
 # I use hx to enter helix
 echo "alias hx='helix'" >> ~/.bashrc
 
+echo "alias download='yt-dlp -f \"bestvideo[height<=720]+bestaudio/best[height<=720]\" --add-metadata --merge-output-format mkv '" >> ~/.bashrc
+
+
 # add update to update packages and updateSystem to update all the changes
 echo "alias updateSystem='bash  ~/publicConfig/scripts/systemMenu.sh'" >> ~/.bashrc
 echo "alias update='bash ~/publicConfig/scripts/update.sh'" >> ~/.bashrc
