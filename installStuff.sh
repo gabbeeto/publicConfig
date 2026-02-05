@@ -164,3 +164,6 @@ sudo pacman -S waybar --noconfirm --needed
 
 # fuse2 for appimages
 sudo pacman -S fuse2 --noconfirm --needed
+
+
+sudo pacman -S kamoso --noconfirm --needed
