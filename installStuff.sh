@@ -130,6 +130,7 @@ flatpak-install-if-needed org.kde.labplot
 flatpak-install-if-needed org.kde.kalgebra
 flatpak-install-if-needed org.learningequality.Kolibri
 flatpak-install-if-needed com.github.tchx84.Flatseal
+flatpak-install-if-needed net.christianbeier.Gromit-MPX
 
 
 npm-install-if-needed() {
