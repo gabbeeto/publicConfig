@@ -167,4 +167,7 @@ sudo pacman -S waybar --noconfirm --needed
 sudo pacman -S fuse2 --noconfirm --needed
 
 
+# for taking pictures
 sudo pacman -S kamoso --noconfirm --needed
+
+
