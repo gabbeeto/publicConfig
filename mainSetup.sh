@@ -83,22 +83,6 @@ rm ~/godot-4.5.1-linux.zip
 chmod +x ~/Godot.x86_64
 
 
-# Create godot desktop file for fuzzel
-cat > ~/.local/share/applications/godot.desktop << EOF
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Godot
-Comment=Godot 4.5.1
-Exec=/home/$USER/Godot.x86_64
-Icon=godot
-Categories=Development;IDE;
-Keywords=godot;engine;godot engine;
-StartupNotify=false
-Terminal=false
-MimeType=application/x-godot-project;
-EOF
-
 
 sudo systemctl enable keyd --now
 sudo systemctl start keyd
