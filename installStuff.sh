@@ -82,8 +82,6 @@ sudo pacman -S curl unzip obs-studio go helix zellij npm nodejs python-pip pytho
 
 # install gaming stuff
 sudo pacman -S lutris wine-staging winetricks steam gamemode lib32-gamemode --noconfirm --needed
-# install retroarch
-sudo pacman -S retroarch libretro-core-inf libretro-mupen64plus-next libretro-ppsspp libretro-yabause libretro-beetle-psx  --noconfirm --needed
 
 sudo pacman -S sdl2 sdl2_image sdl2_ttf --noconfirm --needed
 
@@ -100,7 +98,7 @@ sudo pacman -S sagemath gnuplot   --noconfirm --needed
 
 
 # mhmm some video editing
-sudo pacman -S kdenlive flowblade --noconfirm --needed
+sudo pacman -S  flowblade --noconfirm --needed
 
 flatpak-install-if-needed() {
     if ! flatpak list --app | grep -q "$1"; then
@@ -130,8 +128,8 @@ flatpak-install-if-needed org.kde.labplot
 flatpak-install-if-needed org.kde.kalgebra
 flatpak-install-if-needed org.learningequality.Kolibri
 flatpak-install-if-needed com.github.tchx84.Flatseal
-flatpak-install-if-needed net.christianbeier.Gromit-MPX
-
+flatpak-install-if-needed org.kde.kdenlive
+flatpak-install-if-needed org.libretro.RetroArch
 
 npm-install-if-needed() {
     if ! npm list -g "$1" --depth=0 | grep -q "$1"; then
